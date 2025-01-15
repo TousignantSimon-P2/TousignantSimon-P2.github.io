@@ -1,63 +1,73 @@
-# Bases de données 1 (420-2B4-VI) - Hiver 2024
+# Programmation 2 (420-2A6-VI) - Hiver 2025
 ## Introduction
 Vous trouverez ici les notes et exercices du cours. J'ajouterai du nouveau contenu continuellement.
 
 **Préalable à ce cours** : 420-1D6-VI Programmation 1
 
-**Ce cours est préalable à** :
-420-3B4-VI : Bases de données 2 (approfondissement de la conception et intégration à des applications logicielles/web)  
-420-3A5-VI : Développement web 2 (intégration des BD dans un contexte web)  
-420-3C4-VI : Piratage éthique (sécuriser les applications)  
-420-4C4-VI : Mégadonnées (efficacité des traitements sur de grands ensembles et base de données NoSQL)  
-
-Il est donc préalable, indirectement, à presque tous les cours de la 3e année.
+**Ce cours est préalable à** :  
+420-4A6-VI : Programmation 3  
+420-3B3-VI : Jeux 2d  
+420-5A4-VI : Jeux 3d   
+420-4D4-VI : Applications mobiles 1  
+420-5B4-VI : Applications mobiles 2  
+420-3A3-VI : Nano-ordinateurs  
 
 **Cheminement complet**: [https://informatique.apical.xyz/](https://informatique.apical.xyz/)
 
 ## Environnement de travail
 
-Afin d’utiliser MySQL vous devez installer deux logiciels :
+Pour le cours vous avez deux logiciels à installer:
 
-* AMPPS, qui contient MySQL Server (installé aussi dans le cours de web 1)
-* MySQL Workbench
+* Visual studio community 2022
+* Un éditeur de texte évolué tel notepad++ (recommandé) 
+* Git
 
-### AMPPS
-AMPPS est une pile Apache (Apache, MySQL, Php, Perl et d’autres) disponible à [https://ampps.com/](https://ampps.com/)
 
-*Note* : si vous avez une erreur en lien avec « Microsoft c++ redistributable », lisez les détails de l’erreur. S’il est indiqué qu’une autre version est déjà installée, c’est probablement une version plus récente, ce qui est sans conséquence.
-
-Une fois installé, vous n’avez qu’à le lancer pour voir apparaître cette petite fenêtre au bas à droite de votre écran. Le statut de MySQL devrait être vert (ça peut prendre quelques secondes après le démarrage pour passer du rouge au vert, c’est normal).
-
-![AMPPS](images/ampps.png)
-
-Note: si vous voulez, vous pouvez configurer AMPPS pour qu'il démarre automatiquement à l'ouverture de votre session Windows. Sinon vous devrez le démarrer manuellement.
+### Visual studio community 2022
+Vous devez installer visual studio community uniquement avec les paquets essentiels au développement des applications de bureau.
+Les paquets tels que, mais non limités à, intellicode, intellisense, liveshare sont formellement proscrits.
  
-### MySQL Workbench
+### Notepad++ (ou autre éditeur compatible)
+Parfois git vous demande de faire l'éditions de fichiers tel que les commentaires pour les soumissions. (git commit). Il arrive également que des conflits soient présent. Le logiciels permet de mieux travailler dans ces situations plus complexe.
 
-Téléchargez-le sur le site [https://www.mysql.com/fr/products/workbench/](https://www.mysql.com/fr/products/workbench/)
+### Git
+Installation normale, portez attention à l'éditeur par défaut. Autrement, vous allez vous retrouver avec vim pour éditer vos fichiers
 
-À l’installation, choisissez « Client only ».
+### Règles de classes et explications :
+Petit rappel des règles au niveau de la [P.D.E.A](https://valisevirtuelle.cegepvicto.ca/medias/pdea/1/pdea2024-66cd38f5e7d90.pdf)
 
-Pour le lancer, il suffit de cliquer sur l’application. Vous devez d’abord démarrer MySQL Server. 
 
-Une fois l’application lancée, vous devez ajouter une connexion en cliquant sur « + » (seulement au premier démarrage). 
+#### Conditions pédagogiques particulières  
+Utilisation de générateur automatique :  
 
-![](images/wb01.png)
- 
-Dans la fenêtre qui apparaît, entrez les infos suivantes :
+Dans le cadre des activités académiques du cours, l'utilisation de générateurs de code automatiques, d'assistants d'IA tels que ChatGPT, Copilot ou tout autre outil similaire permettant la création automatique de contenu, la génération de code ou l’assistance à la résolution d'exercices, est formellement interdite. Toute utilisation de ces outils durant un cours entraînera l'exclusion immédiate de l'élève de la période concernée.  
 
-* Connection Name : le nom de votre connexion. Vous pouvez mettre ce que vous voulez, tant que vous le retrouvez.
+#### Utilisation des cellulaires ou d'appareils mobiles en classe :  
 
-* Password : cliquez sur Store in Vault… et entrez le mot de passe : « mysql ».
+Toute utilisation d'appareil mobile tel que cellulaire, tablette ou console de jeux mobile est proscrite pendant le bloc horaire à l'intérieur du local. (Précision : pauses incluses.) L'utilisation de tels appareils doit impérativement se faire hors du local afin de favoriser le climat d'apprentissage.  
 
-* [optionnel] : cliquer sur le bouton Test Connection en bas à droite.
+Les manquements aux articles précédents seront consignés. Après trois (3) exclusions, des démarches administratives seront entreprises avec l'API afin de déterminer les modalités de cheminement.
+Installation de Visual Studio Community 2022:
 
-* Cliquer sur le bouton OK.
+Les seuls paquets autorisés sont :
 
-![](images/wb02.png)
+   * Outils de développement d'application de bureau .NET
+   * Outils de développement .NET Framework 4.7.2
+   * C# et Visual Basic
 
-Si tout se passe bien, vous verrez la fenêtre suivante:
+Environnement numérique d’apprentissage (plateforme)
 
-![](images/wb03.png)
+   * Team
+   * Github
 
-Vous allez pouvoir entrer des commandes SQL dans la zone indiquée. L’icône de disquette permet de sauvegarder vos scripts. L’éclair exécute tout le script tandis que l’éclair avec un curseur exécute que la requête dans laquelle votre curseur est situé.
+L'élève a la responsabilité d'avoir un compte github avec un nom d'utilisateur répondant à la norme suivante :
+
+cgpvicto-[son numéro de DA]
+
+exemple : cgpvicto-9999999
+
+   * Github classroom :
+
+Une fois le compte github créé. On doit rejoindre le github classroom correspondant à son groupe :  
+[gr. 00001 (mardi 13:15, vendredi 09:15)](https://classroom.github.com/classrooms/194335470-h25-p2-gr01)  
+[gr. 00002 (mardi 09:15, vendredi 13:15)](https://classroom.github.com/classrooms/194335470-h25-p2-gr02)

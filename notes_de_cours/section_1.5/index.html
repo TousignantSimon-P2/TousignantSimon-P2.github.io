@@ -18,7 +18,7 @@
     
     
       
-        <title>Clés étrangères et relations - Cours de Programmation 2</title>
+        <title>Section 1.5 - Cours de Programmation 2</title>
       
     
     
@@ -112,11 +112,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#cles-etrangeres-et-relations" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -149,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clés étrangères et relations
+              Section 1.5
             
           </span>
         </div>
@@ -262,6 +257,57 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../convention/" class="md-tabs__link">
+        
+  
+    
+  
+  Convention
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../horaire/" class="md-tabs__link">
+        
+  
+    
+  
+  Horaire
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -335,6 +381,66 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../horaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Horaire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -353,85 +459,57 @@
   
 
 
-<h1 id="cles-etrangeres-et-relations">Clés étrangères et relations</h1>
-<h2 id="stocker-des-informations">Stocker des informations</h2>
-<p>Imaginons maintenant que l'on souhaite stocker des informations sur quel étudiant suit quel cours. On pourrait faire quelque chose qui ressemble à ceci :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Nom</th>
-<th style="text-align: left;">Code</th>
-<th style="text-align: left;">Session</th>
-<th style="text-align: left;">Sigle cours</th>
-<th style="text-align: center;">Duree cours</th>
-<th style="text-align: left;">Nom enseignant</th>
-<th style="text-align: left;">Code employe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Tony Stark</td>
-<td style="text-align: left;">1234567</td>
-<td style="text-align: left;">H22</td>
-<td style="text-align: left;">420-2B4-VI</td>
-<td style="text-align: center;">60</td>
-<td style="text-align: left;">Kara Danvers</td>
-<td style="text-align: left;">7654</td>
-</tr>
-<tr>
-<td style="text-align: left;">Natasha Romanov</td>
-<td style="text-align: left;">3456789</td>
-<td style="text-align: left;">H22</td>
-<td style="text-align: left;">420-2B4-VI</td>
-<td style="text-align: center;">60</td>
-<td style="text-align: left;">Kara Danvers</td>
-<td style="text-align: left;">7654</td>
-</tr>
-<tr>
-<td style="text-align: left;">Tony Stark</td>
-<td style="text-align: left;">1234567</td>
-<td style="text-align: left;">H22</td>
-<td style="text-align: left;">420-2A6-VI</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: left;">Bruce Wayne</td>
-<td style="text-align: left;">8765</td>
-</tr>
-<tr>
-<td style="text-align: left;">Thor Odison</td>
-<td style="text-align: left;">6789012</td>
-<td style="text-align: left;">H22</td>
-<td style="text-align: left;">420-2A6-VI</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: left;">Bruce Wayne</td>
-<td style="text-align: left;">8765</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Problèmes ?</p>
-<ul>
-<li>Répétition des valeurs = perte d'espace mémoire !</li>
-<li>Difficile de faire des modifications (ex. : changer le nom de l'enseignant)</li>
-</ul>
-</div>
-<h2 id="relations-entre-tables">Relations entre tables</h2>
-<p>Il faut découper nos informations entre plusieurs tables et faire des références entre les tables. On référence alors la clé primaire d'une des tables dans l'autre table. </p>
-<p>C'est ce que l'on appelle une clé étrangère (<strong>FOREIGN KEY</strong>).</p>
-<p>On remarque la direction de la flèche, de la table appelée « enfant » vers la table 
-« parent ».</p>
-<p>On ajoute dans la table enfant un champ enseignant et une annotation de clé étrangère. Donc ici chaque <code>cours</code> possède un <code>enseignant</code>.</p>
+  <h1>Section 1.5</h1>
+
+<!-- # Clés étrangères et relations
+
+## Stocker des informations
+
+Imaginons maintenant que l'on souhaite stocker des informations sur quel étudiant suit quel cours. On pourrait faire quelque chose qui ressemble à ceci :
+
+|Nom|Code|Session|Sigle cours|Duree cours|Nom enseignant|Code employe|
+|:--|:--|:--|:--|:-:|:--|:--|
+|Tony Stark|1234567|H22|420-2B4-VI|60|Kara Danvers|7654|
+|Natasha Romanov|3456789|H22|420-2B4-VI|60|Kara Danvers|7654|
+|Tony Stark|1234567|H22|420-2A6-VI|90|Bruce Wayne|8765|
+|Thor Odison|6789012|H22|420-2A6-VI|90|Bruce Wayne|8765|
+
+
+!!! note "Problèmes ?"
+    * Répétition des valeurs = perte d'espace mémoire !
+    * Difficile de faire des modifications (ex. : changer le nom de l'enseignant)
+
+## Relations entre tables
+
+Il faut découper nos informations entre plusieurs tables et faire des références entre les tables. On référence alors la clé primaire d'une des tables dans l'autre table. 
+
+C'est ce que l'on appelle une clé étrangère (__FOREIGN KEY__).
+
+On remarque la direction de la flèche, de la table appelée « enfant » vers la table 
+« parent ».
+
+On ajoute dans la table enfant un champ enseignant et une annotation de clé étrangère. Donc ici chaque `cours` possède un `enseignant`.
+
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 
 </code></pre>
-<h2 id="importances-des-relations">Importances des relations</h2>
-<p>On trouve rarement une table isolée dans un modèle de base de données (table en relation avec aucune autre table).</p>
-<p>Pour faire une analogie, on pourrait comporarer une table isolée à du code qui n'est pas référencé (fonction qui n'est jamais appelée) dans le domaine de la programmation.</p>
-<h2 id="cle-etrangere-sql">Clé étrangère SQL</h2>
-<p>Pour indiquer une clé étrangère, on ajoute la contrainte suivante dans la requête de création de la table.</p>
+
+## Importances des relations
+
+On trouve rarement une table isolée dans un modèle de base de données (table en relation avec aucune autre table).
+
+Pour faire une analogie, on pourrait comporarer une table isolée à du code qui n'est pas référencé (fonction qui n'est jamais appelée) dans le domaine de la programmation.
+
+## Clé étrangère SQL
+
+Pour indiquer une clé étrangère, on ajoute la contrainte suivante dans la requête de création de la table.
+
 <div class="highlight"><pre><span></span><code><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">table_parent</span><span class="p">(</span><span class="n">cle_primaire</span><span class="p">)</span>
 </code></pre></div>
-<p>Exemple avec la table <code>cours</code></p>
+
+Exemple avec la table `cours`
+
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="w">  </span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">  </span>
 <span class="w">    </span><span class="n">sigle</span><span class="w"> </span><span class="kt">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">),</span><span class="w">  </span>
@@ -440,41 +518,65 @@
 <span class="w">    </span><span class="n">enseignant</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">enseignant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">enseignants</span><span class="w"> </span><span class="p">(</span><span class="n">code_employe</span><span class="p">));</span>
 </code></pre></div>
-<p>Ici rien ne change dans la création de la table <code>enseignants</code> (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).</p>
-<h2 id="suppression-de-tables-qui-contiennent-des-relations">Suppression de tables qui contiennent des relations</h2>
+
+Ici rien ne change dans la création de la table `enseignants` (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).
+
+## Suppression de tables qui contiennent des relations
+
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 
 
 </code></pre>
-<p>Peut-on supprimer la table <code>enseignants</code> sans supprimer la table <code>cours</code>?   Pourquoi?</p>
-<div class="admonition warning">
-<p class="admonition-title">Attention</p>
-<p>Pour pouvoir supprimer une table, celle-ci ne doit pas être référencée par une autre table. Autrement dit, il faut que sa clé primaire ne soit pas une clé étrangère pour une ou plusieurs autres tables.</p>
-</div>
-<p>Si l'on pouvait faire la suppression, la table <code>cours</code> aurait une colonne qui contiendrait des clés d'une table inexistante.</p>
-<h2 id="ordre-de-creation">Ordre de création</h2>
-<p>Afin d'ajouter les contraintes de clés étrangères, la table parent doit être créée avant la table enfants.</p>
-<p>Autrement, vous aurez une erreur SQL disant que votre contrainte FOREIGN KEY référence une table inexistante.</p>
-<h2 id="-exercice-151-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 1.5.1 ---</h2>
-<p>Proposez un modèle de base de données illustrant qu'un enseignant est responsable d'un programme.</p>
-<p>Implémentez la base de données correspondant à votre modèle.</p>
-<h2 id="tables-dassociation">Tables d'association</h2>
-<p>Les clés étrangères permettent de référer un enregistrement dans une autre table. Qu'arrive-t-il dans la situation suivante:</p>
-<p>Une BD permet de gérer les inscriptions des étudiants à leurs cours. Comment représenter le fait qu'un étudiant puisse s'inscrire à plusieurs cours et qu'à un même cours, plusieurs étudiants puissent s'inscrire ?</p>
-<p>On ajoute une table dont le rôle dont les enregistrements représentent chaque relation.</p>
-<p>Par exemple, on ajouterait une table <code>inscriptions</code> pour représenter notre association. Comme <code>inscriptions</code> est créée spécialement pour représenter une association, elle est appelée table d'association.</p>
-<p>On voit ici que la table <code>inscriptions</code> assure l'association entre <code>cours</code>  et <code>etudiants</code>.</p>
-<p>On peut voir que deux tables sont associées si l'on peut suivre avec notre doigt d'une table à l'autre en empruntant les flèches comme des chemins (ici le sens des flèches n'a pas d'importance).</p>
+
+Peut-on supprimer la table `enseignants` sans supprimer la table `cours`?   Pourquoi?
+
+!!! warning "Attention"
+    Pour pouvoir supprimer une table, celle-ci ne doit pas être référencée par une autre table. Autrement dit, il faut que sa clé primaire ne soit pas une clé étrangère pour une ou plusieurs autres tables.
+
+Si l'on pouvait faire la suppression, la table `cours` aurait une colonne qui contiendrait des clés d'une table inexistante.
+
+## Ordre de création
+
+Afin d'ajouter les contraintes de clés étrangères, la table parent doit être créée avant la table enfants.
+
+Autrement, vous aurez une erreur SQL disant que votre contrainte FOREIGN KEY référence une table inexistante.
+
+## :material-cog: --- Exercice 1.5.1 ---
+
+Proposez un modèle de base de données illustrant qu'un enseignant est responsable d'un programme.
+
+Implémentez la base de données correspondant à votre modèle.
+
+## Tables d'association
+
+Les clés étrangères permettent de référer un enregistrement dans une autre table. Qu'arrive-t-il dans la situation suivante:
+
+Une BD permet de gérer les inscriptions des étudiants à leurs cours. Comment représenter le fait qu'un étudiant puisse s'inscrire à plusieurs cours et qu'à un même cours, plusieurs étudiants puissent s'inscrire ?
+
+On ajoute une table dont le rôle dont les enregistrements représentent chaque relation.
+
+Par exemple, on ajouterait une table `inscriptions` pour représenter notre association. Comme `inscriptions` est créée spécialement pour représenter une association, elle est appelée table d'association.
+
+On voit ici que la table `inscriptions` assure l'association entre `cours`  et `etudiants`.
+
+On peut voir que deux tables sont associées si l'on peut suivre avec notre doigt d'une table à l'autre en empruntant les flèches comme des chemins (ici le sens des flèches n'a pas d'importance).
+
+
 <pre class="mermaid"><code>erDiagram  
     etudiants ||--o{ inscriptions : " " 
 
     inscriptions }o--|| cours : " "
 
 </code></pre>
-<h2 id="mais-un-instant">Mais... un instant!</h2>
-<p>Dans la table <code>inscriptions</code> la clé primaire est-elle vraiment composée de <em>deux</em> colonnes?</p>
-<p>Oui, c'est possible: c'est appelé une <em>clé composée</em>. </p>
+
+## Mais... un instant!
+
+Dans la table `inscriptions` la clé primaire est-elle vraiment composée de *deux* colonnes?
+
+Oui, c'est possible: c'est appelé une *clé composée*. 
+
+
 <pre class="mermaid"><code>erDiagram   
     etudiants ||--o{ inscriptions : " " 
 
@@ -482,19 +584,26 @@
 
 
 </code></pre>
-<h2 id="cle-composee">Clé composée</h2>
-<p>Pour indiquer une clé composée dans une base de données, nous devrons utiliser la notation de contrainte.</p>
-<p>Après avoir déclaré les colonnes, on indique</p>
+
+## Clé composée
+
+Pour indiquer une clé composée dans une base de données, nous devrons utiliser la notation de contrainte.
+
+Après avoir déclaré les colonnes, on indique
+
 <div class="highlight"><pre><span></span><code><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
-<p>Ne fonctionne pas :
+
+Ne fonctionne pas :
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
 <span class="w">    </span><span class="n">etudiant</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">cours</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">));</span>
-</code></pre></div></p>
-<p>Bonne écriture :</p>
+</code></pre></div>
+
+Bonne écriture :
+
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
 <span class="w">    </span><span class="n">etudiant</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span>
 <span class="w">    </span><span class="n">cours</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span>
@@ -502,10 +611,14 @@
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id_cours</span><span class="p">));</span>
 </code></pre></div>
-<h2 id="notation-de-contraintes">Notation de contraintes</h2>
-<p>La notation contrainte de <strong>PRIMARY KEY</strong> s'utilise aussi en présence d'une clé simple (clé comportant une seule colonne).</p>
-<p>La notation vue précédemment constitue un raccourci intéressant lorsqu'on travaille.</p>
-<p>On revient plus en détail sur les contraintes dans le Chapitre 4 - Assurer l'intégrité des données.</p>
+
+## Notation de contraintes
+
+La notation contrainte de __PRIMARY KEY__ s'utilise aussi en présence d'une clé simple (clé comportant une seule colonne).
+
+La notation vue précédemment constitue un raccourci intéressant lorsqu'on travaille.
+
+On revient plus en détail sur les contraintes dans le Chapitre 4 - Assurer l'intégrité des données. -->
 
 
 

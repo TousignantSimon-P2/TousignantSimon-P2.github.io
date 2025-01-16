@@ -18,7 +18,7 @@
     
     
       
-        <title>Créer, mettre à jour, supprimer des données - Cours de Programmation 2</title>
+        <title>Section 2.1 - Cours de Programmation 2</title>
       
     
     
@@ -112,11 +112,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#creer-mettre-a-jour-supprimer-des-donnees" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -149,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Créer, mettre à jour, supprimer des données
+              Section 2.1
             
           </span>
         </div>
@@ -262,6 +257,57 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../convention/" class="md-tabs__link">
+        
+  
+    
+  
+  Convention
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../horaire/" class="md-tabs__link">
+        
+  
+    
+  
+  Horaire
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -335,6 +381,66 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../horaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Horaire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -353,240 +459,249 @@
   
 
 
-<h1 id="creer-mettre-a-jour-supprimer-des-donnees">Créer, mettre à jour, supprimer des données</h1>
-<h2 id="requetes-sql">Requêtes SQL</h2>
-<p>L’ensemble d’instructions du langage SQL pour faire des requêtes est différent de celui pour la structure des données.</p>
-<p>On retrouve principalement 4 types de requêtes (principe <em>CRUD</em>):</p>
-<ul>
-<li>(<strong>C</strong>reate) Insertion (<em>INSERT</em>)</li>
-<li>(<strong>R</strong>ead) Sélection (<em>SELECT</em>)</li>
-<li>(<strong>U</strong>pdate) Mise à jour (<em>UPDATE</em>)</li>
-<li>(<strong>D</strong>elete) Suppression (<em>DELETE</em>)</li>
-</ul>
-<h2 id="inserer-un-enregistrement">Insérer un enregistrement</h2>
-<p>La requête d’insertion est la suivante :</p>
+  <h1>Section 2.1</h1>
+
+<!-- # Créer, mettre à jour, supprimer des données
+
+## Requêtes SQL
+
+L’ensemble d’instructions du langage SQL pour faire des requêtes est différent de celui pour la structure des données.
+
+On retrouve principalement 4 types de requêtes (principe *CRUD*):
+
+- (**C**reate) Insertion (*INSERT*)
+- (**R**ead) Sélection (*SELECT*)
+- (**U**pdate) Mise à jour (*UPDATE*)
+- (**D**elete) Suppression (*DELETE*)
+
+## Insérer un enregistrement
+
+La requête d’insertion est la suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Nom_table</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,...)</span><span class="w"> </span>
 <span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">valeur_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">valeur_colonne2</span><span class="p">,...);</span>
 </code></pre></div>
-<p>Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.</p>
+
+Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span>
 <span class="w">        </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1324567</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Tony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2023</span><span class="p">,</span>
 <span class="w">        </span><span class="s1">&#39;420.B0&#39;</span><span class="p">);</span>
 </code></pre></div>
+
+
 <pre class="mermaid"><code>erDiagram  
 
 </code></pre>
-<p>Dans le cas d’un champ assigné automatiquement, comme une clé auto-incrémentée ou l’utilisation d’une valeur par défaut, on n'indique pas cette colonne dans la requête <strong>INSERT</strong>.</p>
+
+Dans le cas d’un champ assigné automatiquement, comme une clé auto-incrémentée ou l’utilisation d’une valeur par défaut, on n'indique pas cette colonne dans la requête **INSERT**.
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">sigle</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;420-2B4-VI&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
 </code></pre></div>
-<p>Le cours BD1 aura alors un id automatique et une durée de 60 heures.</p>
+
+Le cours BD1 aura alors un id automatique et une durée de 60 heures.
+
+
 <pre class="mermaid"><code>erDiagram  
 
 </code></pre>
-<table>
-<thead>
-<tr>
-<th>cours_id</th>
-<th>enseignant</th>
-<th>sigle</th>
-<th>duree</th>
-<th>nom</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>NULL</td>
-<td>420-2B4-VI</td>
-<td>60</td>
-<td>Base de données 1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="inserer-plusieurs-enregistrements">Insérer plusieurs enregistrements</h3>
-<p>On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.</p>
+
+|cours_id|enseignant|sigle|duree|nom|
+|---|---|---|---|---|
+|1|NULL|420-2B4-VI|60|Base de données 1|
+
+### Insérer plusieurs enregistrements
+
+On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span><span class="w"> </span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1234567</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anthony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="p">),</span><span class="w">    </span>
 <span class="w">        </span><span class="p">(</span><span class="mi">2345678</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Steve Rogers&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="p">),</span><span class="w">      </span>
 <span class="w">        </span><span class="p">(</span><span class="mi">3456789</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Natasha Romanov&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2019</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A1&#39;</span><span class="p">);</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 
 </code></pre>
-<h3 id="omettre-le-nom-des-colonnes">Omettre le nom des colonnes</h3>
-<p>On peut omettre le nom des colonnes à condition que les valeurs soient insérées dans l’ordre des colonnes.</p>
-<p>Par exemple, cette instruction est valide :</p>
+
+### Omettre le nom des colonnes
+
+On peut omettre le nom des colonnes à condition que les valeurs soient insérées dans l’ordre des colonnes.
+
+Par exemple, cette instruction est valide :
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">VALUES</span><span class="w">      </span>
 <span class="w">    </span><span class="p">(</span><span class="mi">1234567</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anthony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1963-10-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 
 </code></pre>
-<p>L'instruction suivante n'est pas valide car la table <em>cours</em> comporte cinq colonnes et seulement deux valeurs sont indiquées:</p>
+
+L'instruction suivante n'est pas valide car la table *cours* comporte cinq colonnes et seulement deux valeurs sont indiquées:
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;420-2B4-VI&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 </code></pre>
-<p>L'instruction suivante n'est pas valide car l'ordre des colonnes n’est pas respecté:</p>
+
+L'instruction suivante n'est pas valide car l'ordre des colonnes n’est pas respecté:
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;1963-10-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anthony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1234567</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="utiliser-la-valeur-par-defaut">Utiliser la valeur par défaut</h3>
-<p>On peut indiquer explicitement à SQL d’utiliser la valeur par défaut en utilisant l’instruction  </p>
+
+### Utiliser la valeur par défaut
+
+On peut indiquer explicitement à SQL d’utiliser la valeur par défaut en utilisant l’instruction  
+
 <div class="highlight"><pre><span></span><code><span class="k">DEFAULT</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">).</span>
 </code></pre></div>
-<p>Ici le cours BD1 aura une durée de 60.</p>
+
+Ici le cours BD1 aura une durée de 60.
+
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">sigle</span><span class="p">,</span><span class="w"> </span><span class="n">duree</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w">      </span>
 <span class="w">        </span><span class="p">(</span><span class="s1">&#39;420-2B4-VI&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="p">(</span><span class="n">duree</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">),</span><span class="w">     </span>
 <span class="w">        </span><span class="p">(</span><span class="s1">&#39;420-1D6-VI&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Programmation 1&#39;</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="omettre-une-colonne">Omettre une colonne</h3>
-<p>Si lors de l’ajout d’un enregistrement une colonne ne possède pas de valeur par défaut et qu’aucune valeur n’est précisée, alors la valeur spéciale <strong>NULL</strong> est utilisée.</p>
+
+
+### Omettre une colonne
+
+Si lors de l’ajout d’un enregistrement une colonne ne possède pas de valeur par défaut et qu’aucune valeur n’est précisée, alors la valeur spéciale **NULL** est utilisée.
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Cours</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
 </code></pre></div>
-<p>Ici le sigle et l'enseignant de l’enregistrement sont <strong>NULL</strong> :</p>
-<table>
-<thead>
-<tr>
-<th>cours_id</th>
-<th>enseignant</th>
-<th>sigle</th>
-<th>duree</th>
-<th>nom</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>60</td>
-<td>Base de données 1</td>
-</tr>
-</tbody>
-</table>
-<h2 id="afficher-le-contenu-dune-table">Afficher le contenu d’une table</h2>
-<p>Pour afficher tous les enregistrements d’une table, on utilise l’instruction suivante :</p>
+
+Ici le sigle et l'enseignant de l’enregistrement sont **NULL** :
+
+|cours_id|enseignant|sigle|duree|nom|
+|---|---|---|---|---|
+|1|NULL|NULL|60|Base de données 1|
+
+
+## Afficher le contenu d’une table
+
+Pour afficher tous les enregistrements d’une table, on utilise l’instruction suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="p">;</span>
 </code></pre></div>
-<p>Nous verrons dans les prochaines sections les requêtes <strong>SELECT</strong> en détail.</p>
-<h2 id="-exercice-211-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 2.1.1 ---</h2>
-<p>Ajoutez les enseignants et les programmes suivants:</p>
-<p><strong>enseignants</strong></p>
-<table>
-<thead>
-<tr>
-<th>code_employe</th>
-<th>nom</th>
-<th>num_assurance_sociale</th>
-<th>anciennete</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9876</td>
-<td>Clark Kent</td>
-<td>150 150 150</td>
-<td>8</td>
-</tr>
-<tr>
-<td>8765</td>
-<td>Bruce Wayne</td>
-<td>260 260 260</td>
-<td>14</td>
-</tr>
-<tr>
-<td>7654</td>
-<td>Kara Danvers</td>
-<td>888 777 666</td>
-<td>0</td>
-</tr>
-<tr>
-<td>6573</td>
-<td>Richard Grayson</td>
-<td>222 444 666</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<p><strong>programmes</strong> </p>
-<table>
-<thead>
-<tr>
-<th>code</th>
-<th>nom</th>
-<th>responsable</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>420.A0</td>
-<td>Informatique appliquée</td>
-<td>Bruce Wayne</td>
-</tr>
-<tr>
-<td>420.B0</td>
-<td>Informatique - jeux vidéos</td>
-<td>Kara Danvers</td>
-</tr>
-</tbody>
-</table>
-<h2 id="mettre-a-jour-un-enregistrement">Mettre à jour un enregistrement</h2>
-<p>On utilise la requête <strong>UPDATE</strong> pour mettre à jour un enregistrement.</p>
+
+Nous verrons dans les prochaines sections les requêtes **SELECT** en détail.
+
+## :material-cog: --- Exercice 2.1.1 ---
+
+Ajoutez les enseignants et les programmes suivants:
+
+**enseignants**
+
+|code_employe|nom|num_assurance_sociale|anciennete|
+|||||
+|9876|Clark Kent|150 150 150|8|
+|8765|Bruce Wayne|260 260 260|14|
+|7654|Kara Danvers|888 777 666|0|
+|6573|Richard Grayson|222 444 666|4|
+
+**programmes** 
+
+|code|nom|responsable|
+||||
+|420.A0|Informatique appliquée|Bruce Wayne|
+|420.B0|Informatique - jeux vidéos|Kara Danvers|
+
+## Mettre à jour un enregistrement
+
+On utilise la requête **UPDATE** pour mettre à jour un enregistrement.
+
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur2</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
-<p>Cette syntaxe comporte un défaut car ici, on met à jour <strong>tous</strong> les enregistrements! Dans la plupart des cas, ce n’est pas ce qu’on cherche à faire.</p>
-<p>Pour indiquer quel enregistrement mettre à jour, on utilise la clause <strong>WHERE</strong> qui permet de spécifier une condition. </p>
-<h3 id="clause-where">Clause WHERE</h3>
-<p>La syntaxe d’une requête UPDATE avec la clause WHERE est :</p>
+
+Cette syntaxe comporte un défaut car ici, on met à jour **tous** les enregistrements! Dans la plupart des cas, ce n’est pas ce qu’on cherche à faire.
+
+Pour indiquer quel enregistrement mettre à jour, on utilise la clause **WHERE** qui permet de spécifier une condition. 
+
+### Clause WHERE
+
+La syntaxe d’une requête UPDATE avec la clause WHERE est :
+
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span>
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
 </code></pre></div>
-<p>Par exemple, on souhaite que le programme 420.A0 (Informatique appliquée) soit maintenant sous la responsabilité de Clark Kent (9876).</p>
+
+Par exemple, on souhaite que le programme 420.A0 (Informatique appliquée) soit maintenant sous la responsabilité de Clark Kent (9876).
+
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">programmes</span>
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">responsable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9876</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;420.B0&#39;</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 </code></pre>
-<h3 id="desactiver-le-safemode">Désactiver le SafeMode</h3>
-<p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le <em>SafeMode</em>.</p>
-<p>Pour désactiver le SafeMode :</p>
-<p>Edit &gt; Preferences &gt; SQLEditor &gt; Safe updates
-Puis reconnectez-vous au serveur.</p>
-<h3 id="-exercice-212-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 2.1.2 ---</h3>
-<p>A. Mettez à jour le profil de Kara Danvers pour assigner la valeur 1 à son ancienneté.</p>
-<p>B. Mettez à jour le cours BD1 pour qu'il ait une durée de 90 heures.</p>
-<h2 id="duplicata-de-cle-primaire">Duplicata de clé primaire</h2>
-<p>Qu’arrive-t-il si on ajoute un enregistrement pour lequel la clé primaire existe déjà?</p>
-<p>2 choix :</p>
-<p>1) Provoquer une erreur (ce qui se produit normalement)</p>
-<p>2) Offrir la possibilité de mettre à jour l’enregistrement</p>
-<h2 id="mettre-a-jour-si-la-cle-existe-deja">Mettre à jour si la clé existe déjà</h2>
-<p>On modifie la requête <strong>INSERT</strong> de la façon suivante :</p>
+
+### Désactiver le SafeMode
+
+Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le *SafeMode*.
+
+Pour désactiver le SafeMode :
+
+Edit > Preferences > SQLEditor > Safe updates
+Puis reconnectez-vous au serveur.
+
+### :material-cog: --- Exercice 2.1.2 ---
+
+A. Mettez à jour le profil de Kara Danvers pour assigner la valeur 1 à son ancienneté.
+
+B. Mettez à jour le cours BD1 pour qu'il ait une durée de 90 heures.
+
+## Duplicata de clé primaire
+
+Qu’arrive-t-il si on ajoute un enregistrement pour lequel la clé primaire existe déjà?
+
+2 choix :
+
+1) Provoquer une erreur (ce qui se produit normalement)
+
+2) Offrir la possibilité de mettre à jour l’enregistrement
+
+## Mettre à jour si la clé existe déjà
+
+On modifie la requête **INSERT** de la façon suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="n">…</span><span class="p">)</span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">valeur1</span><span class="p">,</span><span class="w"> </span><span class="n">valeur2</span><span class="p">,</span><span class="n">…</span><span class="p">)</span>
 <span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DUPLICATE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">;</span>
 </code></pre></div>
-<p>Note: il n'est pas toujours une bonne idée d’utiliser <strong>ON DUPLICATE KEY UPDATE</strong>.</p>
-<p>Souvent, on veut signaler une erreur pour indiquer à l’utilisateur qu’il fait une opération non standard.</p>
-<p>On peut utiliser <strong>ON DUPLICATE KEY UPDATE</strong> lorsqu’on transfère des données ou que l’on est sûr que les enregistrements sont identiques.</p>
-<h2 id="supprimer-un-enregistrement">Supprimer un enregistrement</h2>
-<p>La requête de suppression est <strong>DELETE</strong> et a la syntaxe suivante :</p>
+
+Note: il n'est pas toujours une bonne idée d’utiliser **ON DUPLICATE KEY UPDATE**.
+
+Souvent, on veut signaler une erreur pour indiquer à l’utilisateur qu’il fait une opération non standard.
+
+On peut utiliser **ON DUPLICATE KEY UPDATE** lorsqu’on transfère des données ou que l’on est sûr que les enregistrements sont identiques.
+
+## Supprimer un enregistrement
+
+La requête de suppression est **DELETE** et a la syntaxe suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">condition</span><span class="p">;</span>
 </code></pre></div>
-<p>Comme pour les requêtes DROP, aucune confirmation n'est demandée.</p>
-<p><strong><em>Attention</em></strong> : s’il n’y a pas de clause WHERE et que le SafeMode est désactivé, vous allez supprimer toutes les données de la table.</p>
-<h2 id="-exercice-213-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 2.1.3 ---</h2>
-<p>L'enseignant Bruce Wayne souhaite quitter son poste d'enseignant pour devenir un riche homme d'affaires. Retirez-le de la table <em>Enseignants</em>.</p>
-<p>Ajoutez-le de nouveau par la suite et réassignez-le comme responsable de programme.</p>
-<p><strong><em>Difficultés :</em></strong> </p>
-<ol>
-<li>Vérifier vos contraintes de clé étrangère</li>
-<li>Pour vérifier si une valeur est <strong>NULL</strong>, on doit utiliser l'expression <strong>IS NULL</strong>    et non « <strong>= NULL</strong> » (et <strong>!= NULL</strong> devient <strong>IS NOT NULL</strong>)</li>
-</ol>
+
+Comme pour les requêtes DROP, aucune confirmation n'est demandée.
+
+***Attention*** : s’il n’y a pas de clause WHERE et que le SafeMode est désactivé, vous allez supprimer toutes les données de la table.
+
+## :material-cog: --- Exercice 2.1.3 ---
+
+L'enseignant Bruce Wayne souhaite quitter son poste d'enseignant pour devenir un riche homme d'affaires. Retirez-le de la table *Enseignants*.
+
+Ajoutez-le de nouveau par la suite et réassignez-le comme responsable de programme.
+
+***Difficultés :*** 
+
+1. Vérifier vos contraintes de clé étrangère
+2. Pour vérifier si une valeur est **NULL**, on doit utiliser l'expression **IS NULL**    et non « **= NULL** » (et **!= NULL** devient **IS NOT NULL**) -->
 
 
 

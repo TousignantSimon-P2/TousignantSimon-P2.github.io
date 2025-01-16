@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://tousignantsimon-p2.github.io/convention/">
       
       
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../ressources/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Convention de nommage C - Cours de Programmation 2</title>
+        <title>Convention - Cours de Programmation 2</title>
       
     
     
@@ -149,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Convention de nommage C
+              Convention
             
           </span>
         </div>
@@ -262,6 +266,59 @@
   
 
       
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Convention
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../horaire/" class="md-tabs__link">
+        
+  
+    
+  
+  Horaire
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -335,6 +392,160 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Convention
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Convention
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gardez-en-tete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gardez en tête
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regles-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Règles générales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-des-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définition des classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-des-methodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définition des méthodes.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noms-des-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noms des variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commentaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commentaires
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../horaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Horaire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -365,26 +576,53 @@
 <li>Toujours commencer une méthode par une lettre majuscule camelcase</li>
 <li>Toujours commencer une variable membre par _</li>
 <li>Toujours garder en tête de mettre privé par défaut et public seulement si nécessaire</li>
+<li>Toujours en français lorsque possible.</li>
 </ul>
-<h2 id="nom-des-classes">Nom des classes</h2>
+<h2 id="definition-des-classes">Définition des classes</h2>
 <ul>
-<li>TODO</li>
+<li>Commence par un summary</li>
+<li>Comence par une majuscule</li>
+<li>Doit avoir une visibilité définie</li>
+<li>Aucun _ dans le nom</li>
+<li>
+<p>Doit être en francais</p>
+<blockquote>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" title=":memo:" /> ** L'ordre des choses est la suivante **</p>
+<ul>
+<li>Déclaration de la classe  </li>
+<li>Déclaration des variable membres  </li>
+<li>Déclaration des constructeurs  </li>
+<li>Déclaration des méthodes  </li>
+<li>Déclaration des implémentations d'interface  </li>
+<li>Déclaration de la méthode ToString()  </li>
 </ul>
-<h2 id="nom-methodes">Nom méthodes</h2>
+</blockquote>
+</li>
+</ul>
+<h2 id="definition-des-methodes">Définition des méthodes.</h2>
 <ul>
-<li>TODO</li>
+<li>Commence par un summary</li>
+<li>Comence par une majuscule</li>
+<li>Doit avoir une visibilité définie</li>
+<li>Aucun _ dans le nom</li>
 </ul>
 <h2 id="noms-des-variables">Noms des variables</h2>
 <ul>
-<li>TODO</li>
+<li>Variable membre<ul>
+<li>Commence par un _ si c'Est une variable membre</li>
+<li>Casse chameau</li>
+<li>Commentaire si la variable nécessite une précision sur ces limites de valeurs, rôle, etc.</li>
+</ul>
+</li>
+<li>Variable standard<ul>
+<li>Casse chameau</li>
+<li>Pas de _ dans le nom de la variable</li>
+</ul>
+</li>
 </ul>
 <h2 id="commentaires">Commentaires</h2>
 <ul>
-<li>TODO</li>
-</ul>
-<h2 id="references">références :</h2>
-<ul>
-<li>TODO</li>
+<li>Nécessaire pour les entête de classe et de méthode sous la forme de summary</li>
 </ul>
 
 

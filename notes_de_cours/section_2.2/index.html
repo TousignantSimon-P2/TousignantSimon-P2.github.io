@@ -18,7 +18,7 @@
     
     
       
-        <title>Sélection, filtrage et opérateurs logiques - Cours de Programmation 2</title>
+        <title>Section 2.2 - Cours de Programmation 2</title>
       
     
     
@@ -112,11 +112,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#selection-filtrage-et-operateurs-logiques" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -149,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sélection, filtrage et opérateurs logiques
+              Section 2.2
             
           </span>
         </div>
@@ -262,6 +257,57 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../convention/" class="md-tabs__link">
+        
+  
+    
+  
+  Convention
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../horaire/" class="md-tabs__link">
+        
+  
+    
+  
+  Horaire
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -335,6 +381,66 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../horaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Horaire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -353,115 +459,115 @@
   
 
 
-<h1 id="selection-filtrage-et-operateurs-logiques">Sélection, filtrage et opérateurs logiques</h1>
-<p>Sélection de colonnes
+  <h1>Section 2.2</h1>
+
+<!-- # Sélection, filtrage et opérateurs logiques
+
+Sélection de colonnes
 Filtrage des résultats
 Opérateurs logiques
-Ordonner et limiter</p>
-<h2 id="selection-de-colonnes">Sélection de colonnes</h2>
-<p>Pour sélectionner des données, la requête est <strong>SELECT</strong> et à la syntaxe de base suivante :</p>
+Ordonner et limiter
+
+## Sélection de colonnes
+
+Pour sélectionner des données, la requête est **SELECT** et à la syntaxe de base suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="n">…</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="p">;</span>
 </code></pre></div>
-<p>On indique après le <strong>SELECT</strong> que le nom des colonnes que l’on souhaite récupérer.</p>
-<p>Pour récupérer les colonnes sigle et nom de la table Cours, on utilise la requête suivante :</p>
+
+On indique après le **SELECT** que le nom des colonnes que l’on souhaite récupérer.
+
+Pour récupérer les colonnes sigle et nom de la table Cours, on utilise la requête suivante :
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sigle</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span><span class="p">;</span>
 </code></pre></div>
-<p>On utilise le symbole <strong>*</strong> pour indiquer la sélection de toutes les colonnes.</p>
+
+On utilise le symbole __*__ pour indiquer la sélection de toutes les colonnes.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="p">;</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 
 </code></pre>
-<h3 id="alias">Alias</h3>
-<p>Il est possible de renommer des colonnes lors de la sélection (on verra plus tard des applications de ce concept)</p>
-<p>Le mot-clé à utiliser est <strong>AS</strong></p>
+
+### Alias
+
+Il est possible de renommer des colonnes lors de la sélection (on verra plus tard des applications de ce concept)
+
+Le mot-clé à utiliser est **AS**
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sigle</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nom_cours</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span>
 </code></pre></div>
-<h2 id="filtrer-les-enregistrements">Filtrer les enregistrements</h2>
-<p>Tout comme dans un <strong>UPDATE</strong> ou <strong>DELETE</strong>, il est possible d'utiliser la clause <strong>WHERE</strong> dans un <strong>SELECT</strong> afin de restreindre le nombre d'enregistrements affectés.</p>
+
+## Filtrer les enregistrements
+
+Tout comme dans un **UPDATE** ou **DELETE**, il est possible d'utiliser la clause **WHERE** dans un **SELECT** afin de restreindre le nombre d'enregistrements affectés.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="n">…</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">condition</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="creation-de-conditions">Création de conditions</h3>
-<p>On peut utiliser les opérateurs suivants pour construire des conditions.</p>
-<table>
-<thead>
-<tr>
-<th>Opérateur</th>
-<th>Symbole</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Égal</td>
-<td>=</td>
-</tr>
-<tr>
-<td>Différent de</td>
-<td>&lt;&gt;</td>
-</tr>
-<tr>
-<td>Plus grand que</td>
-<td>&gt;</td>
-</tr>
-<tr>
-<td>Plus grand ou égal que</td>
-<td>&gt;=</td>
-</tr>
-<tr>
-<td>Plus petit que</td>
-<td>&lt;</td>
-</tr>
-<tr>
-<td>Plus petit ou égal que</td>
-<td>&lt;=</td>
-</tr>
-</tbody>
-</table>
-<h3 id="clause-where-avec-valeur-null">Clause WHERE avec valeur NULL</h3>
-<p>Pour récupérer les colonnes dont la valeur est <strong>NULL</strong>, la structure de la condition est différente. Il faut utiliser le mot-clé <strong>IS</strong>.</p>
+
+### Création de conditions
+
+On peut utiliser les opérateurs suivants pour construire des conditions.
+
+|Opérateur|Symbole|
+|||
+|Égal|=|
+|Différent de|<>|
+|Plus grand que|>|
+|Plus grand ou égal que|>=|
+|Plus petit que|<|
+|Plus petit ou égal que|<=|
+
+### Clause WHERE avec valeur NULL
+
+Pour récupérer les colonnes dont la valeur est **NULL**, la structure de la condition est différente. Il faut utiliser le mot-clé **IS**.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom_colonne</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="no">NULL</span><span class="p">;</span>
 </code></pre></div>
-<p>On ajoute le mot-clé <strong>NOT</strong> pour avoir les colonnes qui ne sont pas <strong>NULL</strong></p>
+
+On ajoute le mot-clé **NOT** pour avoir les colonnes qui ne sont pas **NULL**
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom_colonne</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">;</span>
 </code></pre></div>
-<p>Pour sélectionner le nom des cours dont la durée est supérieure ou égale à 60 heures on utilise la requête suivante.</p>
+
+Pour sélectionner le nom des cours dont la durée est supérieure ou égale à 60 heures on utilise la requête suivante.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
 </code></pre></div>
-<p>Pour sélectionner les sigles des cours dont le nom est <strong>NULL</strong>, on utilise la requête suivante.</p>
+
+Pour sélectionner les sigles des cours dont le nom est **NULL**, on utilise la requête suivante.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sigle</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="no">NULL</span><span class="p">;</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 </code></pre>
-<p>On peut combiner les opérations de filtrage en utilisant les opérateurs logiques.</p>
-<table>
-<thead>
-<tr>
-<th>Opérateur</th>
-<th>Instruction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Et</td>
-<td>AND</td>
-</tr>
-<tr>
-<td>Ou</td>
-<td>OR</td>
-</tr>
-</tbody>
-</table>
-<p>Sélectionnez le nom des cours où la durée est entre 60 et 75 heures incluse.</p>
+
+On peut combiner les opérations de filtrage en utilisant les opérateurs logiques.
+
+|Opérateur|Instruction|
+|||
+|Et|AND|
+|Ou|OR|
+
+Sélectionnez le nom des cours où la durée est entre 60 et 75 heures incluse.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Cours</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 </code></pre>
-<h3 id="-exercice-221-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 2.2.1 ---</h3>
-<p>À partir du script <a href="../ecole.sql">ecole.sql</a>, créez la base de données <strong>ecole</strong> et répondez aux questions suivantes.</p>
+
+### :material-cog: --- Exercice 2.2.1 ---
+
+À partir du script [ecole.sql](../ecole.sql), créez la base de données **ecole** et répondez aux questions suivantes.
+
 <pre class="mermaid"><code>erDiagram  
 
     enseignants ||--o{ programmes : "responsable"
@@ -535,106 +641,94 @@ Ordonner et limiter</p>
         NUMERIC(5_2) note
     }
 </code></pre>
-<p>A. Sélectionnez les codes d'employé des enseignants qui ont au moins 5 ans d'ancienneté.<br />
-B. Sélectionnez le nom des étudiants admis entre 2019 et 2020.<br />
-C. Sélectionnez la date de début de session de toutes les sessions d'automne.  </p>
-<h2 id="ordonner-les-resultats">Ordonner les résultats</h2>
-<p>Pour obtenir des résultats triés, on utilise la clause ORDER BY. Cette clause est optionnelle.</p>
+
+A. Sélectionnez les codes d'employé des enseignants qui ont au moins 5 ans d'ancienneté.  
+B. Sélectionnez le nom des étudiants admis entre 2019 et 2020.  
+C. Sélectionnez la date de début de session de toutes les sessions d'automne.  
+
+## Ordonner les résultats
+
+Pour obtenir des résultats triés, on utilise la clause ORDER BY. Cette clause est optionnelle.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Nom_table</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">condition</span>
 <span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
 </code></pre></div>
-<p>Il faut porter attention à la taille de la sélection, car un tri devient vite couteux en ressources.</p>
-<p>Pour sélectionner le nom et la durée des cours et les classer en ordre alphabétique on utilise la requete suivante.</p>
+
+Il faut porter attention à la taille de la sélection, car un tri devient vite couteux en ressources.
+
+Pour sélectionner le nom et la durée des cours et les classer en ordre alphabétique on utilise la requete suivante.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span>
 <span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div>
+
 <pre class="mermaid"><code>erDiagram  
 </code></pre>
-<p>Maintenant, on veut la même requête, mais en ordonnant d'abord par durée, puis par ordre alphabétique. Voici le résultat attendu :</p>
-<table>
-<thead>
-<tr>
-<th>nom</th>
-<th style="text-align: center;">duree</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mathématique de l'ordinateur</td>
-<td style="text-align: center;">45</td>
-</tr>
-<tr>
-<td>Base de donnees 1</td>
-<td style="text-align: center;">60</td>
-</tr>
-<tr>
-<td>Fonctionnement de l'ordinateur</td>
-<td style="text-align: center;">60</td>
-</tr>
-<tr>
-<td>Développement Web 2</td>
-<td style="text-align: center;">75</td>
-</tr>
-<tr>
-<td>Programmation 1</td>
-<td style="text-align: center;">90</td>
-</tr>
-<tr>
-<td>Programmation 2</td>
-<td style="text-align: center;">90</td>
-</tr>
-</tbody>
-</table>
-<p>On peut trier sur plusieurs colonnes en les séparant par des virgules. Le tri se fait en ordre inverse que les colonnes sont indiquées.</p>
+
+Maintenant, on veut la même requête, mais en ordonnant d'abord par durée, puis par ordre alphabétique. Voici le résultat attendu :
+
+|nom|duree|
+||:-:|
+|Mathématique de l'ordinateur|45|
+|Base de donnees 1|60|
+|Fonctionnement de l'ordinateur|60|
+|Développement Web 2|75|
+|Programmation 1|90|
+|Programmation 2|90|
+
+On peut trier sur plusieurs colonnes en les séparant par des virgules. Le tri se fait en ordre inverse que les colonnes sont indiquées.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cours</span>
 <span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">duree</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div>
-<p>Ici on tri par ordre alphabétique et après par durée. Donc le résultat final est <em>globablement</em> trié par durée, et pour chaque durée, les éléments sont en ordre alphabétique.</p>
-<h3 id="tris-stables-et-instables">Tris stables et instables</h3>
-<ul>
-<li>
-<p>Dans la théorie des tris (oui, ça existe et c'est assez riche comme théorie), on parle de tri stable si, pour des valeurs égales, l'ordre original est préservé.</p>
-</li>
-<li>
-<p>Dans l'exemple précédent, on tri par ordre alphabétique d'abord. Ensuite, quand on tri par durée, deux cours de même durée resteront dans l'ordre (le tri par durée ne change pas l'ordre des éléments). C'est ce qu'on appelle un tri stable.</p>
-</li>
-<li>
-<p>Bien qu'intéressant parce qu'ils permettent le tri par plusieurs colonnes successivement, les tris stables (<em>bubble</em>, <em>insertion</em>, <em>merge</em>) sont généralement plus lents que les tris instables (<em>quicksort</em>, <em>shellsort</em>, <em>radix</em>, <em>bogosort (a.k.a stupid sort)</em>).</p>
-</li>
-</ul>
-<h3 id="ordonnancement-des-caracteres">Ordonnancement des caractères</h3>
-<p>Comment se fait un tri sur un CHAR/VARCHAR ?</p>
-<ul>
-<li>
-<p>Par le code ASCII donc numéro en premier, ensuite lettres majuscules, ensuite lettres minuscules.</p>
-</li>
-<li>
-<p>«Boujour» vient donc avant «allo»</p>
-</li>
-<li>
-<p>Certains caractères spéciaux sont entre les majuscules et minuscules!</p>
-</li>
-</ul>
-<h3 id="ordre-decroissant">Ordre décroissant</h3>
-<p>On peut ajouter l’ordre du tri après le nom d'une colonne dans la clause ORDER BY.</p>
-<ul>
-<li>ASC pour ascendant (croissant). Cette valeur est celle par défaut.</li>
-<li>DESC pour descendant (décroissant)</li>
-</ul>
+
+Ici on tri par ordre alphabétique et après par durée. Donc le résultat final est *globablement* trié par durée, et pour chaque durée, les éléments sont en ordre alphabétique.
+
+### Tris stables et instables
+
+* Dans la théorie des tris (oui, ça existe et c'est assez riche comme théorie), on parle de tri stable si, pour des valeurs égales, l'ordre original est préservé.
+
+* Dans l'exemple précédent, on tri par ordre alphabétique d'abord. Ensuite, quand on tri par durée, deux cours de même durée resteront dans l'ordre (le tri par durée ne change pas l'ordre des éléments). C'est ce qu'on appelle un tri stable.
+
+* Bien qu'intéressant parce qu'ils permettent le tri par plusieurs colonnes successivement, les tris stables (*bubble*, *insertion*, *merge*) sont généralement plus lents que les tris instables (*quicksort*, *shellsort*, *radix*, *bogosort (a.k.a stupid sort)*).
+
+### Ordonnancement des caractères
+
+Comment se fait un tri sur un CHAR/VARCHAR ?
+
+* Par le code ASCII donc numéro en premier, ensuite lettres majuscules, ensuite lettres minuscules.
+
+* «Boujour» vient donc avant «allo»
+
+* Certains caractères spéciaux sont entre les majuscules et minuscules!
+
+### Ordre décroissant
+
+On peut ajouter l’ordre du tri après le nom d'une colonne dans la clause ORDER BY.
+
+- ASC pour ascendant (croissant). Cette valeur est celle par défaut.
+- DESC pour descendant (décroissant)
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">Table</span>
 <span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">Table</span>
 <span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_colonne1</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="limiter-les-resultats">Limiter les résultats</h2>
-<p>On peut aussi indiquer un nombre maximal de résultats à afficher avec la clause LIMIT</p>
+
+## Limiter les résultats
+
+On peut aussi indiquer un nombre maximal de résultats à afficher avec la clause LIMIT
+
 <div class="highlight"><pre><span></span><code><span class="k">LIMIT</span><span class="w"> </span><span class="n">nombre_sélectionné</span>
 <span class="k">LIMIT</span><span class="w"> </span><span class="n">premier_enregistrement</span><span class="p">,</span><span class="w"> </span><span class="n">nombre_sélectionné</span>
 </code></pre></div>
-<p>La clause LIMIT est optionnelle.</p>
-<p>On veut par exemple seulement les 5 premiers cours pour avoir un aperçu des données dans la table Cours.</p>
+
+La clause LIMIT est optionnelle.
+
+On veut par exemple seulement les 5 premiers cours pour avoir un aperçu des données dans la table Cours.
+
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Cours</span>
 <span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 
@@ -643,10 +737,14 @@ C. Sélectionnez la date de début de session de toutes les sessions d'automne. 
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Cours</span>
 <span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="-exercice-222-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 2.2.2 ---</h3>
-<p>A. Sélectionnez les 5 évaluations ayant la plus basse pondération</p>
-<p>B. Sélectionnez le nom des 3 étudiants qui ont été admis le plus récemment</p>
-<p>C. Sélectionnez tous les groupes, triés par numéro de groupe en ordre croissant et par session, de la plus récente à la plus ancienne (supposez que les sessions sont ajoutées dans l'ordre quelles arrivent). Les groupes d'un même cours doivent être regroupés à l'affichage.</p>
+
+### :material-cog: --- Exercice 2.2.2 ---
+
+A. Sélectionnez les 5 évaluations ayant la plus basse pondération
+
+B. Sélectionnez le nom des 3 étudiants qui ont été admis le plus récemment
+
+C. Sélectionnez tous les groupes, triés par numéro de groupe en ordre croissant et par session, de la plus récente à la plus ancienne (supposez que les sessions sont ajoutées dans l'ordre quelles arrivent). Les groupes d'un même cours doivent être regroupés à l'affichage. -->
 
 
 

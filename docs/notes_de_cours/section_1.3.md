@@ -1,4 +1,4 @@
-# Types de données
+<!-- # Types de données
 
 * Données numériques  
 * Données temporelles  
@@ -138,4 +138,4 @@ Choisissez le type de données approprié pour les situations suivantes :
 - Description d'un produit  
 - Sorte d'une carte (Pique, cœur, carreau, trèfle)  
 - Numéro de téléphone  
-- Photo d'un produit  
+- Photo d'un produit   -->

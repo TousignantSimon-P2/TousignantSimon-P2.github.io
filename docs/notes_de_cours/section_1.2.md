@@ -1,4 +1,4 @@
-# Composantes d'une BD
+<!-- # Composantes d'une BD
 
 Sur un serveur on peut retrouver plusieurs BD. Chaque BD est propre à un système.  
 Les BD sont divisées en tables. Les tables contiennent des informations sur une entité.  
@@ -113,4 +113,4 @@ erDiagram
 
 La compagnie de livraison intergalactique du PlanetExpress souhaite informatiser son service de livraison. Pour ce faire, elle a besoin d'une base de données contenant les informations sur ses vaisseaux de livraison (modèle, immatriculation, chargement, équipage requis) et sur les commandes (nom du destinataire, planète du destinataire, type de livraison , masse de la livraison et date de livraison).
 
-Proposez un digramme ER pour cette BD et identifiez pour chaque table une clé primaire.
+Proposez un digramme ER pour cette BD et identifiez pour chaque table une clé primaire. -->

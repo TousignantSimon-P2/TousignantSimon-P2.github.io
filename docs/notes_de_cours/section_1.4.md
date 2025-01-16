@@ -1,4 +1,4 @@
-# Création de BD et de tables
+<!-- # Création de BD et de tables
 
 ## Normes de code du langage SQL
 
@@ -312,4 +312,4 @@ Pour supprimer la colonne sigle de la table __cours__, on utilise la requête su
 ```mysql
 ALTER TABLE cours 
     DROP COLUMN sigle;
-```
+``` -->

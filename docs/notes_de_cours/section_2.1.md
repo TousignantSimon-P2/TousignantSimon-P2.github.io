@@ -1,4 +1,4 @@
-# Créer, mettre à jour, supprimer des données
+<!-- # Créer, mettre à jour, supprimer des données
 
 ## Requêtes SQL
 
@@ -267,4 +267,4 @@ Ajoutez-le de nouveau par la suite et réassignez-le comme responsable de progra
 ***Difficultés :*** 
 
 1. Vérifier vos contraintes de clé étrangère
-2. Pour vérifier si une valeur est **NULL**, on doit utiliser l'expression **IS NULL**    et non « **= NULL** » (et **!= NULL** devient **IS NOT NULL**)
+2. Pour vérifier si une valeur est **NULL**, on doit utiliser l'expression **IS NULL**    et non « **= NULL** » (et **!= NULL** devient **IS NOT NULL**) -->

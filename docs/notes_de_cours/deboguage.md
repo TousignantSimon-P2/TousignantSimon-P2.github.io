@@ -1,4 +1,4 @@
-# Détecter et corriger les erreurs dans un script SQL
+<!-- # Détecter et corriger les erreurs dans un script SQL
 
 ## Étapes de déboguage  
 
@@ -211,4 +211,4 @@ SELECT nom_evaluation, note_max
 FROM evaluations
 ORDER BY note_max 
 FIRST 5 ROWS ONLY;
-```
+``` -->

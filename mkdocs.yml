@@ -17,9 +17,9 @@ nav:
   #     - 1.4 Création de BD et Tables: notes_de_cours/section_1.4.md
   #     - 1.5 Clés étrangères et relations: notes_de_cours/section_1.5.md
   
-  # - 'Convention': convention.md
-  # - 'Ressources': ressources.md
-  # - 'Horaire': horaire.md
+   - 'Convention': convention.md
+   - 'Ressources': ressources.md
+   - 'Horaire': horaire.md
 theme:
   name: material
   icon:

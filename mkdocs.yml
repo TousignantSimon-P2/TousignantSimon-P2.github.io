@@ -5,7 +5,10 @@ repo_url: hhttps://github.com/TousignantSimon-P2/TousignantSimon-P2.github.io.gi
 use_directory_urls: true
 
 nav:
-  - 'Accueil': index.md
+   - 'Accueil': index.md  
+   - 'Convention': convention.md
+   - 'Ressources': ressources.md
+   - 'Horaire': horaire.md
   # - 'Dépannage':
   #     - 'Comment traduire du français en SQL': notes_de_cours/traduire.md
   #     - 'Déboguage': notes_de_cours/deboguage.md
@@ -17,9 +20,7 @@ nav:
   #     - 1.4 Création de BD et Tables: notes_de_cours/section_1.4.md
   #     - 1.5 Clés étrangères et relations: notes_de_cours/section_1.5.md
   
-   - 'Convention': convention.md
-   - 'Ressources': ressources.md
-   - 'Horaire': horaire.md
+
 theme:
   name: material
   icon:

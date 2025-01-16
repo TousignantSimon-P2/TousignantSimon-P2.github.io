@@ -375,13 +375,7 @@
 <span class="w">        </span><span class="s1">&#39;420.B0&#39;</span><span class="p">);</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     }
+
 </code></pre>
 <p>Dans le cas d’un champ assigné automatiquement, comme une clé auto-incrémentée ou l’utilisation d’une valeur par défaut, on n'indique pas cette colonne dans la requête <strong>INSERT</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">sigle</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span>
@@ -389,13 +383,7 @@ etudiants {
 </code></pre></div>
 <p>Le cours BD1 aura alors un id automatique et une durée de 60 heures.</p>
 <pre class="mermaid"><code>erDiagram  
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }
+
 </code></pre>
 <table>
 <thead>
@@ -425,13 +413,7 @@ cours {
 <span class="w">        </span><span class="p">(</span><span class="mi">3456789</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Natasha Romanov&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2019</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A1&#39;</span><span class="p">);</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     }
+
 </code></pre>
 <h3 id="omettre-le-nom-des-colonnes">Omettre le nom des colonnes</h3>
 <p>On peut omettre le nom des colonnes à condition que les valeurs soient insérées dans l’ordre des colonnes.</p>
@@ -440,25 +422,13 @@ etudiants {
 <span class="w">    </span><span class="p">(</span><span class="mi">1234567</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anthony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1963-10-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     }
+
 </code></pre>
 <p>L'instruction suivante n'est pas valide car la table <em>cours</em> comporte cinq colonnes et seulement deux valeurs sont indiquées:</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;420-2B4-VI&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }     </code></pre>
+</code></pre>
 <p>L'instruction suivante n'est pas valide car l'ordre des colonnes n’est pas respecté:</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;1963-10-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anthony Stark&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;420.A0&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1234567</span><span class="p">);</span>
 </code></pre></div>
@@ -580,11 +550,7 @@ cours {
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;420.B0&#39;</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
-programmes {
-        INTEGER code PK
-        VARCHAR(255) nom
-        NUMERIC(8) prof_responsable FK
-    }</code></pre>
+</code></pre>
 <h3 id="desactiver-le-safemode">Désactiver le SafeMode</h3>
 <p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le <em>SafeMode</em>.</p>
 <p>Pour désactiver le SafeMode :</p>

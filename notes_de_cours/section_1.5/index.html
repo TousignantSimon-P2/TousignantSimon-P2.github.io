@@ -422,20 +422,8 @@
 <p>On ajoute dans la table enfant un champ enseignant et une annotation de clé étrangère. Donc ici chaque <code>cours</code> possède un <code>enseignant</code>.</p>
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
-enseignants {
-        NUMERIC(8) code_employe
-        VARCHAR(255) nom
-        VARCHAR(255) prenom
-        NUMERIC(9) num_assurance_sociale
-        TINYINT anciennete
-    }
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }    </code></pre>
+
+</code></pre>
 <h2 id="importances-des-relations">Importances des relations</h2>
 <p>On trouve rarement une table isolée dans un modèle de base de données (table en relation avec aucune autre table).</p>
 <p>Pour faire une analogie, on pourrait comporarer une table isolée à du code qui n'est pas référencé (fonction qui n'est jamais appelée) dans le domaine de la programmation.</p>
@@ -456,20 +444,8 @@ cours {
 <h2 id="suppression-de-tables-qui-contiennent-des-relations">Suppression de tables qui contiennent des relations</h2>
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
-enseignants {
-        NUMERIC(8) code_employe
-        VARCHAR(255) nom
-        VARCHAR(255) prenom
-        NUMERIC(9) num_assurance_sociale
-        TINYINT anciennete
-    }
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    } 
+
+
 </code></pre>
 <p>Peut-on supprimer la table <code>enseignants</code> sans supprimer la table <code>cours</code>?   Pourquoi?</p>
 <div class="admonition warning">
@@ -492,51 +468,19 @@ cours {
 <p>On peut voir que deux tables sont associées si l'on peut suivre avec notre doigt d'une table à l'autre en empruntant les flèches comme des chemins (ici le sens des flèches n'a pas d'importance).</p>
 <pre class="mermaid"><code>erDiagram  
     etudiants ||--o{ inscriptions : " " 
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     }
+
     inscriptions }o--|| cours : " "
-inscriptions {
-        INTEGER cours PK
-        INTEGER etudiant PK
-        CHAR(3) session
-    }
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }    </code></pre>
+
+</code></pre>
 <h2 id="mais-un-instant">Mais... un instant!</h2>
 <p>Dans la table <code>inscriptions</code> la clé primaire est-elle vraiment composée de <em>deux</em> colonnes?</p>
 <p>Oui, c'est possible: c'est appelé une <em>clé composée</em>. </p>
 <pre class="mermaid"><code>erDiagram   
     etudiants ||--o{ inscriptions : " " 
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     }
+
     inscriptions }o--|| cours : " "
-inscriptions {
-        INTEGER cours PK
-        INTEGER etudiant PK
-        CHAR(3) session
-    }
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }   
+
+
 </code></pre>
 <h2 id="cle-composee">Clé composée</h2>
 <p>Pour indiquer une clé composée dans une base de données, nous devrons utiliser la notation de contrainte.</p>

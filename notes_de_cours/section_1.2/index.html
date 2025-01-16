@@ -419,20 +419,8 @@ Les tables comportent des colonnes (aussi appelés attributs). Chaque colonne d�
 <p>code <code>&lt;pk&gt;</code></p>
 <p>À noter: on rassemble en haut les colonnes de clé primaire</p>
 <pre class="mermaid"><code>erDiagram  
-etudiants {
-        NUMERIC(8) code PK
-        VARCHAR(255) nom
-        YEAR annee_admission
-        DATETIME date_naissance
-        VARCHAR(10) programme
-     } 
-cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }</code></pre>
+
+</code></pre>
 <h2 id="identifier-les-cles-candidates">Identifier les clés candidates</h2>
 <p><img alt="" src="../images/1_choix_cle_primaire.png" /></p>
 <h2 id="comment-choisir-la-cle-primaire">Comment choisir la clé primaire?</h2>

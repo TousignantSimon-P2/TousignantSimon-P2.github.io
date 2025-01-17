@@ -38,6 +38,12 @@ decimal | 16 octets | ±1.0 x 10^-28 | ±7.9228 x 10^28 | 28-29 nombres
  byte | 1 octets | Valeurs de 0 à 255
  sbyte | 1 octet | Valeurs de -128 à 127 
 
+### Les tableaux unidimentionnels
+
+### Les tableaux multidimentionnels
+
+### Les tableaux de tableaux
+
 ## Les structures de controle
 
 ### if
@@ -73,5 +79,42 @@ else
 * Affirmation 3 est exécuté (chaque fois) après que le bloc de code soit exécuté.  
 
 ### while
+
+``` c# title="simple while"
+   while (condition)  
+   {  
+      // Bloc de code à executer si la condition retourne "true"  
+   }  
+```
+
 ### do while
+``` c# title="simple do while"
+   do  
+   {  
+      // Bloc de code à executer si la condition retourne "true"  
+   } while (condition) 
+```
+* À noter que la boucle sera toujours exécuté 1 fois au minimum
+
 ### foreach
+
+*  En lecture seule seulement, aucune modification de la structure.
+
+``` c# title="foreach - pour toutes les valeurs d'une collection"
+   foreach(LeType nomVariable in laCollectionOuLeTableau)
+      // Bloc de code à executer si la condition retourne "true"  
+   }
+
+   int[] lesNombres =  {1, 3, 5 };
+   foeach(int leNombre in lesNombres)
+   {
+      //utilisation de la varibale "leNombre" qui prendra les valeurs de 1, 3 et 5
+      Console.WriteLine(leNombre); //affichera 1, 3 et 5 en sautant une ligne
+   } 
+```
+## Visual studio et la compilation
+### Mode de compilation
+### Positions des fichiers compilés dans l'ordinateur
+### Exécution d'une application console via l'invite de commande
+### public static void Main(string[] args) ?
+

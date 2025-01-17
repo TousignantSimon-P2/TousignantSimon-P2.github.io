@@ -42,11 +42,19 @@ decimal | 16 octets | ±1.0 x 10^-28 | ±7.9228 x 10^28 | 28-29 nombres
 
 ### if
 
-``` c# title="simple for"
+``` c# title="simple if"
 if (condition) 
 {  
     // Bloc de code à executer si la condition retourne "true"  
 }  
+else if (condition 2)  
+{ 
+    /* bloc de code 2 */
+}
+else
+{
+    /*bloc de code 3*/
+}
 ```
 
 ### for

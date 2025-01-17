@@ -1,4 +1,4 @@
-<!-- # Introduction aux bases de données relationnelles
+# Introduction aux bases de données relationnelles
 
 ## Pourquoi utiliser des bases de données?
 
@@ -61,4 +61,4 @@ Le langage SQL (prononcé parfois "SEE-QWEL" par les anglophones) permet de cré
 
 La toute première version du langage SQL a été développée chez IBM en 1970. En 1979, la compagnie Oracle présenta une version commercialement disponible au grand public. SQL fut rapidement imité et adopté par d'autres fournisseurs.
 
-La plupart des langages de programmation impératifs que vous avez vu (C#, PHP, javascript ...) sont basés sur la théorie de l'algorithmie. Mais SQL provient de la théorie des ensembles. C'est un langage DÉCLARATIF qui permet de décrire le résultat escompté, *sans décrire la manière de l'obtenir*. Les SGBD (systèmes de gestion de bases de données) tel que SQL sont équipés d'optimiseurs de requêtes - des mécanismes qui déterminent automatiquement la manière optimale d'effectuer les opérations, notamment par une estimation de la complexité algorithmique. (Source: <https://fr.wikipedia.org/wiki/Structured_Query_Language>) -->
+La plupart des langages de programmation impératifs que vous avez vu (C#, PHP, javascript ...) sont basés sur la théorie de l'algorithmie. Mais SQL provient de la théorie des ensembles. C'est un langage DÉCLARATIF qui permet de décrire le résultat escompté, *sans décrire la manière de l'obtenir*. Les SGBD (systèmes de gestion de bases de données) tel que SQL sont équipés d'optimiseurs de requêtes - des mécanismes qui déterminent automatiquement la manière optimale d'effectuer les opérations, notamment par une estimation de la complexité algorithmique. (Source: <https://fr.wikipedia.org/wiki/Structured_Query_Language>)

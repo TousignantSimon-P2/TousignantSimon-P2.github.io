@@ -1,4 +1,4 @@
-# Horaire du cours de bases de données 1
+# Horaire du cours de programmation 2
  Semaine| Cours | Date | Sections | Matière | Bloc | Travail à faire | Remises 
 --|--|--|--|--|--|--|--
 1|1|2025-01-17|||||

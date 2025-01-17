@@ -24,7 +24,7 @@ decimal | 16 octets | ±1.0 x 10^-28 | ±7.9228 x 10^28 | 28-29 nombres
 ### Logiques
  Type | Nombre d'octets | Valeurs
  --|--|--
- bool | 1 octets | true/false	
+ bool | 1 octet | true/false	
 
 ### Textuels
  Type | Nombre d'octets | Notes

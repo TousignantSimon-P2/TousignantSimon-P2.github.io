@@ -113,8 +113,88 @@ else
    } 
 ```
 ## Visual studio et la compilation
-### Mode de compilation
-### Positions des fichiers compilés dans l'ordinateur
+Lorsque visual studion fait la compilation de votre programme, soit par l'exécution, soit simplement par la génération (menu générer) le code est converti en langage intermédiaire (Intermediate language "il")  
+
+Généralement, depuis programmation 1, vous compilez en mode debug.  
+
+Se faisant votre programme sera compilé et assemblé dans le dossier de votre solution sous [dossier de solution]/[dossier de Projet]/bin/debug/  
+
+![](../images/semaine1_executable.png)
+
 ### Exécution d'une application console via l'invite de commande
+
+On peut démarrer l'application en cliquant dessus, mais également en lancant l'exécutable via l'invite de commande.  
+
+Pour le présent exemple j'ai utilisé "git bash". J'aurais pu utiliser powershell ou encore l'invite de commande standard.
+
+![](../images/semaine1_console.png)
+
 ### public static void Main(string[] args) ?
 
+``` c# title="Main"
+   public static void Main(string[] args)
+   {
+      // afficher chacun des paramètres à l'écran
+      foreach(string parametre in args)
+      {
+         Console.WriteLine(parametre);
+      }
+   } 
+```
+
+** notez les choses suivante : **  
+
+- Rien de particulier pour paramètre 1 et 2
+- Le paramètre 3 a été coupé en deux à cause de l'espace
+- Le paramètre 4 est correct puisqu'il est entre guillemets.
+
+![](../images/semaine1_parametresmain.png)
+
+### Déboguage avec visual studio et les paramètres.
+On peut lancer l'application dans visual studio en simulant que des paramètres ont été insérés dans l'invite de commande.  
+pour se faire, on doit aller dans le menu Déboguer -> Propriétés de déboguage de [projet] -> Arguments de la ligne de commande.  
+
+Ou encore  
+
+Par les propriété du projet. Dans le menu de déboggage. Les deux sont équivalent.
+![](../images/semaine1_parametreDeboguage.png)
+
+## Exercice de révision p1 + p2 (Utilisation de l'ia ou des travaux de P1 interdit)
+
+1. Faites une méthode Afficher() qui prend en paramètre un tableau d'entiers et qui l'affiche à l'écran.
+Faites le summary associé.  
+
+2. Faites une méthode qui s'appelle Interchanger qui prends en paramètre un tableau d'entier et 2 nombre entiers.  
+Les 2 nombres passés en paramètres sont les 2 index qui doivent être interchangé.
+
+Exemple Interchanger(monTableau, index1, index2);  
+
+Considérant le tableau suivant : 
+{ 10, 20, 30, 40, 50 }  
+Considérant les index 0 et 3
+L'invocation de Interchanger(leTableau, 0, 3) interchange les valeurs à l'index 0 et 3 soit :  
+{ 40, 20, 30, 10, 50 }  
+
+Vous avez vu les trois tris suivants:  
+- Tri à bulle
+- Tri selection  
+- Tri insertion  
+
+Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.
+
+3. Faites la codification de l'application de façon à ce que :
+3.1 S'il n'y a aucun paramêtres ou si les paramètres sont invalides, l'application se ferme en disant "Paramêtres invalide : la syntaxe doit être...."
+3.2 l'application doit avoir comme premier parametres "bulle", "insertion" ou "selection"
+3.3 l'application doit avoir en dernier parametres une série d'entiers à trier.
+3.4 l'application doit utiliser Interchanger
+
+Exemple : Trier.exe bulle 5 5 7 8 9 4 5 3 3 10
+Doit afficher :  
+
+Tri bulle :
+3 3 4 5 5 5 7 8 9 10
+
+Exemple : Trier.exe bubulle 5 5 7 8 9 4 5 3 3 10
+Doit afficher :  
+
+Paramêtres invalide : la syntaxe doit être Trier.exe [ bulle | insertion | selection ] {nombres...}

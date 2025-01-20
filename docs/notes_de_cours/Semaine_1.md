@@ -160,6 +160,16 @@ Par les propriété du projet. Dans le menu de déboggage. Les deux sont équiva
 ![](../images/semaine1_parametreDeboguage.png)
 
 ## Exercice de révision p1 + p2 (Utilisation de l'ia ou des travaux de P1 interdit)
+0. Faites vous un répertoire git avec un .gitignore pour c#.
+Je vous suggère  [celui-ci](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore)  
+0.0 Faites vous un dossier pour travailler.  
+0.1 Lancez git bash dans le dossier et lancez -> git init  
+0.2 Copiez votre fichier .gitignore dans le dossier  
+0.3 Faites git add .   
+0.4 Faites git commit -m "Premier commit"
+0.5 Ensuite lancez votre visual studio dans le dossier git.  
+
+**Règles pour vos commit. 1 commit par fonctionnalité terminée et testée.**
 
 1. Faites une méthode Afficher() qui prend en paramètre un tableau d'entiers et qui l'affiche à l'écran.
 Faites le summary associé.  
@@ -181,7 +191,7 @@ Vous avez vu les trois tris suivants:
 - Tri insertion  
 
 Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.  
-
+<!-- TODO markdown vérifier la suite logique-->
 3. Faites la codification de du Main de façon à ce que :  
 3.1 S'il n'y a aucun paramètres ou si les paramètres sont invalides, l'application se ferme en disant "Paramètre invalide : la syntaxe doit être...."  
 3.2 l'application doit avoir comme premier parametres "bulle", "insertion" ou "selection"  

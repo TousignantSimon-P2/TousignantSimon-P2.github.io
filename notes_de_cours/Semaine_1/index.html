@@ -677,24 +677,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mode-de-compilation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mode de compilation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positions-des-fichiers-compiles-dans-lordinateur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Positions des fichiers compilés dans l'ordinateur
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#execution-dune-application-console-via-linvite-de-commande" class="md-nav__link">
     <span class="md-ellipsis">
       Exécution d'une application console via l'invite de commande
@@ -712,15 +694,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deboguage-avec-visual-studio-et-les-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déboguage avec visual studio et les paramètres.
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-normes-de-codification" class="md-nav__link">
+  <a href="#exercice-de-revision-p1-p2-utilisation-de-lia-ou-des-travaux-de-p1-interdit" class="md-nav__link">
     <span class="md-ellipsis">
-      Les normes de codification
+      Exercice de révision p1 + p2 (Utilisation de l'ia ou des travaux de P1 interdit)
     </span>
   </a>
   
@@ -964,11 +955,72 @@
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span>
 </span></code></pre></div>
 <h2 id="visual-studio-et-la-compilation">Visual studio et la compilation</h2>
-<h3 id="mode-de-compilation">Mode de compilation</h3>
-<h3 id="positions-des-fichiers-compiles-dans-lordinateur">Positions des fichiers compilés dans l'ordinateur</h3>
+<p>Lorsque visual studion fait la compilation de votre programme, soit par l'exécution, soit simplement par la génération (menu générer) le code est converti en langage intermédiaire (Intermediate language "il")  </p>
+<p>Généralement, depuis programmation 1, vous compilez en mode debug.  </p>
+<p>Se faisant votre programme sera compilé et assemblé dans le dossier de votre solution sous [dossier de solution]/[dossier de Projet]/bin/debug/  </p>
+<p><img alt="" src="../../images/semaine1_executable.png" /></p>
 <h3 id="execution-dune-application-console-via-linvite-de-commande">Exécution d'une application console via l'invite de commande</h3>
+<p>On peut démarrer l'application en cliquant dessus, mais également en lancant l'exécutable via l'invite de commande.  </p>
+<p>Pour le présent exemple j'ai utilisé "git bash". J'aurais pu utiliser powershell ou encore l'invite de commande standard.</p>
+<p><img alt="" src="../../images/semaine1_console.png" /></p>
 <h3 id="public-static-void-mainstring-args">public static void Main(string[] args) ?</h3>
-<h2 id="les-normes-de-codification">Les normes de codification</h2>
+<div class="language-c# highlight"><span class="filename">Main</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">   </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="c1">// afficher chacun des paramètres à l&#39;écran</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="k">foreach</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">parametre</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">parametre</span><span class="p">);</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div>
+<p>** notez les choses suivante : **  </p>
+<ul>
+<li>Rien de particulier pour paramètre 1 et 2</li>
+<li>Le paramètre 3 a été coupé en deux à cause de l'espace</li>
+<li>Le paramètre 4 est correct puisqu'il est entre guillemets.</li>
+</ul>
+<p><img alt="" src="../../images/semaine1_parametresmain.png" /></p>
+<h3 id="deboguage-avec-visual-studio-et-les-parametres">Déboguage avec visual studio et les paramètres.</h3>
+<p>On peut lancer l'application dans visual studio en simulant que des paramètres ont été insérés dans l'invite de commande.<br />
+pour se faire, on doit aller dans le menu Déboguer -&gt; Propriétés de déboguage de [projet] -&gt; Arguments de la ligne de commande.  </p>
+<p>Ou encore  </p>
+<p>Par les propriété du projet. Dans le menu de déboggage. Les deux sont équivalent.
+<img alt="" src="../../images/semaine1_parametreDeboguage.png" /></p>
+<h2 id="exercice-de-revision-p1-p2-utilisation-de-lia-ou-des-travaux-de-p1-interdit">Exercice de révision p1 + p2 (Utilisation de l'ia ou des travaux de P1 interdit)</h2>
+<ol>
+<li>
+<p>Faites une méthode Afficher() qui prend en paramètre un tableau d'entiers et qui l'affiche à l'écran.
+Faites le summary associé.  </p>
+</li>
+<li>
+<p>Faites une méthode qui s'appelle Interchanger qui prends en paramètre un tableau d'entier et 2 nombre entiers.<br />
+Les 2 nombres passés en paramètres sont les 2 index qui doivent être interchangé.</p>
+</li>
+</ol>
+<p>Exemple Interchanger(monTableau, index1, index2);  </p>
+<p 10_="10," 20_="20," 30_="30," 40_="40," 50="50">Considérant le tableau suivant : 
+{ 10, 20, 30, 40, 50 }<br />
+Considérant les index 0 et 3
+L'invocation de Interchanger(leTableau, 0, 3) interchange les valeurs à l'index 0 et 3 soit :<br /></p>
+<p>Vous avez vu les trois tris suivants:<br />
+- Tri à bulle
+- Tri selection<br />
+- Tri insertion  </p>
+<p>Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.</p>
+<ol>
+<li>Faites la codification de l'application de façon à ce que :
+3.1 S'il n'y a aucun paramêtres ou si les paramètres sont invalides, l'application se ferme en disant "Paramêtres invalide : la syntaxe doit être...."
+3.2 l'application doit avoir comme premier parametres "bulle", "insertion" ou "selection"
+3.3 l'application doit avoir en dernier parametres une série d'entiers à trier.
+3.4 l'application doit utiliser Interchanger</li>
+</ol>
+<p>Exemple : Trier.exe bulle 5 5 7 8 9 4 5 3 3 10
+Doit afficher :  </p>
+<p>Tri bulle :
+3 3 4 5 5 5 7 8 9 10</p>
+<p>Exemple : Trier.exe bubulle 5 5 7 8 9 4 5 3 3 10
+Doit afficher :  </p>
+<p>Paramêtres invalide : la syntaxe doit être Trier.exe [ bulle | insertion | selection ] {nombres...}</p>
 
 
 

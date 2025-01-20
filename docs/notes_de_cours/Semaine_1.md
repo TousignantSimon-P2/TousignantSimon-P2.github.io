@@ -51,7 +51,7 @@ decimal | 16 octets | ±1.0 x 10^-28 | ±7.9228 x 10^28 | 28-29 nombres
 ``` c# title="simple if"
 if (condition) 
 {  
-    // Bloc de code à executer si la condition retourne "true"  
+    // Bloc de code à exécuter si la condition retourne "true"  
 }  
 else if (condition 2)  
 { 
@@ -69,7 +69,7 @@ else
 ``` c# title="simple for"
    for (affirmation 1; affirmation 2; affirmation 3)  
    {  
-      // Bloc de code à executer si la condition retourne "true"  
+      // Bloc de code à exécuter si la condition retourne "true"  
    }  
 ```
   
@@ -83,7 +83,7 @@ else
 ``` c# title="simple while"
    while (condition)  
    {  
-      // Bloc de code à executer si la condition retourne "true"  
+      // Bloc de code à exécuter si la condition retourne "true"  
    }  
 ```
 
@@ -91,7 +91,7 @@ else
 ``` c# title="simple do while"
    do  
    {  
-      // Bloc de code à executer si la condition retourne "true"  
+      // Bloc de code à exécuter si la condition retourne "true"  
    } while (condition) 
 ```
 * À noter que la boucle sera toujours exécuté 1 fois au minimum
@@ -102,7 +102,7 @@ else
 
 ``` c# title="foreach - pour toutes les valeurs d'une collection"
    foreach(LeType nomVariable in laCollectionOuLeTableau)
-      // Bloc de code à executer si la condition retourne "true"  
+      // Bloc de code à exécuter si la condition retourne "true"  
    }
 
    int[] lesNombres =  {1, 3, 5 };
@@ -176,25 +176,28 @@ L'invocation de Interchanger(leTableau, 0, 3) interchange les valeurs à l'index
 { 40, 20, 30, 10, 50 }  
 
 Vous avez vu les trois tris suivants:  
-- Tri à bulle
-- Tri selection  
+- Tri à bulle  
+- Tri selection    
 - Tri insertion  
 
-Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.
+Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.  
 
-3. Faites la codification de l'application de façon à ce que :
-3.1 S'il n'y a aucun paramêtres ou si les paramètres sont invalides, l'application se ferme en disant "Paramêtres invalide : la syntaxe doit être...."
-3.2 l'application doit avoir comme premier parametres "bulle", "insertion" ou "selection"
-3.3 l'application doit avoir en dernier parametres une série d'entiers à trier.
-3.4 l'application doit utiliser Interchanger
+3. Faites la codification de du Main de façon à ce que :  
+3.1 S'il n'y a aucun paramètres ou si les paramètres sont invalides, l'application se ferme en disant "Paramètre invalide : la syntaxe doit être...."  
+3.2 l'application doit avoir comme premier parametres "bulle", "insertion" ou "selection"  
+3.3 l'application doit avoir en dernier parametres une série d'entiers à trier.  
+3.4 l'application doit utiliser Interchanger  
 
-Exemple : Trier.exe bulle 5 5 7 8 9 4 5 3 3 10
+Exemple : Trier.exe bulle 5 5 7 8 9 4 5 3 3 10  
 Doit afficher :  
-
-Tri bulle :
+  
+Tri bulle :  
 3 3 4 5 5 5 7 8 9 10
 
-Exemple : Trier.exe bubulle 5 5 7 8 9 4 5 3 3 10
+Exemple : Trier.exe bubulle 5 5 7 8 9 4 5 3 3 10  
+ou  
+Trier.exe bubulle 5 5 7 8 Roger 4 5 3 3 10  
+
 Doit afficher :  
 
-Paramêtres invalide : la syntaxe doit être Trier.exe [ bulle | insertion | selection ] {nombres...}
+Paramètres invalide : la syntaxe doit être Trier.exe [ bulle | insertion | selection ] {nombres...}

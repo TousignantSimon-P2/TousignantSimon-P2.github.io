@@ -166,7 +166,7 @@ Je vous suggère  [celui-ci](https://github.com/github/gitignore/blob/main/Visua
 0.1 Lancez git bash dans le dossier et lancez -> git init  
 0.2 Copiez votre fichier .gitignore dans le dossier  
 0.3 Faites git add .   
-0.4 Faites git commit -m "Premier commit"
+0.4 Faites git commit -m "Premier commit"  
 0.5 Ensuite lancez votre visual studio dans le dossier git.  
 
 **Règles pour vos commit. 1 commit par fonctionnalité terminée et testée.**

@@ -190,7 +190,7 @@ Vous avez vu les trois tris suivants:
 - Tri selection    
 - Tri insertion  
 
-Référence : [Visualgo] (https://visualgo.net/en/sorting)
+Référence : [Visualgo](https://visualgo.net/en/sorting)
 
 Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys tels que demandés.  
 <!-- TODO markdown vérifier la suite logique-->

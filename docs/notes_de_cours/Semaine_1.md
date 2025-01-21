@@ -202,14 +202,16 @@ Codez 3 méthodes avec leurs noms respectifs. Pouvant trié Avec les summarys te
 
 Exemple : Trier.exe bulle 5 5 7 8 9 4 5 3 3 10  
 Doit afficher :  
-  
+> :memo: **Résultat**  
 Tri bulle :  
 3 3 4 5 5 5 7 8 9 10
-
+---
 Exemple : Trier.exe bubulle 5 5 7 8 9 4 5 3 3 10  
 ou  
 Trier.exe bubulle 5 5 7 8 Roger 4 5 3 3 10  
 
 Doit afficher :  
 
+> :memo: **Résultat**  
 Paramètres invalide : la syntaxe doit être Trier.exe [ bulle | insertion | selection ] {nombres...}
+---

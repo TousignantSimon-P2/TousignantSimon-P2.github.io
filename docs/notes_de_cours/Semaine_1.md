@@ -183,6 +183,7 @@ Considérant le tableau suivant :
 { 10, 20, 30, 40, 50 }  
 Considérant les index 0 et 3
 L'invocation de Interchanger(leTableau, 0, 3) interchange les valeurs à l'index 0 et 3 soit :  
+
 { 40, 20, 30, 10, 50 }  
 
 Vous avez vu les trois tris suivants:  

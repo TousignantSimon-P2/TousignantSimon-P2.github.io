@@ -8,8 +8,10 @@ nav:
    - 'Accueil': index.md  
    - 'Convention': convention.md
    - 'Ressources': ressources.md
+   - 'Installation' : notes_de_cours/Section_0.0.md
    - 'Horaire': horaire.md
    - 'Semaine 1': notes_de_cours/Semaine_1.md
+   - 'Semaine 2': notes_de_cours/Semaine_2.md
   # - 'Dépannage':
   #     - 'Comment traduire du français en SQL': notes_de_cours/traduire.md
   #     - 'Déboguage': notes_de_cours/deboguage.md

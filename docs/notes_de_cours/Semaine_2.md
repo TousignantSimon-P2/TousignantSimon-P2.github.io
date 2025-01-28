@@ -5,9 +5,9 @@ La raison est qu'on ne mélange pas les projets qui font l'interaction avec l'ut
 avec les projets qui sont la logique, le domaine, de l'application.
 
 Généralement on retrouve 3 types de projets.  
-- Les projet(s) d'interface avec l'utilisateur -> Console / Graphique
-- Les projets de bibliothèque de classe
-- Les projets de tests unitaires
+- Les projet(s) d'interface avec l'utilisateur -> Console / Graphique  
+- Les projets de bibliothèque de classe  
+- Les projets de tests unitaires  
 
 Pour bien saisir les 3 types de projet, récapitulons les indices.
 

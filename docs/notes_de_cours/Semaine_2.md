@@ -36,3 +36,10 @@ vous avez .NET 8 et .NET 9.
 ![](images/vs_projet_etape10.png)  
 ![](images/vs_projet_etape11.png)  
 ![](images/vs_projet_etape12.png)
+
+##
+``` sh title="Program.cs" 
+// En entete de fichier on doit maintenant faire le bon using
+
+using MaBibliotheque-9999999; // le namespace dans lequel la ou les classe(s) se retrouvent.
+```  

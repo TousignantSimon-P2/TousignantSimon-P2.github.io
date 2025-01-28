@@ -28,6 +28,11 @@ git commit -m "Le message significatif"
 ## Revenir en arrière quand les fichiers sont en attente de la soumission (staged)
 ``` sh title="Console" 
 git restore --staged [le fichier ou le dossiers]  
+```
+## Restauration des fichiers 
+ - Vous avez modifier de quoi mais vous voulez revenir au dernier commit et perdre vos modifications)
+``` sh title="Console" 
+git reset --hard  
 ```  
 ## Lister les soumissions
 ``` sh title="Console" 

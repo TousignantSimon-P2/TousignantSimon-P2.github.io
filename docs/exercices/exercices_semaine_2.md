@@ -9,12 +9,12 @@
 - Dans une branche devParceQueSimonLeDemande, faites la codification des éléments suivants :
     - Une classe statique "OutilTableaux" avec les méthodes statiques suivantes :
     - Générer un tableau avec une taille donnée.
-    - Générer un tableau avec une taille donnée, un minimum pour les valeurs inclus, un maximum exclus.
+    - Générer un tableau avec une taille donnée, un minimum pour les valeurs inclus, un maximum __inclusif__.
     - Inverser un tableau nommé Inverser.
-    - Décaler vers la droite un tableau sans rotation d'un nombre d'éléments.
-    - Décaler vers la gauche un tableau sans rotation d'un nombre d'éléments.
-    - Décaler vers la droite un tableau avec rotation d'un nombre d'éléments.
-    - Décaler vers la gauche un tableau avec rotation d'un nombre d'éléments.
+    - Décaler vers la droite un tableau __sans rotation__ d'un nombre d'éléments.
+    - Décaler vers la gauche un tableau __sans rotation__ d'un nombre d'éléments.
+    - Décaler vers la droite un tableau __avec rotation__ d'un nombre d'éléments.
+    - Décaler vers la gauche un tableau __avec rotation__ d'un nombre d'éléments.
     - Copier un tableau à l'identique.
     - Extraire un sous-tableau d'un tableau à partir d'un index x à un index y et le recopier dans un tableau de destination à partir d'un index z.
     - Trier avec bulle, insertion et sélection doit être déplacé dans cette bibliothèque.

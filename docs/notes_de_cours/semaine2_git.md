@@ -1,8 +1,11 @@
+## La commande ultime  
+``` sh title="Console"
+git status
+```  
 ## Création d'un projet git local  
 ``` sh title="Console"
 git init
 ```  
-
 ## Création d'une branche  
 ``` sh title="Console"
 git branch [le nom de la branche]  

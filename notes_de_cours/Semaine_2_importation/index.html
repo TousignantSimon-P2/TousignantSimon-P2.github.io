@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p2.github.io/notes_de_cours/git/">
+        <link rel="canonical" href="https://tousignantsimon-p2.github.io/notes_de_cours/Semaine_2_importation/">
       
       
-        <link rel="prev" href="../Semaine_2/">
+        <link rel="prev" href="../semaine2_git/">
       
       
         <link rel="next" href="../../exercices/exercices_semaine_2/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Git - Cours de Programmation 2</title>
+        <title>Solution à plusieurs projets - Cours de Programmation 2</title>
       
     
     
@@ -117,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creation-dun-projet-git-local" class="md-skip">
+        <a href="#importation-de-projet-dans-une-solution" class="md-skip">
           Aller au contenu
         </a>
       
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git
+              Solution à plusieurs projets
             
           </span>
         </div>
@@ -630,6 +630,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../semaine2_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -644,7 +665,7 @@
           
   
   <span class="md-ellipsis">
-    Git
+    Solution à plusieurs projets
   </span>
   
 
@@ -655,7 +676,7 @@
         
   
   <span class="md-ellipsis">
-    Git
+    Solution à plusieurs projets
   </span>
   
 
@@ -675,92 +696,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creation-dun-projet-git-local" class="md-nav__link">
+  <a href="#importation-de-projet-dans-une-solution" class="md-nav__link">
     <span class="md-ellipsis">
-      Création d'un projet git local
+      Importation de projet dans une solution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importation de projet dans une solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-le-dossier-du-projet-dans-le-dossier-de-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter le dossier du projet dans le dossier de solution
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creation-dune-branche" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-le-projet-a-la-solution" class="md-nav__link">
     <span class="md-ellipsis">
-      Création d'une branche
+      Ajouter le projet à la solution
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#changement-de-branche" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-la-dependence-entre-les-projets" class="md-nav__link">
     <span class="md-ellipsis">
-      Changement de branche
+      Ajouter la dépendence entre les projets
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#afficher-toutes-les-branches" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-le-using-pour-utiliser-les-classes-dans-lautre-espace-de-nom" class="md-nav__link">
     <span class="md-ellipsis">
-      Afficher toutes les branches
+      Ajouter le "using" pour utiliser les classes dans l'autre espace de nom
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creer-et-changer-de-branche" class="md-nav__link">
-    <span class="md-ellipsis">
-      Créer et changer de branche
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faire-une-soumission-de-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Faire une soumission de code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revenir-en-arriere-quand-les-fichiers-sont-en-attente-de-la-soumission-staged" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenir en arrière quand les fichiers sont en attente de la soumission (staged)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restauration-des-fichiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restauration des fichiers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lister-les-soumissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lister les soumissions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionner-2-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      fusionner 2 branches
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -864,47 +846,17 @@
   
 
 
-  <h1>Git</h1>
+  <h1>Solution à plusieurs projets</h1>
 
-<h2 id="creation-dun-projet-git-local">Création d'un projet git local</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init
-</span></code></pre></div>
-<h2 id="creation-dune-branche">Création d'une branche</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>branch<span class="w"> </span><span class="o">[</span>le<span class="w"> </span>nom<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>branche<span class="o">]</span><span class="w">  </span>
-</span></code></pre></div>
-<h2 id="changement-de-branche">Changement de branche</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">[</span>le<span class="w"> </span>nom<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>branche<span class="o">]</span><span class="w">  </span>
-</span></code></pre></div>
-<h2 id="afficher-toutes-les-branches">Afficher toutes les branches</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>branch<span class="w">  </span>
-</span></code></pre></div>
-<h2 id="creer-et-changer-de-branche">Créer et changer de branche</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>le<span class="w"> </span>nom<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>branche<span class="o">]</span><span class="w">  </span>
-</span></code></pre></div>
-<h2 id="faire-une-soumission-de-code">Faire une soumission de code</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>le<span class="w"> </span>fichiers<span class="w"> </span>ou<span class="w"> </span>le<span class="w"> </span>dossier<span class="o">]</span><span class="w">  </span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Le message significatif&quot;</span><span class="w">  </span>
-</span></code></pre></div>
-<h2 id="revenir-en-arriere-quand-les-fichiers-sont-en-attente-de-la-soumission-staged">Revenir en arrière quand les fichiers sont en attente de la soumission (staged)</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span><span class="o">[</span>le<span class="w"> </span>fichier<span class="w"> </span>ou<span class="w"> </span>le<span class="w"> </span>dossiers<span class="o">]</span><span class="w">  </span>
-</span></code></pre></div>
-<h2 id="restauration-des-fichiers">Restauration des fichiers</h2>
-<ul>
-<li>Vous avez modifier de quoi mais vous voulez revenir au dernier commit et perdre vos modifications)
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w">  </span>
-</span></code></pre></div></li>
-</ul>
-<h2 id="lister-les-soumissions">Lister les soumissions</h2>
-<div class="language-sh highlight"><span class="filename">Console</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>log<span class="w">  </span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w">  </span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w">  </span>
-</span></code></pre></div>
-<h2 id="fusionner-2-branches">fusionner 2 branches</h2>
-<ul>
-<li>Se placer dans la branche qui va recevoir (exemple main avec git checkout main)  </li>
-<li>faire git merge [nom de la branche à aller chercher]  </li>
-<li>Prier que rien n'explose.  </li>
-</ul>
+<h2 id="importation-de-projet-dans-une-solution">Importation de projet dans une solution</h2>
+<h3 id="ajouter-le-dossier-du-projet-dans-le-dossier-de-solution">Ajouter le dossier du projet dans le dossier de solution</h3>
+<p><img alt="" src="../images/ajoutprojet/deplacement_projet.gif" />  </p>
+<h3 id="ajouter-le-projet-a-la-solution">Ajouter le projet à la solution</h3>
+<p><img alt="" src="../images/ajoutprojet/ajout_projet_solution.gif" />  </p>
+<h3 id="ajouter-la-dependence-entre-les-projets">Ajouter la dépendence entre les projets</h3>
+<p><img alt="" src="../images/ajoutprojet/ajout_dependence.gif" />  </p>
+<h3 id="ajouter-le-using-pour-utiliser-les-classes-dans-lautre-espace-de-nom">Ajouter le "using" pour utiliser les classes dans l'autre espace de nom</h3>
+<p><img alt="" src="../images/ajoutprojet/ajout_using.gif" />  </p>
 
 
 

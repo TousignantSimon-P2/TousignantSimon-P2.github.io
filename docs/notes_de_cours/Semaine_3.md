@@ -6,4 +6,4 @@
 - Je vous recommande de la mettre avec vos espions
 - Toutes les fenêtres d'aide à l'exécution sont disponibles dans le menu Déboggage -> Fenêtres. 
 
-![](images/visual_studio/debug_writeline.gif)  
+![](images/visual_studio/debug_writeline.gif)

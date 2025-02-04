@@ -1,5 +1,5 @@
 ## Importation de projet dans une solution
-
+(Version حمير)  
 ### Ajouter le dossier du projet dans le dossier de solution  
 ![](images/ajoutprojet/deplacement_projet.gif)  
 ### Ajouter le projet à la solution  

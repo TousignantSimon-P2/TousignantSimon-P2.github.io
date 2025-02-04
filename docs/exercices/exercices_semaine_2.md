@@ -1,10 +1,11 @@
+# Exercice 2  
 - Faire un dépôt Git dans un dossier de votre choix. (git init)
 - Ajouter le .gitignore pour Visual Studio (sur Google VisualStudio.gitignore -> renommez-le)
 - Créer une solution Visual Studio avec 2 projets à l'intérieur (Nommons-la Exercice2)
     - Un projet console .NET 8
     - Une bibliothèque de classes MesOutils-9999999 (avec votre DA)
 
-##  
+## Découpage du problème  
 
 - Dans une branche devParceQueSimonLeDemande, faites la codification des éléments suivants :
     - Une classe statique "OutilTableaux" avec les méthodes statiques suivantes :

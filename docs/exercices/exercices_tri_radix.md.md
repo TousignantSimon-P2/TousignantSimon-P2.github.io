@@ -1,15 +1,16 @@
 # Exercice 3 - Tri radix  
-- Une fois l'exercice 2 complété : 
+- Une fois l'exercice 2 complété :  
 
 ## Réorganisation des fichiers  
-- Placez-vous dans la branche "main" et fusionnez "merge" la branche de developpement
-- À partir de cette branche main -> faites une branche "Tri"
+- Placez-vous dans la branche "main" et fusionnez "merge" la branche de developpement  
+- À partir de cette branche main -> faites une branche "Tri"  
     - Réorganisez vos fichiers de façon à ce que :  
-    - Dans une classe Tris il y ait -> bubble, insertion, selection et radix  
+    - Dans une classe Tris il y ait -> bubble, insertion, selection et radix    
     - radix va lancer l'exception de non implémentation pour le moment.  
     - La classe Tris va être dans les namespace Outils_9999999.Tris  
-    - Faites la classe OutilsTableaux et déplacez y les méthodes nécessaires.
-    - Les méthodes qui ne sont pas utiles à l'extérieure de la classe doivent être "private" 
+    - Faites la classe OutilsTableaux et déplacez y les méthodes nécessaires.  
+    - La classe Tris va être dans les namespace Outils_9999999.Tableaux
+    - Les méthodes qui ne sont pas utiles à l'extérieur de la classe doivent être "private"   
  
 ##  Programmation  
 

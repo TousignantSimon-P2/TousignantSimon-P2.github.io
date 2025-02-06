@@ -50,8 +50,10 @@ fais pas coder quelque chose pour rien...
     - Voici la nouvelle méthode -> Fusion(int[] espaceDeTravail, int indexLimiteBasse, int mid, indexLimiteHaute)  
     - Définition : On ne travail plus qu'avec un tableau...  
     - Donc : tableau = {7,8,9,1,2,3} -> on appelle Fusion avec Fusion(tableau, 0, 3, 5)  
+    - déclarez vous un tableau de travail de la longueur du tableau en paramètre.
     - l'algorithme compare en premier l'index 0 et l'index 3 et interverti si nécessaire. le but est de fusionner en place et en ordre ;)  
     - le résultat reste {1, 2, 3, 7, 8, 9}  
+    - recopiez le résultat dans le tableau d'orgine.
 
 ??? "Liste de vérification"
     - Une branche de developpement 

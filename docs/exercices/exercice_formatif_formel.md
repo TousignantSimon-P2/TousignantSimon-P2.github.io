@@ -23,14 +23,14 @@
     - Importez votre bibliothèque de classe pour la gestion des tableaux que vous avez faites en classe.  
     - Vous pouvez utiliser les méthodes de cette dernière pour résoudre le problème suivant :  
     - Dans la classe OutilsFormatifFormel faites l'implémentation de la méthode avec la signature string Fusion(string[])  
-    - La méthode prend chacun des mots dans le tableau de tableau de string et fusionne les mots avec des espaces pour faire une phrase exemple {"Bonjour", "," "très","appréciés", "étudiants"}  
+    - La méthode prend chacun des mots dans le tableau de string et fusionne les mots avec des espaces pour faire une phrase exemple {"Bonjour", ",", "très","appréciés", "étudiants"}  
         - Particularité, si c'est une virgule, la syntaxe c'est "mot, " (mot virgule espace)  
         - Si c'est deux mots la syntaxe c'est "mot mot" (mot espace mot)  
 
 ## Question 5 - Appel avec arguments.
     - Faites les modifications nécessaires pour que la sources des mots soit passée en paramètre  
     par l'utilisateur à l'appel du programme. :  
-    Exemple : ProjetConsole.exe bonjours , très chers étudiants
+    Exemple : ProjetConsole.exe bonjours "," très chers étudiants
 
 ## Vérification et continuation
 Pour les zigotos qui sont plus avancés. La liste de vérification est dans la boite cachée ci-bas.  

@@ -18,11 +18,12 @@ nav:
    - 'Semaine 3': 
       - Semaine 3 - Debug.WriteLine: notes_de_cours/Semaine_3.md
       - Semaine 3.1 - Passage par valeur ou référence : notes_de_cours/Semaine_3_1.md
+   - 'Semaine 4-5-6': 
+      - Semaine 4-5-6 - Classes et tests - récapitulation : notes_de_cours/Semaine_4-ClassesEtTest.md
    - 'Exercices': 
-
       - Exercice 2 : exercices/exercices_semaine_2.md
       - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md
-      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md  
+      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md 
       
    - 'Formatif Formel': 
       - Formatif Formel : exercices/exercice_formatif_formel.md

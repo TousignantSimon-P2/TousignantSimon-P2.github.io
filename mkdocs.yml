@@ -22,8 +22,11 @@ nav:
 
       - Exercice 2 : exercices/exercices_semaine_2.md
       - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md
+      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md  
+      
    - 'Formatif Formel': 
       - Formatif Formel : exercices/exercice_formatif_formel.md
+
      
 
   # - 'Dépannage':

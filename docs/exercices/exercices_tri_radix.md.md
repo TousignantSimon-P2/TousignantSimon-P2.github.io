@@ -1,5 +1,5 @@
 # Exercice 3 - Tri radix  
-# Les tests à trouver pour les cas suivants : 
+# Les tests à trouver pour les cas d'utilisation suivants : 
 File doit avoir / faire.
 
 - Constructeur

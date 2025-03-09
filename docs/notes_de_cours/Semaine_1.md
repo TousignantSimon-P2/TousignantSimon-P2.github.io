@@ -154,10 +154,10 @@ Pour le présent exemple j'ai utilisé "git bash". J'aurais pu utiliser powershe
 On peut lancer l'application dans visual studio en simulant que des paramètres ont été insérés dans l'invite de commande.  
 pour se faire, on doit aller dans le menu Déboguer -> Propriétés de déboguage de [projet] -> Arguments de la ligne de commande.  
 
-Ou encore  
-
-Par les propriété du projet. Dans le menu de déboggage. Les deux sont équivalent.
-![](../images/semaine1_parametreDeboguage.png)
+![](../images/semaine1_parametreDeboguage.png)  
+Ou encore dans le menu de déboggage. Par les propriétés du projet.  Les deux sont équivalents.  
+![](../images/semaine1_parametresmain2.png)  
+![](../images/semaine1_parametresmain3.png)  
 
 ## Exercice de révision p1 + p2 (Utilisation de l'ia ou des travaux de P1 interdit)
 0. Faites vous un répertoire git avec un .gitignore pour c#.

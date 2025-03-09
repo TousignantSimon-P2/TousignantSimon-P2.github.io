@@ -1,6 +1,6 @@
 # Exercice Test unitaires
 
-# Pour la file, les tests à trouver pour les cas d'utilisation suivants : 
+# Pour la file, les tests à trouver pour les cas d'utilisations suivants : 
 File doit avoir / faire.
 
 - Constructeur

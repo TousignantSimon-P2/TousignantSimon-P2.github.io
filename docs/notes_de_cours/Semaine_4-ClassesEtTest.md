@@ -74,7 +74,7 @@
      
   "J'affirme que sera lancée l'exception "ArgumentException",  
    quand sera exécutée l'instruction "new étudiant(...)"  
-   faute de quoi le message d'erreur sera "L'ArgumentException non lancé sur construction avec nom == string.Empty"
+   faute de quoi le message d'erreur sera "L'ArgumentException non lancé sur construction avec nom == string.Empty"  
 ![](/images/ClasseEtProjet/17.png)  
 
 - Test valide, confirme, via ce qui est disponible, que l'étudiant est bien créé.  

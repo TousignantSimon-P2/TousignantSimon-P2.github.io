@@ -1142,6 +1142,95 @@
 - Vide ? booléen
 - Pleine ? booléen.
 </code></pre></div>
+<h2 id="definition-des-tests">Définition des tests</h2>
+<p>Définition des test pour la classe File  </p>
+<p>// ----------- Constructeurs -------------------//</p>
+<p>Constructeur avec un parametre de taille. </p>
+<div class="language-text highlight"><pre><span></span><code>  Je dois tester que :  
+- * Une taille négative ou de longueur 0 doit lancer ArgumentOutOfRangeException  
+- Pour une file crée de taille N la propriété capacité doit être de N  
+- La propriété vide doit être true  
+- La propriété pleine doit être false  
+- Le nombre d&#39;élément doit être 0   
+- La propriété infinie doit être false
+</code></pre></div>
+<p>Constructeur avec un parametre tableau (capacité == longueur du tableau)</p>
+<div class="language-text highlight"><pre><span></span><code>  Je dois tester que :  
+- * Passer un tableau null lance ArgumentNullException  
+- * Passer un tableau avec une longueur de 0 doit lancer ArgumentException  
+- La file doit avoir capacité N pour un tableau de N de long  
+- Le nombre d&#39;éléments pour un tableau de N de long doit être de N  
+- La propriété vide est à false  
+- La propriété pleine est à true  
+- La propriété infinie est à false  
+- Observer retourne l&#39;élément au tableau[0]  
+- La modification de tableau[0] après le new de la file ne change pas la valeur  
+  retourné par Observer();
+</code></pre></div>
+<p>Constructeur sans paramètre (noter : capacité infinie)</p>
+<div class="language-text highlight"><pre><span></span><code>  Je dois tester que :
+- La propriété vide doit être true
+- La propriété pleine doit être false
+- Le nombre d&#39;élément doit être 0 
+- La propriété infinie doit être true
+</code></pre></div>
+<p>// ----------- Méthodes -----------//</p>
+<p>Pour une file de longueur définie<br />
+File vide</p>
+<div class="language-text highlight"><pre><span></span><code>- Ajouter un élément change l&#39;état de la file de la façon suivante :
+- Vide devient false
+- Pleine reste false
+- Nombre d&#39;élément == 1
+- Observer retourne l&#39;élément Enfilé
+- Infini est à false
+- La capacité ne change pas.
+</code></pre></div>
+<p>File pas vide</p>
+<div class="language-text highlight"><pre><span></span><code>- Le nombre d&#39;élément devient nombre d&#39;élément + 1
+- capacité change pas
+- plein est faux
+- vide est faux
+- infini est faux
+- observer retourne le premier élément d&#39;origine. (après création : pour tester que l&#39;insertion n&#39;est pas inversé)
+</code></pre></div>
+<p>File presque pleine -&gt; nombre d'élément == capacité - 1  </p>
+<div class="language-text highlight"><pre><span></span><code>- Le nombre d&#39;élément devient nombre d&#39;élément + 1
+- capacité change pas
+- plein devient true
+- vide reste faux
+- infini reste faux
+- observer retourne le premier élément d&#39;origine. (après création : pour tester que l&#39;insertion n&#39;est pas inversé)
+</code></pre></div>
+<p>File pleine</p>
+<div class="language-text highlight"><pre><span></span><code>- Ajouter un élément dans une file pleine lance InvalidOperationException
+</code></pre></div>
+<p>File infinie </p>
+<div class="language-text highlight"><pre><span></span><code>- Nombre d&#39;élément : 0
+- Plein : false
+- Vide : True
+- Capacité : -1
+- On peut insérer un nombre conséquent (10k éléments) et vérifier que ça fonctionne bien.
+</code></pre></div>
+<p>Défiler</p>
+<p>File pleine</p>
+<div class="language-text highlight"><pre><span></span><code>- Observer retourne X
+- Défiler retourne X et observer subséquemment retourne le prochain.
+- Nombre d&#39;élément = nombre d&#39;élément -1
+- capacité change pas
+- vide false
+- plein passe de true à false
+</code></pre></div>
+<p>File vide</p>
+<div class="language-text highlight"><pre><span></span><code>- Lance InvalidOperationException
+</code></pre></div>
+<p>~50% plein</p>
+<div class="language-text highlight"><pre><span></span><code>- Observer retourne X  
+- Défiler retourne X et observer subséquemment retourne le prochain.  
+- Nombre d&#39;élément = nombre d&#39;élément -1  
+- capacité change pas  
+- vide est à false   
+- infini reste true si c&#39;est file infinie, sinon reste à false.
+</code></pre></div>
 
 
 

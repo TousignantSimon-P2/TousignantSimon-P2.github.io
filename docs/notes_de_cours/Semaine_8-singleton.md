@@ -54,6 +54,11 @@ Autre exemple pour l'accesseur si toutefois vous la croiseriez
 
 public static ExempleSingleton Instance => instance ?? (instance = new ExempleSingleton());
 
+```
+  
+  
+```csharp
+
 //Décomposé en plusieurs lignes on retrouverait
 
 public static ExempleSingleton Instance 

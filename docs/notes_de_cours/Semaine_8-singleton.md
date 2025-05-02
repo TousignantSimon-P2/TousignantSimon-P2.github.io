@@ -77,9 +77,6 @@ Si l'instance n'est pas null on mets instance égal à instance...
 Donc, vous allez souvent voir la version condensée.  
 
 ```csharp
-// C'est un "get" static avec la notion ?? qui veut dire si c'est null fait un new ExempleSingleton
-
-public static ExempleSingleton Instance => instance ?? (instance = new ExempleSingleton());
 
 //Décomposé en plusieurs lignes on retrouverait
 

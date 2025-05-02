@@ -22,7 +22,9 @@ nav:
       - Semaine 4-5-6 - Classes et tests - récapitulation : notes_de_cours/Semaine_4-ClassesEtTest.md
    - 'Semaine 7': 
       - Semaine 7 Les interfaces : notes_de_cours/Semaine_7-Interface.md
-   
+   - 'Semaine 8' :
+      - Semaine 8 Le Singleton : notes_de_cours/Semaine_8-singleton.md
+
    - 'Exercices': 
       - Exercice 2 : exercices/exercices_semaine_2.md
       - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md

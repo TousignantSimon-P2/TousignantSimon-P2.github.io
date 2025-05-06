@@ -1,0 +1,174 @@
+
+# Concepts OOP en C# : abstract, virtual, sealed, interfaces
+
+## Sommaire
+
+- [1. Mots-clés fondamentaux](#1-mots-cl%C3%A9s-fondamentaux)
+  - [1.1. abstract](#11-abstract)
+  - [1.2. virtual](#12-virtual)
+  - [1.3. sealed](#13-sealed)
+- [2. Comparaison avec les interfaces](#2-comparaison-avec-les-interfaces)
+- [3. Cas d'utilisation recommandés](#3-cas-dutilisation-recommand%C3%A9s)
+- [4. Résumé comparatif](#4-r%C3%A9sum%C3%A9-comparatif)
+
+---
+
+## 1. Mots-clés fondamentaux
+
+### 1.1. `abstract`
+
+- **Définition :** Une classe ou une méthode marquée `abstract` est incomplète et doit être implémentée dans une classe dérivée.
+- **Usage :** utilisé pour définir des modèles communs, des "templates" de comportement.
+
+```csharp
+abstract class Animal
+{
+    public abstract void FaireDuBruit();
+}
+
+class Chien : Animal
+{
+    public override void FaireDuBruit()
+    {
+        Console.WriteLine("Wouf!");
+    }
+}
+```
+
+🔸 **Note :** Une classe `abstract` ne peut pas être instanciée directement.
+
+### 1.2. `virtual`
+
+- **Définition :** Permet à une méthode dans une classe de base d’être redéfinie (surchargée) dans une classe dérivée.
+- **Usage :** utilisé pour fournir un comportement par défaut, tout en laissant la possibilité de le remplacer.
+
+```csharp
+class Animal
+{
+    public virtual void FaireDuBruit()
+    {
+        Console.WriteLine("Un bruit animal");
+    }
+}
+
+class Chat : Animal
+{
+    public override void FaireDuBruit()
+    {
+        Console.WriteLine("Miaou");
+    }
+}
+```
+
+🔸 **Note :** Si une méthode `virtual` n’est pas redéfinie, le comportement par défaut est conservé.
+
+### 1.3. `sealed`
+
+- **Définition :** Empêche qu’une classe (ou une méthode) soit dérivée ou redéfinie.
+- **Usage :** utilisé pour des raisons de sécurité, de performance, ou pour figer une implémentation.
+
+```csharp
+sealed class Utilitaire
+{
+    public void EffectuerTâche()
+    {
+        Console.WriteLine("Tâche effectuée.");
+    }
+}
+
+// class Avancé : Utilitaire ❌ Erreur : sealed = pas de dérivation possible
+```
+
+On peut également marquer une **méthode** comme `sealed` dans une classe dérivée :
+
+```csharp
+class Animal
+{
+    public virtual void FaireDuBruit() => Console.WriteLine("Animal!");
+}
+
+class Chien : Animal
+{
+    public sealed override void FaireDuBruit() => Console.WriteLine("Wouf!");
+}
+
+class Chiot : Chien
+{
+    // public override void FaireDuBruit() ❌ Interdit
+}
+```
+
+---
+
+## 2. Comparaison avec les interfaces
+
+| Élément         | Classe Abstraite            | Interface                        |
+|----------------|-----------------------------|----------------------------------|
+| Héritage       | Une seule classe de base    | Multiple interfaces              |
+| Implémentation | Peut contenir du code       | Depuis C# 8, peut contenir du code par défaut (default interface methods), mais rare. |
+| Constructeurs  | Oui                         | Non                              |
+| Membre         | Champs, propriétés, méthodes| Seulement méthodes/propriétés    |
+
+**Exemple interface :**
+
+```csharp
+interface IAnimal
+{
+    void FaireDuBruit();
+}
+
+class Chat : IAnimal
+{
+    public void FaireDuBruit() => Console.WriteLine("Miaou");
+}
+```
+
+**Avantages d’une interface :**
+- Idéal pour l’héritage multiple (ex. `IAnimal`, `IVolant`).
+- Favorise le couplage faible.
+
+**Avantages d’une classe abstraite :**
+- Partage de code commun facilité.
+- Encapsulation de logique métier partielle.
+
+---
+
+## 3. Cas d'utilisation recommandés
+
+### ➤ Quand utiliser `abstract` ?
+- Si vous avez une hiérarchie avec des comportements partagés.
+- Si certaines méthodes doivent obligatoirement être redéfinies.
+- Ex : `Animal`, `Vehicule`, `Employe`.
+
+### ➤ Quand utiliser `virtual` ?
+- Si une méthode a un comportement par défaut, mais peut être personnalisée.
+- Ex : `ToString()`, `Equals()` dans .NET.
+
+### ➤ Quand utiliser `sealed` ?
+- Pour sécuriser une implémentation.
+- Pour empêcher toute extension d’une classe ou d’une méthode.
+- Pour optimiser les performances (pas besoin de chercher des overrides au runtime).
+
+### ➤ Quand utiliser une `interface` ?
+- Pour définir un contrat sans logique métier.
+- Quand plusieurs classes sans lien hiérarchique doivent partager un comportement.
+- Ex : `IDisposable`, `IEnumerable<T>`.
+
+---
+
+## 4. Résumé comparatif
+
+| Concept   | Héritage | Implémentation | Objectif principal                      |
+|----------|----------|----------------|------------------------------------------|
+| abstract | Simple   | Partielle      | Modèle commun avec obligation d’override |
+| virtual  | Simple   | Complète       | Comportement personnalisable             |
+| sealed   | Simple   | Complète       | Protection de l’implémentation           |
+| interface| Multiple | Aucune (ou default)| Définir un contrat                      |
+
+---
+
+**Dernière mise à jour :** 2025-05-05
+
+---
+
+> ✍️ Ces notes sont prêtes à être intégrées dans une documentation `mkdocs`. N'oubliez pas d’ajouter les fichiers dans la section `nav:` de votre `mkdocs.yml` pour un affichage structuré.

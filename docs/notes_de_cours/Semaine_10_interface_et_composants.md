@@ -1,4 +1,4 @@
-# Cycle de vie d’un Formulaire Windows Forms en C#
+# Cycle de vie d’un Formulaire Windows Forms en C\#
 
 Ce document résume les étapes clés du cycle de vie d’un `Form` dans une application Windows Forms, du constructeur à la fermeture.
 

@@ -29,7 +29,11 @@
     > - Déclaration des constructeurs  
     > - Déclaration des méthodes  
     > - Déclaration des implémentations d'interface  
+    > - Déclaration des "overrides"  
     > - Déclaration de la méthode ToString()  
+    > - Déclaration des accesseurs get/set   
+    > - Déclaration des variables static avec s_  
+
 
 
 ## Définition des méthodes.

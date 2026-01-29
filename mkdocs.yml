@@ -4,53 +4,49 @@ repo_url: hhttps://github.com/TousignantSimon-P2/TousignantSimon-P2.github.io.gi
 
 use_directory_urls: true
 
-nav:
+nav:  
    - 'Accueil': index.md  
    - 'Convention': convention.md
    - 'Ressources': ressources.md
    - 'Installation' : notes_de_cours/Section_0.0.md
    - 'Horaire': horaire.md
-   - 'Semaine 1': notes_de_cours/Semaine_1.md
-   - 'Semaine 2': 
+   - '1.Types et arguments': 
+      - Les types : notes_de_cours/Semaine_1.md
+      - Passage par valeur ou référence : notes_de_cours/Semaine_3_1.md
+   - '2. Solution et git': 
       - Création du projet : notes_de_cours/Semaine_2.md
+      - Importation de projet existant : notes_de_cours/Semaine_2_importation.md
       - Git : notes_de_cours/semaine2_git.md
-      - Solution à plusieurs projets : notes_de_cours/Semaine_2_importation.md
-   - 'Semaine 3': 
-      - Semaine 3 - Debug.WriteLine: notes_de_cours/Semaine_3.md
-      - Semaine 3.1 - Passage par valeur ou référence : notes_de_cours/Semaine_3_1.md
-   - 'Semaine 4-5-6': 
-      - Semaine 4-5-6 - Classes et tests - récapitulation : notes_de_cours/Semaine_4-ClassesEtTest.md
-   - 'Semaine 7': 
-      - Semaine 7 Les interfaces : notes_de_cours/Semaine_7-Interface.md
-   - 'Semaine 8' :
-      - Semaine 8 Le Singleton : notes_de_cours/Semaine_8-singleton.md
-   - 'Semaine 9' :
-      - Semaine 9 Contrôlleur et Interface graphique : notes_de_cours/Semaine_9_interface_et_controlleur.md
-   - 'Semaine 10' :
-      - Semaine 10 Cycle de vie et composants graphique : notes_de_cours/Semaine_10_interface_et_composants.md
-   - 'Semaine 11' :
-      - Semaine 11 abstract sealed virtual interface : notes_de_cours/Semaine_11_abstract_virtual_interface.md
-   - 'Exercices': 
-      - Exercice 2 : exercices/exercices_semaine_2.md
-      - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md
-      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md 
-      
+   - '3. Déboguage et trace': 
+      - Module3 - Debug.WriteLine: notes_de_cours/Semaine_3.md
+   - '4. Création de classe':
+      -  Classes : notes_de_cours/Semaine_4-Classes.md  
+   - '5. Les exceptions':
+      -  Exception : notes_de_cours/Semaine_4-exceptions-csharp.md
+#   - 'Module5':
+#      
+#      -  Test Unitaires : notes_de_cours/Creation_test_unitaire.md
+#   - 'Module7': 
+#      - Module7 Les interfaces : notes_de_cours/Semaine_7-Interface.md
+#   - 'Module8' :
+#      - Module8 Le Singleton : notes_de_cours/Semaine_8-singleton.md
+#   - 'Module9' :
+#      - Module9 Contrôlleur et Interface graphique : notes_de_cours/Semaine_9_interface_et_controlleur.md
+#   - 'Module10' :
+#      - Module10 Cycle de vie et composants graphique : notes_de_cours/Semaine_10_interface_et_composants.md
+#   - 'Module11' :
+#      - Module11 abstract sealed virtual interface : notes_de_cours/Semaine_11_abstract_virtual_interface.md
+   - 'Exercices' :
+       - 1 Marathon : exercices/Exercicesv3.2.md
+       - Exercice 1 : exercices/1.exercices_de_classe_et_exception.md
+       - Exercice 2 : exercices/exercices_semaine_2.md
+#      - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md
+#      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md 
+#      
    - 'Formatif Formel': 
       - Formatif Formel : exercices/exercice_formatif_formel.md
 
      
-
-  # - 'Dépannage':
-  #     - 'Comment traduire du français en SQL': notes_de_cours/traduire.md
-  #     - 'Déboguage': notes_de_cours/deboguage.md
-  #     - 'Feuilles de triche': notes_de_cours/feuilles.md
-  # - 'Section 1':
-  #     - 1.1 Introduction: notes_de_cours/section_1.1.md
-  #     - 1.2 Composantes: notes_de_cours/section_1.2.md
-  #     - 1.3 Types de données: notes_de_cours/section_1.3.md
-  #     - 1.4 Création de BD et Tables: notes_de_cours/section_1.4.md
-  #     - 1.5 Clés étrangères et relations: notes_de_cours/section_1.5.md
-  
 
 theme:
   name: material

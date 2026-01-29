@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p2.github.io/notes_de_cours/Section_0.0/">
+        <link rel="canonical" href="https://tousignantsimon-p2.github.io/notes_de_cours/Creation_test_unitaire/">
       
       
-        <link rel="prev" href="../../ressources/">
-      
-      
-        <link rel="next" href="../../horaire/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Installation - Cours de Programmation 2</title>
+        <title>Création des tests unitaires - Cours de Programmation 2</title>
       
     
     
@@ -117,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#outils-de-developpement-a-avoir" class="md-skip">
+        <a href="#creation-des-tests-unitaires" class="md-skip">
           Aller au contenu
         </a>
       
@@ -153,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Création des tests unitaires
             
           </span>
         </div>
@@ -303,11 +299,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Section_0.0/" class="md-tabs__link">
         
   
     
@@ -579,30 +573,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Installation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Section_0.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,86 +585,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    <span class="md-ellipsis">
-      git
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editeur-de-texte" class="md-nav__link">
-    <span class="md-ellipsis">
-      éditeur de texte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-de-visual-studio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation de visual studio.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation de visual studio.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#voici-les-paquets-que-vous-devez-avoir-installes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Voici les paquets que vous devez avoir installés
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-facultatifs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les facultatifs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-composants-individuels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les composants individuels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1300,37 +1194,40 @@
   
 
 
-<h1 id="outils-de-developpement-a-avoir">Outils de developpement à avoir</h1>
-<h2 id="git">git</h2>
+<h1 id="creation-des-tests-unitaires">Création des tests unitaires</h1>
 <ul>
-<li>Installer la dernière version de git pour windows</li>
+<li>Sur la classe on ouvre les actions rapides et les refactorisations  </li>
+<li>
+<p>Sélectionner "Créer des tests unitaires"<br />
+<img alt="" src="/images/ClasseEtProjet/14.png" />  </p>
+</li>
+<li>
+<p>Si aucun projet de tests, on garde les options par défaut.<br />
+<img alt="" src="/images/ClasseEtProjet/15.png" />  </p>
+</li>
+<li>
+<p>Faire la section summary de la classe.</p>
+</li>
+<li>On peut se faire des variables pour se faciliter la vie. </li>
+<li>Pour chaque méthode / constructeur, on fait l'analyse des points de retour (throw new, return valeur);</li>
+<li>On fait une méthode de test pour chacun des points de retour (pour le moment)</li>
+<li>Dans l'exemple on test avec un [ExpectedException] en entête de méthode. </li>
+<li>
+<p>La création de l'étudiant se fait avec les variables définie en entête de classe, beaucoup plus lisible, beaucoup plus rapide
+<img alt="" src="/images/ClasseEtProjet/16.png" />  </p>
+</li>
+<li>
+<p>Exemple de test d'exception fait avec un Assert.ThrowsException. Je vous suggère de casser la ligne sur plusieurs lignes.<br />
+  Beaucoup plus facile à lire.  </p>
+</li>
 </ul>
-<h2 id="editeur-de-texte">éditeur de texte</h2>
+<p>"J'affirme que sera lancée l'exception "ArgumentException",<br />
+   quand sera exécutée l'instruction "new étudiant(...)"<br />
+   faute de quoi le message d'erreur sera "L'ArgumentException non lancé sur construction avec nom == string.Empty"<br />
+<img alt="" src="/images/ClasseEtProjet/17.png" />  </p>
 <ul>
-<li>Notepad++ recommandé.  </li>
-<li>Visual studio code  </li>
-</ul>
-<h2 id="installation-de-visual-studio">Installation de visual studio.</h2>
-<h3 id="voici-les-paquets-que-vous-devez-avoir-installes">Voici les paquets que vous devez avoir installés</h3>
-<ul>
-<li>Developpement .NET Desktop  </li>
-</ul>
-<h3 id="dans-les-facultatifs">Dans les facultatifs</h3>
-<ul>
-<li>Outils de développement pour .NET</li>
-</ul>
-<h3 id="dans-les-composants-individuels">Dans les composants individuels</h3>
-<ul>
-<li>.NET Runtime 8 (Prise en charge à long terme)  </li>
-<li>.NET Runtime 9  </li>
-<li>Kit SDK .NET  </li>
-<li>Kit SDK .NET Framework 4.8  </li>
-<li>Pack de ciblage .NET Framework 4.7.2  </li>
-<li>C# et Visual Basic  </li>
-<li>Prise en charge du F# (non nécessaire pour p2)  </li>
-<li>Type de donnée CLR pour SQL Server  </li>
-<li>Compilateur Roslyn C# et Visual Basic  </li>
-<li>MSBuild  </li>
+<li>Test valide, confirme, via ce qui est disponible, que l'étudiant est bien créé.<br />
+<img alt="" src="/images/ClasseEtProjet/18.png" />  </li>
 </ul>
 
 

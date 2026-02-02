@@ -189,24 +189,24 @@ catch (Exception ex)
 
 ## 5. Bonnes pratiques récapitulatives
 
-- Ne pas utiliser `Exception` par défaut
-- Lever des exceptions **exceptionnelles**, pas pour le contrôle de flux
-- Fournir des messages clairs et exploitables
-- Ne jamais masquer une exception sans raison
-- Gérer les exceptions aux **frontières du système**
-- Logger les erreurs critiques
+- Ne pas utiliser `Exception` par défaut  
+- Lever des exceptions **exceptionnelles**, pas pour le contrôle de flux  
+- Fournir des messages clairs et exploitables  
+- Ne jamais masquer une exception sans raison    
+- Gérer les exceptions aux **frontières du système**  
+- Logger les erreurs critiques  
 
 ---
 
 ## 6. Conclusion
 
-Les exceptions sont un outil puissant mais à manier avec discipline.  
-Une bonne stratégie de gestion des exceptions améliore :
-- la lisibilité du code,
-- la maintenabilité,
-- la fiabilité globale de l’application.
+Les exceptions sont un outil puissant mais à manier avec discipline.    
+Une bonne stratégie de gestion des exceptions améliore :  
+- la lisibilité du code,  
+- la maintenabilité,  
+- la fiabilité globale de l’application.  
 
-L’objectif n’est pas d’attraper toutes les erreurs, mais de **les gérer au bon endroit**.
+L’objectif n’est pas d’attraper toutes les erreurs, mais de **les gérer au bon endroit**.  
 
 ### 7. Références
 Gestion et levée d’exceptions dans .NET  

@@ -1,4 +1,4 @@
-# Programmation 2 (420-2A6-VI) - Hiver 2025
+# Programmation 2 (420-2A6-VI) - Hiver 2026
 ## Introduction
 Vous trouverez ici les notes et exercices du cours. J'ajouterai du nouveau contenu continuellement.
 

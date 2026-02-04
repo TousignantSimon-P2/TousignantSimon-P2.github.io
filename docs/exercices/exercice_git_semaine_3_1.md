@@ -45,16 +45,16 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Création de l'architecture
 >
-> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** et un projet **Console**. Une fois que c'est fait, **envoie-moi une capture d'écran de l'explorateur de solutions dans Visual Studio pour confirmer la structure, et la sortie de `git status` pour vérifier que `bin`, `obj` et `.vs` ne sont pas suivis.**
+> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** nommée `Bibliotheque-git-<da>` et un projet **Console** nommé `Console-git-<da>`. Une fois que c'est fait, **envoie-moi une capture d'écran de l'explorateur de solutions dans Visual Studio pour confirmer la structure, et la sortie de `git status` pour vérifier que `bin`, `obj` et `.vs` ne sont pas suivis.**
 
 ### Tes tâches :
 
 ??? Solution "Solution"
     1.  Lance **Visual Studio 2026**.
     2.  Crée une nouvelle solution dans ton dossier cloné :
-        * Nom de la Solution : `MathTechSolution`
-        * Ajoute un projet **Bibliothèque de classes** nommé `MathTech.Librairie`.
-        * Ajoute un projet **Console** nommé `MathTech.Console`.
+        * Nom de la Solution : `[NOM_SOLUTION]`
+        * Ajoute un projet **Bibliothèque de classes** nommé `Bibliotheque-git-[INITIALES]`.
+        * Ajoute un projet **Console** nommé `Console-git-[INITIALES]`.
     3.  Dans la librairie, renomme `Class1.cs` en `Calculatrice.cs` (et mets la classe `public static`).
     4.  Vérifie avec `git status` que les dossiers `bin` et `obj` n'apparaissent pas (grâce à ton travail précédent).
     5.  Valide la structure sur la branche principale :
@@ -73,14 +73,17 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 ## Attention à tes fichiers personnels !
 
 > **De :** Sarah Connor (Tech Lead)
-> **Objet :** Attention à tes fichiers personnels !
+> **Objet :** URGENT - J'ai fait une gaffe avec un fichier perso !
 >
-> Il semblerait que tu aies créé un fichier pour tes notes personnelles et que tu l'aies ajouté par erreur à l'index Git. Il faut corriger ça avant que ça ne pollue le projet.
+> Oh là là, j'ai fait une grosse bêtise ! J'étais en train de prendre des notes rapidement dans un fichier `note_personnelle.txt` et, sans faire attention, je l'ai ajouté à l'index de Git (`git add .`) ! Je ne veux absolument pas que ce fichier finisse sur le dépôt. Je sais qu'il faut l'enlever du staging, mais je ne me souviens plus de la commande exacte.
+>
+> **Tu lui répondrais quoi ? Comment ferait-on pour retirer ce fichier de l'index sans le supprimer de mon ordinateur ?**
 
 ### Scénario à reproduire :
+Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 
 ??? Solution "Solution"
-    1.  Crée un fichier texte nommé `mes_notes.txt` à la racine du projet.
+    1.  Crée un fichier texte nommé `note_personnelle.txt` à la racine du projet.
     2.  Ajoute-le à l'index par erreur (oups !) :
         ```bash
         git add .
@@ -89,11 +92,12 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
         ```bash
         git status
         ```
-    4.  **Correction :** On veut garder le fichier sur ton ordi, mais l'enlever de Git. Utilise la commande magique :
+    4.  **Correction :** Pour garder le fichier sur ton ordi et l'enlever de Git de l'index :
         ```bash
-        git rm --cached mes_notes.txt
+        git restore --staged note_personnelle.txt
         ```
-    5.  Pour éviter de refaire l'erreur, ajoute `mes_notes.txt` à la fin de ton fichier `.gitignore`.
+        (Note: `git rm --cached` also works, but `git restore --staged` is generally preferred for unstaging files.)
+    5.  Pour éviter de refaire l'erreur, ajoute `note_personnelle.txt` à la fin de ton fichier `.gitignore`.
     6.  Valide la mise à jour du gitignore sur la branche `dev` :
         ```bash
         git add .gitignore
@@ -105,20 +109,21 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 ## Dev de l'addition
 
 > **De :** Sarah Connor (Tech Lead)
-> **Objet :** Dev de l'addition
+> **Objet :** Dev de l'addition - Implémentation de la fonction d'addition
 >
-> C'est parti pour développer une nouvelle fonctionnalité ! N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité. Une fois que tu as intégré la méthode d'addition et fusionné ta branche de fonctionnalité dans `dev`, **envoie-moi la sortie de `git log --graph --oneline` pour que je voie l'historique des commits.**
+> C'est parti pour développer une nouvelle fonctionnalité ! N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité. J'ai besoin que tu implémentes la méthode d'addition suivante dans `Calculatrice.cs` :
+> ```csharp
+> public static int Additionner(int a, int b)
+> {
+>     return a + b;
+> }
+> ```
+> Une fois que tu as intégré cette méthode et fusionné ta branche de fonctionnalité dans `dev`, **envoie-moi la sortie de `git log --graph --oneline` pour que je voie l'historique des commits.**
 
 ### Tes tâches :
 ??? Solution "Solution"
     1.  Crée une branche nommée `fonctionnalite/addition` (depuis `dev`).
-    2.  Dans `Calculatrice.cs`, ajoute :
-        ```csharp
-        public static int Additionner(int a, int b)
-        {
-            return a + b;
-        }
-        ```
+    2.  Implémente la méthode `Additionner` dans `Calculatrice.cs` selon les spécifications de Sarah.
     3.  Valide ton travail :
         ```bash
         git add .

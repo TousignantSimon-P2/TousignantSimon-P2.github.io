@@ -3,9 +3,9 @@
 **Contexte :**
 Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre responsable technique, **Sarah**, vous envoie vos tâches par courriel au fil de la journée.
 
-**Règles d'or de l'entreprise :**
-1.  **Langue :** Tous les noms de branches (sauf `main`) et tous les messages de commit doivent être **en français**.
-2.  **Workflow :** On ne touche jamais directement à `main` pour le code. Tout passe par une branche d'intégration nommée `dev`.
+??? note "Règles d'or de l'entreprise"
+    1.  **Langue :** Tous les noms de branches (sauf `main`) et tous les messages de commit doivent être **en français**.
+    2.  **Workflow :** On ne touche jamais directement à `main` pour le code. Tout passe par une branche d'intégration nommée `dev`.
 
 **Prérequis :**
 * Le dépôt a été créé pour vous via **GitHub Classroom**.

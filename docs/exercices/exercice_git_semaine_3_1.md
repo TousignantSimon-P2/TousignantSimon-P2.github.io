@@ -16,9 +16,11 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 ## Démarrage - La propreté avant tout
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** Démarrage - La propreté avant tout
 >
-> Bienvenue ! Ton dépôt est prêt. Avant même d'écrire une ligne de code C#, on doit s'assurer que le dépôt restera propre. On ne veut surtout pas versionner les fichiers temporaires de Visual Studio (`bin`, `obj`, `.vs`).
+> Bienvenue ! Ton dépôt est prêt.  
+> Avant même d'écrire une ligne de code C#, on doit s'assurer que le dépôt restera propre. On ne veut surtout pas versionner les fichiers temporaires de Visual Studio (`bin`, `obj`, `.vs`).
 
 ### Tes tâches :
 
@@ -43,9 +45,11 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 ## Création de l'architecture
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** Création de l'architecture
 >
-> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** nommée `Bibliotheque-git-<da>` et un projet **Console** nommé `Console-git-<da>`. Une fois que c'est fait, **envoie-moi une capture d'écran de l'explorateur de solutions dans Visual Studio pour confirmer la structure, et la sortie de `git status` pour vérifier que `bin`, `obj` et `.vs` ne sont pas suivis.**
+> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution.  
+> J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** nommée `Bibliotheque-git-<da>` et un projet **Console** nommé `Console-git-<da>`. Une fois que c'est fait, **envoie-moi une capture d'écran de l'explorateur de solutions dans Visual Studio pour confirmer la structure, et la sortie de `git status` pour vérifier que `bin`, `obj` et `.vs` ne sont pas suivis.**
 
 ### Tes tâches :
 
@@ -73,9 +77,12 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 ## Attention à tes fichiers personnels !
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** URGENT - J'ai fait une gaffe avec un fichier perso !
 >
-> Oh là là, j'ai fait une grosse bêtise ! J'étais en train de prendre des notes rapidement dans un fichier `note_personnelle.txt` et, sans faire attention, je l'ai ajouté à l'index de Git (`git add .`) ! Je ne veux absolument pas que ce fichier finisse sur le dépôt. Je sais qu'il faut l'enlever du staging, mais je ne me souviens plus de la commande exacte.
+> Oh là là, j'ai fait une grosse bêtise !  
+> J'étais en train de prendre des notes rapidement dans un fichier `note_personnelle.txt` et, sans faire attention, je l'ai ajouté à l'index de Git (`git add .`) !  
+> Je ne veux absolument pas que ce fichier finisse sur le dépôt. Je sais qu'il faut l'enlever du staging, mais je ne me souviens plus de la commande exacte.
 >
 > **Tu lui répondrais quoi ? Comment ferait-on pour retirer ce fichier de l'index sans le supprimer de mon ordinateur ?**
 
@@ -109,9 +116,12 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 ## Dev de l'addition
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** Dev de l'addition - Implémentation de la fonction d'addition
 >
-> C'est parti pour développer une nouvelle fonctionnalité ! N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité. J'ai besoin que tu implémentes la méthode d'addition suivante dans `Calculatrice.cs` :
+> C'est parti pour développer une nouvelle fonctionnalité !  
+> N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité.  
+> J'ai besoin que tu implémentes la méthode d'addition suivante dans `Calculatrice.cs` :
 > ```csharp
 > public static int Additionner(int a, int b)
 > {
@@ -145,9 +155,12 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 ## URGENT - Conflit à gérer
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** URGENT - Conflit à gérer : Ta tâche de division !
 >
-> Attention ! Pendant que tu travaillais sur l'addition, j'ai déjà poussé ma propre version de la méthode `Diviser` sur la branche `dev` pour ajouter une vérification de division par zéro. Voici le code que j'ai mis en place dans `Calculatrice.cs` :
+> Attention !  
+> Pendant que tu travaillais sur l'addition, j'ai déjà poussé ma propre version de la méthode `Diviser` sur la branche `dev` pour ajouter une vérification de division par zéro.  
+> Voici le code que j'ai mis en place dans `Calculatrice.cs` :
 > ```csharp
 > public static double Diviser(int a, int b)
 > {
@@ -155,7 +168,8 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 >     return (double)a / b;
 > }
 > ```
-> Maintenant, c'est à ton tour ! Crée une nouvelle branche depuis `dev`, implémente TA version de la méthode `Diviser` (même si elle est simple et ne gère pas encore la division par zéro), puis fusionne ta branche dans `dev`. Je m'attends à ce que tu rencontres un conflit. Tu devras le résoudre manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
+> Maintenant, c'est à ton tour ! Crée une nouvelle branche depuis `dev`, implémente TA version de la méthode `Diviser` (même si elle est simple et ne gère pas encore la division par zéro), puis fusionne ta branche dans `dev`.  
+> Je m'attends à ce que tu rencontres un conflit. Tu devras le résoudre manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
 
 ### Tes tâches :
 
@@ -203,9 +217,12 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 ## Version 1.0
 
 > **De :** Sarah Connor (Tech Lead)
+>
 > **Objet :** Version 1.0
 >
-> Excellent travail ! Le développement est terminé. La branche `dev` est stable et testée. C'est le moment de déployer ! Une fois que `dev` est fusionnée dans `main`, **envoie-moi la sortie complète de `git log --graph --oneline --all` pour que je puisse valider l'historique final de toutes les branches.**
+> Excellent travail !  
+> Le développement est terminé. La branche `dev` est stable et testée.  
+> C'est le moment de déployer ! Une fois que `dev` est fusionnée dans `main`, **envoie-moi la sortie complète de `git log --graph --oneline --all` pour que je puisse valider l'historique final de toutes les branches.**
 
 ### Tes tâches :
 ??? Solution "Solution"

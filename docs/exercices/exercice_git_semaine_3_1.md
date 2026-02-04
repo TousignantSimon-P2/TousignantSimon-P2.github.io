@@ -120,7 +120,7 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 > **Objet :** Dev de l'addition - Implémentation de la fonction d'addition
 >
 > C'est parti pour développer une nouvelle fonctionnalité !  
-> N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité.  
+> N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité. Pour cette tâche, tu créeras une branche nommée `fonctionnalite/addition`.  
 > J'ai besoin que tu implémentes la méthode d'addition suivante dans `Calculatrice.cs` :
 > ```csharp
 > public static int Additionner(int a, int b)
@@ -152,30 +152,28 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 
 ---
 
-## URGENT - Conflit à gérer
+## Implémentation de ta méthode Diviser (simple)
 
 > **De :** Sarah Connor (Tech Lead)
 >
-> **Objet :** URGENT - Conflit à gérer : Ta tâche de division !
+> **Objet :** Dev - Implémentation de ta méthode Diviser (simple)
 >
-> Attention !  
-> Pendant que tu travaillais sur l'addition, j'ai déjà poussé ma propre version de la méthode `Diviser` sur la branche `dev` pour ajouter une vérification de division par zéro.  
-> Voici le code que j'ai mis en place dans `Calculatrice.cs` :
+> Maintenant, c'est à ton tour !  
+> Crée une nouvelle branche depuis `dev`, par exemple `fonctionnalite/division-simple`.  
+> J'ai besoin que tu implémentes la méthode `Diviser` suivante dans `Calculatrice.cs` :
 > ```csharp
 > public static double Diviser(int a, int b)
 > {
->     if (b == 0) throw new Exception("Division par zéro impossible");
 >     return (double)a / b;
 > }
 > ```
-> Maintenant, c'est à ton tour ! Crée une nouvelle branche depuis `dev`, implémente TA version de la méthode `Diviser` (même si elle est simple et ne gère pas encore la division par zéro), puis fusionne ta branche dans `dev`.  
-> Je m'attends à ce que tu rencontres un conflit. Tu devras le résoudre manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
+> Une fois que ta méthode est prête et que ta branche de fonctionnalité est fusionnée dans `dev`, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide ton travail.**
 
 ### Tes tâches :
 
 ??? Solution "Solution"
     1.  Assure-toi d'être sur la branche `dev` (`git checkout dev`).
-    2.  Crée une nouvelle branche pour ta fonctionnalité de division, par exemple `fonctionnalite/ma-division` (`git checkout -b fonctionnalite/ma-division`).
+    2.  Crée une nouvelle branche pour ta fonctionnalité de division, par exemple `fonctionnalite/division-simple` (`git checkout -b fonctionnalite/division-simple`).
     3.  Dans le fichier `Calculatrice.cs`, ajoute ta version de la méthode `Diviser` (une simple division sans gestion d'erreur) :
         ```csharp
         public static double Diviser(int a, int b)
@@ -186,18 +184,62 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
     4.  Valide ton travail sur ta branche :
         ```bash
         git add .
-        git commit -m "Fonctionnalité : Ajout de ma version de la méthode Diviser"
+        git commit -m "Fonctionnalité : Ajout de ma version simple de la méthode Diviser"
         ```
     5.  Retourne sur la branche `dev` (`git checkout dev`).
-    6.  Tente de fusionner ta branche `fonctionnalite/ma-division` dans `dev` :
+    6.  Fusionne ta branche `fonctionnalite/division-simple` dans `dev` :
         ```bash
-        git merge fonctionnalite/ma-division
+        git merge fonctionnalite/division-simple
         ```
-        💥 **Un conflit devrait être détecté !**
+
+---
+
+## Amélioration de la méthode Diviser (avec gestion d'erreur)
+
+> **De :** Sarah Connor (Tech Lead)
+>
+> **Objet :** Dev - Amélioration de la méthode Diviser
+>
+> Excellent ! Maintenant que la version de base de `Diviser` est en place, j'aimerais que tu l'améliores.  
+> Crée une nouvelle branche depuis `dev`, par exemple `fonctionnalite/division-gestion-erreur`.  
+> Dans cette branche, tu vas modifier la méthode `Diviser` dans `Calculatrice.cs` pour inclure une vérification de division par zéro, comme ceci :
+> ```csharp
+> public static double Diviser(int a, int b)
+> {
+>     if (b == 0) throw new Exception("Division par zéro impossible");
+>     return (double)a / b;
+> }
+> ```
+> Une fois que tu as implémenté cette version et que tu l'as fusionnée dans `dev`, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide l'historique des commits et le code résultant.**
+
+### Tes tâches :
+
+??? Solution "Solution"
+    1.  Assure-toi d'être sur la branche `dev` (`git checkout dev`).
+    2.  Crée une nouvelle branche pour cette amélioration, par exemple `fonctionnalite/division-gestion-erreur` (`git checkout -b fonctionnalite/division-gestion-erreur`).
+    3.  Dans le fichier `Calculatrice.cs`, modifie la méthode `Diviser` pour inclure la gestion d'erreur :
+        ```csharp
+        public static double Diviser(int a, int b)
+        {
+            if (b == 0) throw new Exception("Division par zéro impossible");
+            return (double)a / b;
+        }
+        ```
+    4.  Valide ton travail sur ta branche :
+        ```bash
+        git add .
+        git commit -m "Fonctionnalité : Amélioration de la méthode Diviser avec gestion d'erreur"
+        ```
+    5.  Retourne sur la branche `dev` (`git checkout dev`).
+    6.  Tente de fusionner ta branche `fonctionnalite/division-gestion-erreur` dans `dev` :
+        ```bash
+        git merge fonctionnalite/division-gestion-erreur
+        ```
+        💥 **Un conflit devrait être détecté ici, car tu as déjà une version de `Diviser` sur `dev`!**
     7.  **Résolution du conflit :**
-        *   Ouvre `Calculatrice.cs` dans ton éditeur de texte.
-        *   Tu verras des marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`) indiquant les différences entre ta version et celle de Sarah sur `dev`.
-        *   Modifie le fichier pour combiner les deux versions. L'objectif est de garder la fonctionnalité de division tout en intégrant la vérification de division par zéro de Sarah. Le code final devrait ressembler à ceci :
+        *   Ouvre `Calculatrice.cs` dans ton éditeur de texte.  
+        *   Tu verras des marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`) indiquant les différences entre la version de `dev` (ta version simple) et ta nouvelle version (avec gestion d'erreur).  
+        *   Modifie le fichier pour combiner les deux versions. L'objectif est de garder la nouvelle fonctionnalité de division avec la vérification de division par zéro. Le code final devrait ressembler à ceci :
             ```csharp
             public static double Diviser(int a, int b)
             {
@@ -209,7 +251,7 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
     8.  Marque le conflit comme résolu et finalise la fusion :
         ```bash
         git add Calculatrice.cs
-        git commit -m "Fusion : Résolution de conflit sur la méthode Diviser (intégration des deux versions)"
+        git commit -m "Fusion : Résolution de conflit sur la méthode Diviser (intégration de la version avec gestion d'erreur)"
         ```
 
 ---
@@ -222,7 +264,11 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 >
 > Excellent travail !  
 > Le développement est terminé. La branche `dev` est stable et testée.  
-> C'est le moment de déployer ! Une fois que `dev` est fusionnée dans `main`, **envoie-moi la sortie complète de `git log --graph --oneline --all` pour que je puisse valider l'historique final de toutes les branches.**
+> C'est le moment de déployer !  
+>
+> Une fois que `dev` est fusionnée dans `main`, j'aimerais que tu places un tag `v1.0` sur le commit le plus récent de `main` pour marquer cette version.  
+>
+> Après cela, **envoie-moi la sortie complète de `git log --graph --oneline --all` ainsi que `git tag` pour que je puisse valider l'historique final de toutes les branches et les tags.**
 
 ### Tes tâches :
 ??? Solution "Solution"
@@ -231,7 +277,12 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
         ```bash
         git merge dev
         ```
-    3.  Admire ton graphe final et appelle-moi pour la validation :
+    3.  Place le tag `v1.0` sur le commit actuel de `main` :
+        ```bash
+        git tag -a v1.0 -m "Release v1.0"
+        ```
+    4.  Admire ton graphe final et les tags, puis appelle-moi pour la validation :
         ```bash
         git log --graph --oneline --all
+        git tag
         ```

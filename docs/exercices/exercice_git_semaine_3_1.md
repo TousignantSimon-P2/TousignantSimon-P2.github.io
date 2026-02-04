@@ -53,8 +53,8 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
     1.  Lance **Visual Studio 2026**.
     2.  Crée une nouvelle solution dans ton dossier cloné :
         * Nom de la Solution : `[NOM_SOLUTION]`
-        * Ajoute un projet **Bibliothèque de classes** nommé `Bibliotheque-git-[INITIALES]`.
-        * Ajoute un projet **Console** nommé `Console-git-[INITIALES]`.
+        * Ajoute un projet **Bibliothèque de classes** nommé `Bibliotheque-git-<da>`.
+        * Ajoute un projet **Console** nommé `Console-git-<da>`.
     3.  Dans la librairie, renomme `Class1.cs` en `Calculatrice.cs` (et mets la classe `public static`).
     4.  Vérifie avec `git status` que les dossiers `bin` et `obj` n'apparaissent pas (grâce à ton travail précédent).
     5.  Valide la structure sur la branche principale :

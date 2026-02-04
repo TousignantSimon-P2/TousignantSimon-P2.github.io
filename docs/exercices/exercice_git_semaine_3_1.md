@@ -96,7 +96,7 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
         ```bash
         git restore --staged note_personnelle.txt
         ```
-        (Note: Bien que `git rm --cached` puisse aussi fonctionner, `git restore --staged <fichier>` est généralement préféré pour désindexer des fichiers. `git rm --cached` non seulement désindexe le fichier, mais le supprime également du suivi Git, ce qui peut prêter à confusion et risque, en cas d'erreur ou d'oubli de `--cached`, d'effacer le fichier de votre répertoire de travail. `git restore --staged` est plus sécuritaire car il désindexe le fichier sans toucher à votre copie locale ni à l'historique Git.)
+        (Note: `git rm --cached` also works, but `git restore --staged` is generally preferred for unstaging files.)
     5.  Pour éviter de refaire l'erreur, ajoute `note_personnelle.txt` à la fin de ton fichier `.gitignore`.
     6.  Valide la mise à jour du gitignore sur la branche `dev` :
         ```bash

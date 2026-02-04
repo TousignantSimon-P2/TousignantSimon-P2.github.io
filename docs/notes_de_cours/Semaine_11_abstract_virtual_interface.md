@@ -2,14 +2,14 @@
 
 ## Sommaire
 
-- [1. Mots-clés fondamentaux](#1-mots-cl%C3%A9s-fondamentaux)
+- [1. Mots-clés fondamentaux](#1-mots-cles-fondamentaux)
   - [1.1. abstract](#11-abstract)
   - [1.2. virtual](#12-virtual)
   - [1.3. sealed](#13-sealed)
 - [2. Comparaison avec les interfaces](#2-comparaison-avec-les-interfaces)
-- [3. Cas d'utilisation recommandés](#3-cas-dutilisation-recommand%C3%A9s)
-- [4. Résumé comparatif](#4-r%C3%A9sum%C3%A9-comparatif)
-- [5. Différence entre une méthode abstraite et une interface](#5-diff%C3%A9rence-entre-une-m%C3%A9thode-abstraite-et-une-interface)
+- [3. Cas d'utilisation recommandés](#3-cas-dutilisation-recommandes)
+- [4. Résumé comparatif](#4-resume-comparatif)
+- [5. Différence entre une méthode abstraite et une interface](#5-difference-entre-une-methode-abstraite-et-une-interface)
 
 ---
 

@@ -145,9 +145,9 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 ## URGENT - Conflit à gérer
 
 > **De :** Sarah Connor (Tech Lead)
-> **Objet :** URGENT - Conflit à gérer
+> **Objet :** URGENT - Conflit à gérer : Ta tâche de division !
 >
-> Pendant que tu codais l'addition, j'ai dû modifier le fichier `Calculatrice.cs` sur la branche `dev`. Voici le code que j'ai ajouté :
+> Attention ! Pendant que tu travaillais sur l'addition, j'ai déjà poussé ma propre version de la méthode `Diviser` sur la branche `dev` pour ajouter une vérification de division par zéro. Voici le code que j'ai mis en place dans `Calculatrice.cs` :
 > ```csharp
 > public static double Diviser(int a, int b)
 > {
@@ -155,57 +155,47 @@ Après avoir lu le courriel de Sarah, voici comment tu pourrais l'aider :
 >     return (double)a / b;
 > }
 > ```
-> Maintenant, tu vas devoir intégrer ta version de la division et gérer le conflit manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
+> Maintenant, c'est à ton tour ! Crée une nouvelle branche depuis `dev`, implémente TA version de la méthode `Diviser` (même si elle est simple et ne gère pas encore la division par zéro), puis fusionne ta branche dans `dev`. Je m'attends à ce que tu rencontres un conflit. Tu devras le résoudre manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
 
-### Suis ces étapes PRÉCISÉMENT pour simuler le conflit :
+### Tes tâches :
 
 ??? Solution "Solution"
-    **Étape A : Ton travail sur la division**
-    1.  Assure-toi d'être sur `dev`, puis crée la branche `fonctionnalite/division`.
-    2.  Dans `Calculatrice.cs`, ajoute cette méthode (en dessous de l'addition) :
+    1.  Assure-toi d'être sur la branche `dev` (`git checkout dev`).
+    2.  Crée une nouvelle branche pour ta fonctionnalité de division, par exemple `fonctionnalite/ma-division` (`git checkout -b fonctionnalite/ma-division`).
+    3.  Dans le fichier `Calculatrice.cs`, ajoute ta version de la méthode `Diviser` (une simple division sans gestion d'erreur) :
         ```csharp
         public static double Diviser(int a, int b)
         {
             return (double)a / b;
         }
         ```
-    3.  Valide ton code :
+    4.  Valide ton travail sur ta branche :
         ```bash
-        git commit -am "Fonctionnalité : Ajout de la division simple"
+        git add .
+        git commit -m "Fonctionnalité : Ajout de ma version de la méthode Diviser"
         ```
-
-    **Étape B : Simulation du travail d'un collègue (Le piège)**
-    1.  Reviens sur la branche `dev` : `git checkout dev`.
-    2.  Modifie **le même fichier** `Calculatrice.cs`. Ajoute cette méthode (au même endroit, en dessous de l'addition) :
-        ```csharp
-        // Méthode ajoutée par Sarah
-        public static double Diviser(int a, int b)
-        {
-            if (b == 0) throw new Exception("Division par zéro impossible");
-            return (double)a / b;
-        }
-        ```
-    3.  Simule le commit du collègue sur `dev` :
+    5.  Retourne sur la branche `dev` (`git checkout dev`).
+    6.  Tente de fusionner ta branche `fonctionnalite/ma-division` dans `dev` :
         ```bash
-        git commit -am "Correctif : Sécurisation de la division"
+        git merge fonctionnalite/ma-division
         ```
-
-    **Étape C : La Fusion et la Résolution**
-    Tu es sur `dev`. Tu veux récupérer ton travail qui est sur `fonctionnalite/division`.
-    1.  Lance la fusion :
-        ```bash
-        git merge fonctionnalite/division
-        ```
-        💥 **CONFLIT DÉTECTÉ !**
-
-    2.  **Résolution :**
-        * Ouvre `Calculatrice.cs` dans Visual Studio.
-        * Repère les marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
-        * **Consigne :** Garde la version sécurisée (celle avec le `if`) et supprime les marqueurs. Le code doit compiler.
-    3.  Finalise la fusion :
+        💥 **Un conflit devrait être détecté !**
+    7.  **Résolution du conflit :**
+        *   Ouvre `Calculatrice.cs` dans ton éditeur de texte.
+        *   Tu verras des marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`) indiquant les différences entre ta version et celle de Sarah sur `dev`.
+        *   Modifie le fichier pour combiner les deux versions. L'objectif est de garder la fonctionnalité de division tout en intégrant la vérification de division par zéro de Sarah. Le code final devrait ressembler à ceci :
+            ```csharp
+            public static double Diviser(int a, int b)
+            {
+                if (b == 0) throw new Exception("Division par zéro impossible");
+                return (double)a / b;
+            }
+            ```
+        *   **Attention :** Assure-toi de supprimer tous les marqueurs de conflit !
+    8.  Marque le conflit comme résolu et finalise la fusion :
         ```bash
         git add Calculatrice.cs
-        git commit -m "Fusion : Résolution de conflit sur la division"
+        git commit -m "Fusion : Résolution de conflit sur la méthode Diviser (intégration des deux versions)"
         ```
 
 ---

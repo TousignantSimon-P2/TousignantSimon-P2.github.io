@@ -45,7 +45,7 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Création de l'architecture
 >
-> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** et un projet **Console**.
+> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** et un projet **Console**. Une fois que c'est fait, **envoie-moi une capture d'écran de l'explorateur de solutions dans Visual Studio pour confirmer la structure, et la sortie de `git status` pour vérifier que `bin`, `obj` et `.vs` ne sont pas suivis.**
 
 ### Tes tâches :
 
@@ -75,7 +75,7 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Attention à tes fichiers personnels !
 >
-> Je vois que tu as créé un fichier pour noter tes idées, mais tu as failli l'envoyer sur le serveur. Il faut corriger ça avant que ça ne pollue le projet.
+> Il semblerait que tu aies créé un fichier pour tes notes personnelles et que tu l'aies ajouté par erreur à l'index Git. Il faut corriger ça avant que ça ne pollue le projet.
 
 ### Scénario à reproduire :
 
@@ -107,7 +107,7 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Dev de l'addition
 >
-> C'est parti. On part toujours de `dev` pour créer une fonctionnalité.
+> C'est parti pour développer une nouvelle fonctionnalité ! N'oublie pas que l'on part toujours de la branche `dev` pour créer une fonctionnalité. Une fois que tu as intégré la méthode d'addition et fusionné ta branche de fonctionnalité dans `dev`, **envoie-moi la sortie de `git log --graph --oneline` pour que je voie l'historique des commits.**
 
 ### Tes tâches :
 ??? Solution "Solution"
@@ -142,7 +142,15 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** URGENT - Conflit à gérer
 >
-> Pendant que tu codais l'addition, j'ai dû modifier le fichier sur la branche `dev`. Tu vas devoir gérer l'intégration de la division manuellement.
+> Pendant que tu codais l'addition, j'ai dû modifier le fichier `Calculatrice.cs` sur la branche `dev`. Voici le code que j'ai ajouté :
+> ```csharp
+> public static double Diviser(int a, int b)
+> {
+>     if (b == 0) throw new Exception("Division par zéro impossible");
+>     return (double)a / b;
+> }
+> ```
+> Maintenant, tu vas devoir intégrer ta version de la division et gérer le conflit manuellement. Une fois la fusion et la résolution du conflit terminées, **envoie-moi le code final de `Calculatrice.cs` et la sortie de `git log --graph --oneline` pour que je valide la résolution.**
 
 ### Suis ces étapes PRÉCISÉMENT pour simuler le conflit :
 
@@ -202,7 +210,7 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Version 1.0
 >
-> Le développement est terminé. La branche `dev` est stable et testée. On déploie !
+> Excellent travail ! Le développement est terminé. La branche `dev` est stable et testée. C'est le moment de déployer ! Une fois que `dev` est fusionnée dans `main`, **envoie-moi la sortie complète de `git log --graph --oneline --all` pour que je puisse valider l'historique final de toutes les branches.**
 
 ### Tes tâches :
 ??? Solution "Solution"

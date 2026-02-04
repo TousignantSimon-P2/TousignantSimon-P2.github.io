@@ -45,7 +45,7 @@ Vous rejoignez l'équipe de développement de **MathTech Solutions**. Votre resp
 > **De :** Sarah Connor (Tech Lead)
 > **Objet :** Création de l'architecture
 >
-> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution.
+> Parfait, le dépôt est sécurisé contre les fichiers inutiles. On peut créer la solution. J'aimerais que tu crées une solution Visual Studio contenant une **Bibliothèque de classes** et un projet **Console**.
 
 ### Tes tâches :
 

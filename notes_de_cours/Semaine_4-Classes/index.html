@@ -503,7 +503,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../exercices/exercice_formatif_formel/" class="md-tabs__link">
+        <a href="../../exercices/exercice_formatif_formel_h26/" class="md-tabs__link">
           
   
   
@@ -1182,10 +1182,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#accesseurs" class="md-nav__link">
+  <a href="#accesseurs-proprietes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Accesseurs
+        Accesseurs (Propriétés)
       
     </span>
   </a>
@@ -1205,10 +1205,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#validation-par-regex-et-foreach" class="md-nav__link">
+  <a href="#validation-par-regex-et-boucle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validation par regex et foreach
+        Validation par regex et boucle
       
     </span>
   </a>
@@ -1216,10 +1216,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#valeurs-nullable" class="md-nav__link">
+  <a href="#types-nullables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Valeurs nullable
+        Types nullables
       
     </span>
   </a>
@@ -1232,10 +1232,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generation-du-ou-des-constructeurs" class="md-nav__link">
+  <a href="#generation-des-constructeurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Génération du ou des constructeurs
+        Génération des constructeurs
       
     </span>
   </a>
@@ -1569,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_formatif_formel/" class="md-nav__link">
+      <a href="../../exercices/exercice_formatif_formel_h26/" class="md-nav__link">
         
   
   
@@ -1621,77 +1621,88 @@
 
 <h2 id="creation-dune-classe-dans-une-bibliotheque">Création d'une classe dans une bibliothèque</h2>
 <ul>
-<li>Créer une bibliothèque de classes vous fabrique par défaut Class1 que vous allez devoir renommer.</li>
+<li>Lors de la création d'un projet de bibliothèque de classes, Visual Studio génère par défaut un fichier <code>Class1.cs</code> qu'il est fortement recommandé de renommer pour refléter l'utilité réelle de la classe.  </li>
 <li>
-<p>(Ctrl+r Ctrl+r)<br />
-<img alt="" src="../../images/ClasseEtProjet/1.png" />  </p>
+<p>Utilisez le raccourci de refactoring <code>Ctrl+R, Ctrl+R</code> directement sur le nom de la classe pour déclencher le renommage global.<br />
+<img alt="" src="../../images/ClasseEtProjet/1.png" /><br />
+<em>Figure 1 : Utilisation du raccourci de renommage (Ctrl+R, Ctrl+R) pour assurer la cohérence dans tout le projet.</em>  </p>
 </li>
 <li>
-<p>Renomme également le fichier associé à la classe.<br />
-<img alt="" src="../../images/ClasseEtProjet/2.png" />  </p>
+<p>Suite au changement de nom, accepte la proposition de Visual Studio de renommer également le fichier physique sur le disque.<br />
+<img alt="" src="../../images/ClasseEtProjet/2.png" /><br />
+<em>Figure 2 : Boîte de dialogue confirmant la synchronisation du nom du fichier .cs avec celui de la classe.</em>  </p>
 </li>
 </ul>
 <h2 id="creation-des-champs-attributs">Création des champs / attributs</h2>
 <ul>
-<li>Faire la déclaration des variables membres.</li>
-<li>Attention : Toujours "private" toujours "_" et le nom en casse chameau.<br />
-<img alt="" src="../../images/ClasseEtProjet/3.png" />  </li>
+<li>Déclarez vos variables membres (champs privés) en haut de la classe.  </li>
+<li>Respectez rigoureusement la convention C# : modificateur <code>private</code>, préfixe <code>_</code> et casse chameau (camelCase).<br />
+<img alt="" src="../../images/ClasseEtProjet/3.png" /><br />
+<em>Figure 3 : Déclaration des champs privés (backing fields) servant à stocker l'état interne de l'objet de manière sécurisée.</em>  </li>
 </ul>
-<h2 id="accesseurs">Accesseurs</h2>
+<h2 id="accesseurs-proprietes">Accesseurs (Propriétés)</h2>
 <ul>
 <li>
-<p>Création des accesseur avec les actions rapides.<br />
-<img alt="" src="../../images/ClasseEtProjet/4.png" />  </p>
+<p>Pour exposer vos données tout en conservant le contrôle, générez des propriétés via les "Actions rapides" de Visual Studio.<br />
+<img alt="" src="../../images/ClasseEtProjet/4.png" /><br />
+<em>Figure 4 : Accès au menu "Actions rapides et refactorisation" (Ctrl + .) en plaçant le curseur sur un champ.</em>  </p>
 </li>
 <li>
-<p>Prendre l'option d'encapsuler et d'utiliser la propriété.<br />
-<img alt="" src="../../images/ClasseEtProjet/5.png" />  </p>
+<p>Sélectionnez l'option "Encapsuler le champ et utiliser la propriété" pour lier automatiquement votre champ privé à une propriété publique.<br />
+<img alt="" src="../../images/ClasseEtProjet/5.png" /><br />
+<em>Figure 5 : Choix de l'encapsulation pour garantir que tout accès futur passera par la propriété.</em>  </p>
 </li>
 <li>
-<p>Faire un premier nettoyage des "get" et des "set" pour rendre ça plus propre.  </p>
+<p>Effectuez un nettoyage du code généré pour en améliorer la lisibilité.  </p>
 </li>
-<li>Les "get" peuvent rester sur une seule ligne.<br />
-<img alt="" src="../../images/ClasseEtProjet/6.png" />   </li>
+<li>Les accesseurs <code>get</code> simples peuvent être condensés sur une seule ligne grâce à la syntaxe d'expression.<br />
+<img alt="" src="../../images/ClasseEtProjet/6.png" /><br />
+<em>Figure 6 : Simplification visuelle des accesseurs pour un code plus compact et professionnel.</em>  </li>
 </ul>
 <h2 id="validation-des-valeurs-passees-dans-les-proprietes">Validation des valeurs passées dans les propriétés</h2>
 <ul>
-<li>Les sections summarys sont essentiels  </li>
-<li>Dans les "set" on s'assure de valider le paramètre.</li>
-<li>Attention: Le paramètre prend le nom de "value". Typique à C#<br />
-<img alt="" src="../../images/ClasseEtProjet/7.png" />  </li>
+<li>Les sections de documentation XML (<code>&lt;summary&gt;</code>) sont essentielles pour l'IntelliSense et la maintenance.  </li>
+<li>La logique de validation doit être placée dans le bloc <code>set</code> avant l'assignation au champ privé.  </li>
+<li>Rappel : le mot-clé <code>value</code> représente la donnée entrante que l'on tente d'assigner.<br />
+<img alt="" src="../../images/ClasseEtProjet/7.png" /><br />
+<em>Figure 7 : Implémentation d'un garde-fou dans le <code>set</code> pour valider les données et lever une exception si nécessaire.</em>  </li>
 </ul>
-<h3 id="validation-par-regex-et-foreach">Validation par regex et foreach</h3>
+<h3 id="validation-par-regex-et-boucle">Validation par regex et boucle</h3>
 <ul>
-<li>Exemple d'une validation sanitaire pour le numéro de DA</li>
-<li>Par regex et par boucle foreach.<br />
-<img alt="" src="../../images/ClasseEtProjet/8.png" />  </li>
+<li>Pour des critères plus stricts (ex: format d'un numéro de DA), combinez les expressions régulières (<code>Regex</code>) et les boucles de vérification.<br />
+<img alt="" src="../../images/ClasseEtProjet/8.png" /><br />
+<em>Figure 8 : Exemple de validation complexe traitant le format et le contenu spécifique d'une chaîne de caractères.</em>  </li>
 </ul>
-<h3 id="valeurs-nullable">Valeurs nullable</h3>
+<h3 id="types-nullables">Types nullables</h3>
 <ul>
-<li>Pour les avertissement et les erreurs concernant les type "non-nullable"</li>
-<li>Placer un ? après le type pour rendre la valeur nullable.<br />
-<img alt="" src="../../images/ClasseEtProjet/9.png" />  </li>
+<li>Pour gérer proprement l'absence de valeur et éviter les avertissements de compilation, utilisez le modificateur nullable.  </li>
+<li>Ajoutez un <code>?</code> après le type (ex: <code>string?</code>) pour indiquer que la valeur peut être nulle.<br />
+<img alt="" src="../../images/ClasseEtProjet/9.png" /><br />
+<em>Figure 9 : Définition d'un type nullable pour une gestion plus robuste des données optionnelles.</em>  </li>
 </ul>
-<h2 id="generation-du-ou-des-constructeurs">Génération du ou des constructeurs</h2>
+<h2 id="generation-des-constructeurs">Génération des constructeurs</h2>
 <ul>
-<li>Une fois toutes les validations sanitaires complétées, procédez à la création des constructeurs</li>
+<li>Une fois vos validations en place, automatisez la création des constructeurs via les outils de refactorisation.  </li>
 <li>
-<p>Action rapides et factorisation sur la classe.<br />
-<img alt="" src="../../images/ClasseEtProjet/10.png" />  </p>
+<p>Appelez les "Actions rapides" directement sur le nom de la classe.<br />
+<img alt="" src="../../images/ClasseEtProjet/10.png" /><br />
+<em>Figure 10 : Lancement de l'outil de génération automatique de constructeur.</em>  </p>
 </li>
 <li>
-<p>Sélectionner "Générer le constructeur"<br />
-<img alt="" src="../../images/ClasseEtProjet/11.png" />  </p>
+<p>Sélectionnez l'option "Générer le constructeur..." dans le menu contextuel.<br />
+<img alt="" src="../../images/ClasseEtProjet/11.png" /><br />
+<em>Figure 11 : Accès à la configuration des paramètres du nouveau constructeur.</em>  </p>
 </li>
 <li>
-<p>Sélectionnez les propriétés et non les champs.<br />
-<img alt="" src="../../images/ClasseEtProjet/12.png" />  </p>
+<p><strong>Point crucial</strong> : Cochez les <strong>Propriétés</strong> (casse majuscule) et non les champs privés (<code>_</code>). Cela force le passage par le <code>set</code> et donc l'exécution de vos validations lors de l'instanciation.<br />
+<img alt="" src="../../images/ClasseEtProjet/12.png" /><br />
+<em>Figure 12 : Sélection des propriétés pour garantir l'intégrité des données dès la création de l'objet.</em>  </p>
 </li>
 <li>
-<p>Assurez vous de bien remplir la section summary </p>
+<p>Finalisez en complétant manuellement la documentation XML, particulièrement les balises <code>&lt;exception&gt;</code>, car elles ne sont pas générées automatiquement.<br />
+<img alt="" src="../../images/ClasseEtProjet/13.png" /><br />
+<em>Figure 13 : Constructeur finalisé et documenté, prêt à être utilisé en toute sécurité par d'autres développeurs.</em></p>
 </li>
-<li>Attention les exceptions ne seront pas générées, vous devez compléter cette section manuellement.<br />
-<img alt="" src="../../images/ClasseEtProjet/13.png" />  </li>
 </ul>
 
 

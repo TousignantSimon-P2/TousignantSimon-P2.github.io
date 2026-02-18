@@ -23,6 +23,8 @@ nav:
       -  Classes : notes_de_cours/Semaine_4-Classes.md  
    - '5. Les exceptions':
       -  Exception : notes_de_cours/Semaine_4-exceptions-csharp.md
+   - '6. Les tests' :
+      -  Test Unitaires MSTest : notes_de_cours/test_unitaires_mstest.md
 
 #   - 'Module5':
 #      
@@ -46,7 +48,7 @@ nav:
 #      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md 
 #      
    - 'Formatif Formel': 
-      - Formatif Formel : exercices/exercice_formatif_formel.md
+      - Formatif Formel : exercices/exercice_formatif_formel_h26.md
 
      
 

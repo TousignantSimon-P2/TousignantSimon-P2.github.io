@@ -6,26 +6,26 @@ Le standard au niveau du nom des interface est "I majuscule" suivit du nom de l'
 Exemple : "IEquatable" ou "ICompatable"  
 
 ### Exemple de déclaration
-``` c# title="IUneInterface.cs" 
+```csharp title="IUneInterface.cs"
 
 public interface IUneInterface
 {  
-    
+
 }
-```  
+```
 
 ### Déclaration du "contrat"
 
 Dans l'interface on déclare uniquement les signatures de méthodes.  
 Bref, on termine pas un point-virgule à la fin de la déclaration.
-``` c# title="IUneInterface.cs" 
+```csharp title="IUneInterface.cs"
 
 public interface IUneInterface
 {  
     public void Methode();
     public int Methode(int variable);
 }
-```  
+```
 
 ### Les interfaces "standards" de C#
 
@@ -39,7 +39,7 @@ Permet de savoir si deux objets sont identiques (pareil) en fonction des donnée
 
 Généralement on utiise IEquatable avec la mécanique générique
 
-``` c# title="IUneInterface.cs" 
+```csharp title="IUneInterface.cs"
 
 public class UneClasse : IEquatable<UneClasse> //déclare que la classe UneClasse va avoir Equals(UneClasse other)
 {  
@@ -48,14 +48,14 @@ public class UneClasse : IEquatable<UneClasse> //déclare que la classe UneClass
 
     }
 }
-``` 
+```
 
 ### Les grand principe de IEquatable.
 - Si other est null, nous sommes différents -> retourne faux
 - Ensuite on compare les objets sur les règles métiers. Exemple est-ce que les noms sont identiques, est-ce que le kilométrage est identique, etc.
   
   
-``` c# title="UneClasse.cs" 
+```csharp title="UneClasse.cs"
 Exemple :   
 public class UneClasse : IEquatable<UneClasse> //déclare que la classe UneClasse va avoir Equals(UneClasse other)
 {  
@@ -65,9 +65,9 @@ public class UneClasse : IEquatable<UneClasse> //déclare que la classe UneClass
     {
        if (other is null)
           return false;
-       
+
        return (_uneValeur == other._uneValeur);
-       
+
     }
 }
 ```
@@ -75,7 +75,7 @@ public class UneClasse : IEquatable<UneClasse> //déclare que la classe UneClass
 Autre exemple : 
 
 
-``` c# title="Personne.cs" 
+```csharp title="Personne.cs"
 public class Personne : IEquatable<Personne>
 {
     public string Nom { get; set; }
@@ -110,7 +110,7 @@ Inversement, si la personne à 20 ans et que other a 25... 20 - 25 = -5 donc moi
 En code : 
 
 
-``` c# title="Etudiant.cs"
+```csharp title="Etudiant.cs"
    public class Etudiant : IComparable<Étudiant>
 {
     public string Nom { get; set; }
@@ -123,13 +123,13 @@ En code :
         return this.Moyenne - other.Moyenne;
     }
 } 
-``` 
+```
 
 À noter qu'une implémentation d'interface n'est pas exclusive, une classe peut implémenter plusieurs interfaces.
 
 Exemple :
 
-``` c# title="Etudiant.cs"
+```csharp title="Etudiant.cs"
 public class Personne : IEquatable<Personne>, IComparable<Personne>
 {
     public string Nom { get; set; }

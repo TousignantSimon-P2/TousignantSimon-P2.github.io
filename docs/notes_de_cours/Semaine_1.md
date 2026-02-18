@@ -48,7 +48,7 @@ decimal | 16 octets | ±1.0 x 10^-28 | ±7.9228 x 10^28 | 28-29 nombres
 
 ### if
 
-``` c# title="simple if"
+```csharp title="simple if"
 if (condition) 
 {  
     // Bloc de code à exécuter si la condition retourne "true"  
@@ -66,11 +66,11 @@ else
 ### for
 
 
-``` c# title="simple for"
-   for (affirmation 1; affirmation 2; affirmation 3)  
-   {  
-      // Bloc de code à exécuter si la condition retourne "true"  
-   }  
+```csharp title="simple for"
+for (affirmation 1; affirmation 2; affirmation 3)  
+{  
+    // Bloc de code à exécuter si la condition retourne "true"  
+}  
 ```
   
 
@@ -80,19 +80,19 @@ else
 
 ### while
 
-``` c# title="simple while"
-   while (condition)  
-   {  
-      // Bloc de code à exécuter si la condition retourne "true"  
-   }  
+```csharp title="simple while"
+while (condition)  
+{  
+    // Bloc de code à exécuter si la condition retourne "true"  
+}  
 ```
 
 ### do while
-``` c# title="simple do while"
-   do  
-   {  
-      // Bloc de code à exécuter si la condition retourne "true"  
-   } while (condition) 
+```csharp title="simple do while"
+do  
+{  
+    // Bloc de code à exécuter si la condition retourne "true"  
+} while (condition) 
 ```
 * À noter que la boucle sera toujours exécuté 1 fois au minimum
 
@@ -100,17 +100,18 @@ else
 
 *  En lecture seule seulement, aucune modification de la structure.
 
-``` c# title="foreach - pour toutes les valeurs d'une collection"
-   foreach(LeType nomVariable in laCollectionOuLeTableau)
-      // Bloc de code à exécuter si la condition retourne "true"  
-   }
+```csharp title="foreach - pour toutes les valeurs d'une collection"
+foreach (LeType nomVariable in laCollectionOuLeTableau)
+{
+    // Bloc de code à exécuter si la condition retourne "true"  
+}
 
-   int[] lesNombres =  {1, 3, 5 };
-   foeach(int leNombre in lesNombres)
-   {
-      //utilisation de la varibale "leNombre" qui prendra les valeurs de 1, 3 et 5
-      Console.WriteLine(leNombre); //affichera 1, 3 et 5 en sautant une ligne
-   } 
+int[] lesNombres = { 1, 3, 5 };
+foreach (int leNombre in lesNombres)
+{
+    //utilisation de la varibale "leNombre" qui prendra les valeurs de 1, 3 et 5
+    Console.WriteLine(leNombre); //affichera 1, 3 et 5 en sautant une ligne
+} 
 ```
 ## Visual studio et la compilation
 Lorsque visual studion fait la compilation de votre programme, soit par l'exécution, soit simplement par la génération (menu générer) le code est converti en langage intermédiaire (Intermediate language "il")  
@@ -131,15 +132,15 @@ Pour le présent exemple j'ai utilisé "git bash". J'aurais pu utiliser powershe
 
 ### public static void Main(string[] args) ?
 
-``` c# title="Main"
-   public static void Main(string[] args)
-   {
-      // afficher chacun des paramètres à l'écran
-      foreach(string parametre in args)
-      {
-         Console.WriteLine(parametre);
-      }
-   } 
+```csharp title="Main"
+public static void Main(string[] args)
+{
+    // afficher chacun des paramètres à l'écran
+    foreach (string parametre in args)
+    {
+        Console.WriteLine(parametre);
+    }
+} 
 ```
 
 ** notez les choses suivante : **  

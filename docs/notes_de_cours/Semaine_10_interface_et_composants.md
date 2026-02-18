@@ -10,12 +10,12 @@ Ce document résume les étapes clés du cycle de vie d’un `Form` dans une app
 
        - Appelé lors de la création de l’objet.
        - Initialise les composants.
-   ```csharp
-   public Form1()
-   {
-       InitializeComponent();
-   }
-   ```
+```csharp
+public Form1()
+{
+    InitializeComponent();
+}
+```
 
 
 2. **HandleCreated**
@@ -27,18 +27,18 @@ Ce document résume les étapes clés du cycle de vie d’un `Form` dans une app
 
        - Déclenché juste avant que le formulaire soit affiché.
        - Idéal pour charger des données ou initialiser l’interface.
-   ```csharp
-   private void Form1_Load(object sender, EventArgs e) { }
-   ```
+```csharp
+private void Form1_Load(object sender, EventArgs e) { }
+```
 
 
 4. **Shown**
 
        - Déclenché **une seule fois**, lorsque le formulaire devient visible.
        - Utile pour lancer des actions post-affichage.
-   ```csharp
-   private void Form1_Shown(object sender, EventArgs e) { }
-   ```
+```csharp
+private void Form1_Shown(object sender, EventArgs e) { }
+```
 
 
 5. **[Phase d’interaction]**
@@ -50,24 +50,24 @@ Ce document résume les étapes clés du cycle de vie d’un `Form` dans une app
 
        - Déclenché juste avant la fermeture.
        - Permet d’annuler la fermeture (`e.Cancel = true`).
-   ```csharp
-   private void Form1_Closing(object sender, CancelEventArgs e) { }
-   ```
+```csharp
+private void Form1_Closing(object sender, CancelEventArgs e) { }
+```
 
 
 7. **FormClosed**
 
        - Déclenché une fois le formulaire fermé.
        - Idéal pour les nettoyages finaux ou sauvegardes.
-   ```csharp
-   private void Form1_FormClosed(object sender, FormClosedEventArgs e) { }
-   ```
+```csharp
+private void Form1_FormClosed(object sender, FormClosedEventArgs e) { }
+```
 
 ---
 
 ## 🧭 Résumé visuel
 
-```
+```csharp
 Constructeur
    ↓
 InitializeComponent()

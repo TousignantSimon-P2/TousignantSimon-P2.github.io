@@ -1852,18 +1852,18 @@
 <p>Les <strong>Chevaliers Noirs</strong> ne deviennent jamais "Épuisés", même à 0 d'énergie, mais leur puissance est divisée par 2 quand ils sont fatigués (énergie à 0).  </p>
 </div>
 <h2 id="modelisation-uml">Modélisation UML</h2>
-<p>Voici le diagramme de classes représentant la structure du système :  </p>
+<p>Voici le diagramme de classes représentant la structure du système :</p>
 <pre class="mermaid"><code>classDiagram
     direction LR
     class Couloir {
-        - _nom: string
-        - _longueur: double
-        - _niveauAlerte: int
-        - _capaciteMaximale: int
-        + Nom: string {get; private set;}
-        + Longueur: double {get; private set;}
-        + NiveauAlerte: int {get; private set;}
-        + CapaciteMaximale: int {get; private set;}
+        - nom: string
+        - longueur: double
+        - niveauAlerte: int
+        - capaciteMaximale: int
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Nom: string
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Longueur: double
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;NiveauAlerte: int
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;CapaciteMaximale: int
 
         + Couloir(nom: string, longueur: double, niveauAlerte: int, capaciteMaximale: int)
         + AjouterGarde(garde: Garde) bool
@@ -1872,18 +1872,19 @@
     }
 
     class Garde {
-        + ENERGIE_MAX: int = 100 &lt;&lt;const&gt;&gt;
-        - _nom: string
-        - _matricule: string
-        - _puissanceCombat: int
-        - _energie: int
-        - _type: TypeMonstre
-        + Nom: string {get; private set;}
-        + Matricule: string {get; private set;}
-        + PuissanceCombat: int {get;}
-        + Energie: int {get; private set;}
-        + Type: TypeMonstre {get; private set;}
-        + EstEpuise: bool {get;}
+        - nom: string
+        - matricule: string
+        - puissanceCombat: int
+        - energie: int
+        - energie_initiale: int
+        - type: TypeMonstre
+
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Nom: string
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Matricule: string
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;PuissanceCombat: int
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Energie: int
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Type: TypeMonstre
+        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;EstEpuise: bool
 
         + Garde(nom: string, matricule: string, puissanceCombat: int, energie: int, type: TypeMonstre)
         + Patrouiller(longueur: double, niveauAlerte: int) void
@@ -1918,7 +1919,6 @@
 4. Vérifiez que la <strong>Puissance Défensive Totale</strong> du couloir est maintenant de <strong>0</strong> via <code>CalculerPuissanceDefensiveTotale()</code>.  </p>
 <details class="success">
 <summary>Solution suggérée (C#)</summary>
-</details>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -2194,6 +2194,7 @@
 </span><span id="__span-0-273"><a id="__codelineno-0-273" name="__codelineno-0-273" href="#__codelineno-0-273"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-274"><a id="__codelineno-0-274" name="__codelineno-0-274" href="#__codelineno-0-274"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 
 
 
@@ -2247,6 +2248,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascript/alltarget.js"></script>
       

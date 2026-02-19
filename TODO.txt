@@ -1,0 +1,18 @@
+Documentation simple et récapitulation des notes concernant
+
+Exemple de test unitaire pour :
+AreEquals
+IsTrue
+CollectionAssert.AreEqual
+CollectionAssert.AreUnique
+
+Avec exemple de fonction avec chemin de décision
+if -> 
+multiple if
+
+Exemple simple d'une classe simplement composée avec
+_variable
+Constructeur
+Méthode
+Accesseurs 
+Exemple avec traduction de diagramme UML

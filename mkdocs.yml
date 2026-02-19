@@ -1,0 +1,133 @@
+site_name: Cours de Programmation 2
+site_url: https://tousignantsimon-p2.github.io/
+repo_url: hhttps://github.com/TousignantSimon-P2/TousignantSimon-P2.github.io.git
+
+use_directory_urls: true
+
+nav:  
+   - 'Accueil': index.md  
+   - 'Convention': convention.md
+   - 'Ressources': ressources.md
+   - 'Installation' : notes_de_cours/Section_0.0.md
+   - 'Horaire': horaire.md
+   - '1.Types et arguments': 
+      - Les types : notes_de_cours/Semaine_1.md
+      - Les énumérations : notes_de_cours/Enums.md
+      - Passage par valeur ou référence : notes_de_cours/Semaine_3_1.md
+   - '2. Solution et git': 
+      - Création du projet : notes_de_cours/Semaine_2.md
+      - Importation de projet existant : notes_de_cours/Semaine_2_importation.md
+      - Git : notes_de_cours/semaine2_git.md
+   - '3. Déboguage et trace': 
+      - Module3 - Debug.WriteLine: notes_de_cours/Semaine_3.md
+   - '4. Création de classe':
+      -  Classes : notes_de_cours/Semaine_4-Classes.md  
+   - '5. Les exceptions':
+      -  Exception : notes_de_cours/Semaine_4-exceptions-csharp.md
+   - '6. Les tests' :
+      -  Test Unitaires MSTest : notes_de_cours/test_unitaires_mstest.md
+
+#   - 'Module5':
+#      
+#      -  Test Unitaires : notes_de_cours/Creation_test_unitaire.md
+#   - 'Module7': 
+#      - Module7 Les interfaces : notes_de_cours/Semaine_7-Interface.md
+#   - 'Module8' :
+#      - Module8 Le Singleton : notes_de_cours/Semaine_8-singleton.md
+#   - 'Module9' :
+#      - Module9 Contrôlleur et Interface graphique : notes_de_cours/Semaine_9_interface_et_controlleur.md
+#   - 'Module10' :
+#      - Module10 Cycle de vie et composants graphique : notes_de_cours/Semaine_10_interface_et_composants.md
+#   - 'Module11' :
+#      - Module11 abstract sealed virtual interface : notes_de_cours/Semaine_11_abstract_virtual_interface.md
+   - 'Exercices' :
+       - Exercice Git : exercices/exercice_git_semaine_3_1.md
+       - 1 Marathon : exercices/Exercicesv3.2.md
+       - Exercice 1 : exercices/1.exercices_de_classe_et_exception.md
+       - Exercice 2 : exercices/exercices_semaine_2.md
+#      - Exercice 3 - Tri radix : exercices/exercices_tri_radix.md
+#      - Exercice 4 - Tests Unitaires : exercices/exercice_test_unitaires1.md 
+#      
+   - 'Formatif Formel': 
+      - Formatif Formel : exercices/exercice_formatif_formel_h26.md
+
+     
+
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/database
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - content.code.copy
+    - toc.integrate
+  language: fr
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Passer en mode sombre
+      primary: indigo
+      accent: teal
+    - scheme: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Passer en mode clair
+      primary: indigo
+      accent: light blue
+plugins:
+  - search: {}
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - javascript/alltarget.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.escapeall:
+      hardbreak: true # use \ to create new line
+      nbsp: true # use \<space> to create &nbsp;
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - markdown_include.include:
+      base_path: docs/tables
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+

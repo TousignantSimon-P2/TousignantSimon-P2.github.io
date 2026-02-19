@@ -1,4 +1,9 @@
 venv
+.venv
 site
-.DS_Store
-docs/.vs/slnx.sqlite
+keys
+
+# Executables and build artifacts
+*.out
+*.gch
+*_exec

@@ -1860,10 +1860,10 @@
         - longueur: double
         - niveauAlerte: int
         - capaciteMaximale: int
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Nom: string
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Longueur: double
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;NiveauAlerte: int
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;CapaciteMaximale: int
+        + «get» -«set»Nom: string
+        + «get» -«set»Longueur: double
+        + «get» -«set»NiveauAlerte: int
+        + «get» -«set»CapaciteMaximale: int
 
         + Couloir(nom: string, longueur: double, niveauAlerte: int, capaciteMaximale: int)
         + AjouterGarde(garde: Garde) bool
@@ -1879,12 +1879,12 @@
         - energie_initiale: int
         - type: TypeMonstre
 
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Nom: string
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Matricule: string
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;PuissanceCombat: int
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Energie: int
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;Type: TypeMonstre
-        + &lt;&lt;get&gt;&gt; -&lt;&lt;set&gt;&gt;EstEpuise: bool
+        + «get» -set&gt;&gt;Nom: string
+        + «get» -«set»Matricule: string
+        + «get» -«set»PuissanceCombat: int
+        + «get» -«set»Energie: int
+        + «get» -«set»Type: TypeMonstre
+        + «get» -«set»EstEpuise: bool
 
         + Garde(nom: string, matricule: string, puissanceCombat: int, energie: int, type: TypeMonstre)
         + Patrouiller(longueur: double, niveauAlerte: int) void

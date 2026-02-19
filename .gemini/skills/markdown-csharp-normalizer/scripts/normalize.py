@@ -7,11 +7,8 @@ def normalize_file(file_path):
         content = f.read()
 
     # Convert CRLF to LF
-    content = content.replace('
-', '
-')
-    lines = content.split('
-')
+    content = content.replace('\r\n', '\n')
+    lines = content.split('\n')
     new_lines = []
     in_code_block = False
     code_block_lines = []
@@ -66,10 +63,8 @@ def normalize_file(file_path):
         else:
             new_lines.append(line)
 
-    with open(file_path, 'w', encoding='utf-8', newline='
-') as f:
-        f.write('
-'.join(new_lines))
+    with open(file_path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write('\n'.join(new_lines))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Normalize Markdown C# code blocks.")

@@ -125,6 +125,20 @@ En code :
 } 
 ```
 
+```mermaid
+classDiagram
+    class IComparable~T~ {
+        <<interface>>
+        +CompareTo(T other)* int
+    }
+    class Etudiant {
+        +string Nom
+        +double Moyenne
+        +CompareTo(Etudiant other) int
+    }
+    IComparable <|.. Etudiant
+```
+
 À noter qu'une implémentation d'interface n'est pas exclusive, une classe peut implémenter plusieurs interfaces.
 
 Exemple :

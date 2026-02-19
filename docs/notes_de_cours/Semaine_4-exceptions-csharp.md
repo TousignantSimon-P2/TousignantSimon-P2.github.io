@@ -24,6 +24,22 @@ Lever une exception signifie :
 - remonter l’erreur dans la pile d’appels jusqu’à un gestionnaire approprié (`catch`),
 - ou provoquer l’arrêt du programme si elle n’est pas interceptée.
 
+```mermaid
+sequenceDiagram
+    participant UI as Interface Utilisateur
+    participant Service as Couche Service
+    participant DAL as Couche Données (Bas niveau)
+    
+    UI->>Service: AppelerAction()
+    Service->>DAL: LireDonnées()
+    Note right of DAL: Erreur critique !
+    DAL-->>Service: throw Exception
+    Note over Service: Pas de catch ici
+    Service-->>UI: Propagation de l'exception
+    UI->>UI: catch (Exception)
+    UI->>UI: Afficher message d'erreur
+```
+
 ---
 
 ### 2.2 Lever une exception avec un message explicite
@@ -106,6 +122,18 @@ public class SoldeInsuffisantException : Exception
     {
     }
 }
+```
+
+```mermaid
+classDiagram
+    class Exception {
+        +string Message
+        +string StackTrace
+    }
+    class SoldeInsuffisantException {
+        +SoldeInsuffisantException(string message)
+    }
+    Exception <|-- SoldeInsuffisantException
 ```
 
 Usage :

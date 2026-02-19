@@ -28,6 +28,7 @@ Le contrôleur contient toute la logique liée aux actions métiers sur les clie
 Il est implémenté en **singleton**, c’est-à-dire que seule une instance de la classe sera créée et utilisée :
 
 ```csharp
+```csharp
 public class ControlleurClient
 {
     private static ControlleurClient instance;
@@ -50,6 +51,23 @@ public class ControlleurClient
         //Logique de récupération de la liste
     }
 }
+```
+
+```mermaid
+classDiagram
+    class FormClient {
+        -ControlleurClient _controlleurClient
+        +btnEnregistrer_Click()
+        +btnAfficherClients_Click()
+    }
+    class ControlleurClient {
+        -ControlleurClient instance$
+        -ControlleurClient()
+        +Instance$ ControlleurClient
+        +EnregistrerClient(string nom)
+        +RecupererListeClient() List~string~
+    }
+    FormClient --> ControlleurClient : utilise
 ```
 
 ---

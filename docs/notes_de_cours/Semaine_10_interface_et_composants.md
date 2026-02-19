@@ -67,22 +67,18 @@ private void Form1_FormClosed(object sender, FormClosedEventArgs e) { }
 
 ## 🧭 Résumé visuel
 
-```csharp
-Constructeur
-   ↓
-InitializeComponent()
-   ↓
-HandleCreated (optionnel)
-   ↓
-Load
-   ↓
-Shown
-   ↓
-[Utilisation du formulaire]
-   ↓
-Closing
-   ↓
-FormClosed
+```mermaid
+stateDiagram-v2
+    [*] --> Constructeur
+    Constructeur --> InitializeComponent
+    InitializeComponent --> HandleCreated
+    HandleCreated --> Load
+    Load --> Shown
+    Shown --> Interaction : [Utilisation]
+    Interaction --> Closing
+    Closing --> FormClosed : [e.Cancel = false]
+    Closing --> Interaction : [e.Cancel = true]
+    FormClosed --> [*]
 ```
 
 ---
@@ -115,6 +111,24 @@ public class Client
         return Nom;
     }
 }
+```
+
+```mermaid
+classDiagram
+    class Client {
+        +string Nom
+        +ToString() string
+    }
+    class ComboBox {
+        +object DataSource
+        +string DisplayMember
+    }
+    class FormClient {
+        +ChargerClientsDansComboBox()
+    }
+    FormClient --> Client : gère une liste de
+    FormClient --> ComboBox : lie la liste à
+    ComboBox o-- Client : affiche
 ```
 
 ---

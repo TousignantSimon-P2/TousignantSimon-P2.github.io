@@ -1,0 +1,32 @@
+La Mise en Situation : Projet "DUNGEON-GUARD 3000"
+Le Contexte
+Le Seigneur Noir "Malphas" en a assez que des héros entrent dans son donjon comme dans un moulin. Il vous commissionne pour créer le système de gestion de sa Garde de Porte. Il veut automatiser la surveillance des couloirs et la gestion de ses monstres de garde.
+Le Cahier des Charges (À éplucher)
+« Dans mon donjon, j'ai des Couloirs. Chaque couloir a un nom (ex: "Couloir des Soupirs"), une longueur en mètres et un Niveau d'Alerte (un chiffre de 1 à 5).
+Pour protéger ces couloirs, j'utilise des Gardes. Un Garde a un nom, un matricule, et une Puissance de Combat. Un Garde a aussi une Énergie (maximum 100). Chaque Garde appartient à un Type de Monstre (Squelette, Orc, Chevalier Noir).
+Les règles du Donjon :
+Affectation : On assigne des Gardes à un Couloir. Un couloir a une capacité maximale de gardes (on ne peut pas entasser 50 Orcs dans un petit couloir !).
+Patrouille : Quand un Garde patrouille dans un couloir, il consomme de l'Énergie. La formule est : EnergiePerdue = LongueurDuCouloir * NiveauAlerte.
+Sécurité : Si l'énergie d'un Garde tombe à 0, il devient "Épuisé" (un booléen). Un garde épuisé ne peut plus patrouiller et sa Puissance de Combat tombe à 0 tant qu'il n'a pas dormi.
+Logique de Défense : Le système doit pouvoir calculer la Puissance Défensive Totale d'un couloir (la somme des puissances de tous les gardes non-épuisés présents). »
+Pourquoi c'est parfait pour votre cours :
+1. La Conception UML (Indépendante du langage)
+Composition/Agrégation : Le Couloir possède une liste de Gardes. C'est l'occasion de dessiner la relation "1 à *" avec un losange.
+Multiplicité : Gérer la contrainte de "Capacité maximale" du couloir lors de l'ajout d'un garde dans le diagramme (méthode AjouterGarde).
+Énumérations : Utiliser une enum pour le TypeMonstre.
+2. Collaboration et Architecture
+Étudiant A : Travaille sur la classe Garde. Il gère la logique de l'énergie et l'état "Épuisé".
+Étudiant B : Travaille sur la classe Couloir. Il doit gérer la collection de gardes et le calcul de la puissance totale.
+Le "Clash" : L'étudiant B va réaliser qu'il ne peut pas calculer la puissance totale sans vérifier l'état estEpuise géré par l'étudiant A.
+La Mission (Ce que vous donnez aux étudiants)
+Objectif : Concevoir le module Donjon.Securite.
+Modélisation UML : Produisez le diagramme de classes. Identifiez bien les types de retour (ex: bool pour l'ajout d'un garde si le couloir est plein).
+Encapsulation Strict : Aucun attribut ne doit être public. Si le NiveauAlerte d'un couloir doit être entre 1 et 5, la validation doit se faire à l'entrée.
+Logique Métier : Implémentez une méthode FairePatrouille() qui met à jour l'énergie de tous les gardes du couloir et change leur état si nécessaire.
+Le Test de Validation :
+Créez un couloir de 20m avec un niveau d'alerte de 3.
+Ajoutez un "Squelette" (Puissance 10, Énergie 50).
+Faites patrouiller le garde une fois (il perd 60 d'énergie... oh ! il devient épuisé car il n'en avait que 50).
+Vérifiez que la Puissance Défensive Totale du couloir est maintenant de 0.
+Le "Petit Plus" (Optionnel)
+« Malphas décide que les Chevaliers Noirs sont d'une loyauté absolue : ils ne deviennent jamais "Épuisés", même à 0 d'énergie, mais leur puissance est divisée par 2 quand ils sont fatigués. »(Cela les force à ajouter une condition selon l'Énumération dans leur logique de calcul).

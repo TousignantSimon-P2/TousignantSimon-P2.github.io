@@ -82,6 +82,23 @@ namespace MonApplication.Modeles
 }
 ```
 
+```mermaid
+classDiagram
+    class Saison {
+        <<enumeration>>
+        Printemps
+        Ete
+        Automne
+        Hiver
+    }
+    class Activite {
+        +string Nom
+        +Saison SaisonIdeale
+        +AfficherDetail() void
+    }
+    Activite --> Saison : utilise
+```
+
 ## Avantages de l'Enum
 1. **Lisibilité** : `Saison.Hiver` est beaucoup plus clair que le chiffre `3`.
 2. **Auto-complétion (IntelliSense)** : Visual Studio vous proposera la liste des valeurs possibles dès que vous tapez `=`.

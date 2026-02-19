@@ -47,6 +47,16 @@ public class ExempleSingleton
 }
 ```
 
+```mermaid
+classDiagram
+    class ExempleSingleton {
+        -ExempleSingleton instance$
+        -ExempleSingleton()
+        +Instance$ ExempleSingleton
+        +FaireQuelquechose() void
+    }
+```
+
 Autre exemple pour l'accesseur si toutefois vous la croiseriez  
 
 ```csharp

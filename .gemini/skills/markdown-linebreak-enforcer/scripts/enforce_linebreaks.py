@@ -5,8 +5,7 @@ def enforce_linebreaks_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    lines = content.split('
-')
+    lines = content.split('\n')
     new_lines = []
     in_code_block = False
 
@@ -28,10 +27,8 @@ def enforce_linebreaks_file(file_path):
             # On retire les espaces de fin existants et on en ajoute 2
             new_lines.append(line.rstrip() + "  ")
 
-    with open(file_path, 'w', encoding='utf-8', newline='
-') as f:
-        f.write('
-'.join(new_lines))
+    with open(file_path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write('\n'.join(new_lines))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Enforce two spaces before line breaks in Markdown.")

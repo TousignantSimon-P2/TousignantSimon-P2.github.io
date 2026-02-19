@@ -35,6 +35,18 @@ public class Chien : Animal
 }
 ```
 
+```mermaid
+classDiagram
+    class Animal {
+        <<abstract>>
+        +FaireDuBruit()* void
+    }
+    class Chien {
+        +FaireDuBruit() void
+    }
+    Animal <|-- Chien
+```
+
 🔸 **Note :** Une classe `abstract` ne peut pas être instanciée directement.
 
 ### 1.2. `virtual`
@@ -58,6 +70,17 @@ public class Chat : Animal
         Console.WriteLine("Miaou");
     }
 }
+```
+
+```mermaid
+classDiagram
+    class Animal {
+        +FaireDuBruit() void
+    }
+    class Chat {
+        +FaireDuBruit() void
+    }
+    Animal <|-- Chat
 ```
 
 🔸 **Note :** Si une méthode `virtual` n’est pas redéfinie, le comportement par défaut est conservé.
@@ -121,6 +144,18 @@ public class Chat : IAnimal
 {
     public void FaireDuBruit() => Console.WriteLine("Miaou");
 }
+```
+
+```mermaid
+classDiagram
+    class IAnimal {
+        <<interface>>
+        +FaireDuBruit()* void
+    }
+    class Chat {
+        +FaireDuBruit() void
+    }
+    IAnimal <|.. Chat
 ```
 
 **Avantages d’une interface :**
@@ -196,6 +231,23 @@ public class Photo : IImprimable
     }
 }
 ```
+
+```mermaid
+classDiagram
+    class IImprimable {
+        <<interface>>
+        +Imprimer()* void
+    }
+    class Document {
+        +Imprimer() void
+    }
+    class Photo {
+        +Imprimer() void
+    }
+    IImprimable <|.. Document
+    IImprimable <|.. Photo
+```
+
 🟢 Ici, `Document` et `Photo` n'ont aucun lien hiérarchique, mais ils partagent tous deux la capacité à être imprimés. Une **interface** est donc la solution naturelle.
 
 ---
@@ -227,6 +279,27 @@ public class Contractuel : Employe
     public override decimal CalculerSalaire() => HeuresTravaillees * TauxHoraire;
 }
 ```
+
+```mermaid
+classDiagram
+    class Employe {
+        <<abstract>>
+        +string Nom
+        +CalculerSalaire()* decimal
+    }
+    class Salarie {
+        +decimal SalaireMensuel
+        +CalculerSalaire() decimal
+    }
+    class Contractuel {
+        +int HeuresTravaillees
+        +decimal TauxHoraire
+        +CalculerSalaire() decimal
+    }
+    Employe <|-- Salarie
+    Employe <|-- Contractuel
+```
+
 🟢 Ici, tous les employés **sont** des `Employe`, et ils doivent obligatoirement définir comment calculer leur salaire. Une **classe abstraite avec méthode abstraite** s’impose naturellement.
 
 ---

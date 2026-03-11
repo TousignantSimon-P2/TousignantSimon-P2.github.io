@@ -1,0 +1,376 @@
+# L'héritage en C#
+
+L'héritage permet de créer une nouvelle classe (**dérivée**) à partir d'une classe existante (**de base**). Elle favorise la réutilisation du code et définit une relation de type "Est un".  
+
+## 1. Syntaxe et relation "Est un"
+
+Pour hériter d'une classe, on utilise le symbole `:`. La classe dérivée obtient alors tous les membres non privés de la classe de base.  
+
+!!! tip "La syntaxe de l'héritage"  
+    C'est le symbole **`:`** qui crée le lien entre les deux classes. On lit la ligne ci-dessous : « La classe **Voiture** hérite de la classe **Vehicule** ».  
+
+```mermaid
+classDiagram
+    class Vehicule {
+        +«get»-«set» marque:string
+        +«create» Vehicule(marque:string)
+        +«virtual» Reparer() void
+        +«redefine» ToString() string
+    }
+    class Voiture {
+        +«get»-«set» nombreDePortes:int
+        +«create» Voiture(marque:string, nbPortes:int)
+        +«redefine» Reparer() void
+        +«redefine» ToString() string
+    }
+    class Moto {
+        +«get»-«set» style:string
+        +«create» Moto(marque:string, style:string)
+        +«redefine» Reparer() void
+        +«redefine» ToString() string
+    }
+    Vehicule <|-- Voiture
+    Vehicule <|-- Moto
+```
+
+```csharp hl_lines="35 41 68 74"
+public class Vehicule 
+{
+    // 1. Attributs
+    private string _marque;
+    private bool _estRepare;
+    
+    // 2. Constructeur
+    public Vehicule(string marque)
+    {
+        // On utilise la propriété pour forcer la validation dès la construction
+        Marque = marque;
+        _estRepare = false; // Par défaut, un véhicule n'est pas encore réparé
+    }
+
+    // 3. Méthodes
+    /// <summary>
+    /// Effectue une réparation générique et change l'état du véhicule.
+    /// </summary>
+    public virtual void Reparer()
+    {
+        _estRepare = true;
+        Debug.WriteLine($"[BASE] Le véhicule {_marque} est maintenant marqué comme réparé.");
+    }
+    
+    // 4. Méthodes override (Redéfinition)
+    public override string ToString()
+    {
+        string etat = _estRepare ? "Réparé" : "En attente";
+        return $"Véhicule : {_marque} [{etat}]";
+    }
+
+    // 5. Accesseurs
+    public string Marque 
+    { 
+        get => _marque; 
+        private set
+        {
+            // Validation centralisée
+            ArgumentException.ThrowIfNullOrEmpty(value);
+            _marque = value;
+        }
+    }
+}
+
+public class Voiture : Vehicule // "Est un" véhicule
+{
+    // 1. Attributs propres à la voiture
+    private int _nombreDePortes;
+
+    // 2. Constructeur
+    public Voiture(string marque, int nbPortes) : base(marque) 
+    {
+        NombreDePortes = nbPortes;
+        Debug.WriteLine("[DÉRIVÉE] Initialisation de la voiture terminée.");
+    }
+
+    // 4. Méthodes override (Redéfinition)
+    public override void Reparer()
+    {
+        // On appelle la base pour changer l'état interne (_estRepare = true)
+        base.Reparer();
+        Debug.WriteLine("Vérification de la pression des 4 pneus et du système de freinage.");
+    }
+
+    public override string ToString()
+    {
+        // On réutilise la base ET on ajoute l'info spécifique
+        return base.ToString() + $" | Portes: {_nombreDePortes}";
+    }
+
+    // 5. Accesseurs propres à la voiture
+    public int NombreDePortes
+    {
+        get => _nombreDePortes;
+        private set
+        {
+            // Validation : une voiture a entre 2 et 5 portes
+            if (value < 2 || value > 5)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Le nombre de portes est invalide.");
+            }
+            _nombreDePortes = value;
+        }
+    }
+}
+
+public class Moto : Vehicule // "Est un" véhicule
+{
+    // 1. Attributs propres à la moto
+    private string _style;
+
+    // 2. Constructeur
+    public Moto(string marque, string style) : base(marque)
+    {
+        Style = style;
+        Debug.WriteLine("[DÉRIVÉE] Initialisation de la moto terminée.");
+    }
+
+    // 4. Méthodes override (Redéfinition)
+    public override void Reparer()
+    {
+        // On marque le véhicule comme réparé via la base
+        base.Reparer();
+        Debug.WriteLine("Vérification de la tension de la chaîne et de l'état des 2 pneus.");
+    }
+
+    public override string ToString()
+    {
+        return base.ToString() + $" | Style: {_style}";
+    }
+
+    // 5. Accesseurs propres à la moto
+    public string Style
+    {
+        get => _style;
+        private set
+        {
+            ArgumentException.ThrowIfNullOrEmpty(value);
+            _style = value;
+        }
+    }
+}
+```
+
+### Pourquoi utiliser l'héritage ? (Le pouvoir du Polymorphisme)
+L'héritage prend tout son sens lorsqu'on veut traiter des objets différents de manière uniforme. Imaginons une classe **`Garage`** qui doit réparer tous les véhicules qu'elle reçoit.  
+
+Sans héritage, le garage devrait avoir une méthode pour chaque type : `ReparerVoiture(Voiture v)`, `ReparerMoto(Moto m)`, etc.  
+Avec l'héritage et le polymorphisme, le garage peut simplement manipuler des **`Vehicule`** :  
+
+```csharp
+public class Garage
+{
+    private List<Vehicule> _vehiculesEnAttente = new List<Vehicule>();
+
+    public void AjouterVehicule(Vehicule v) => _vehiculesEnAttente.Add(v);
+
+    public void ReparerTout()
+    {
+        foreach (Vehicule v in _vehiculesEnAttente)
+        {
+            // Grâce au polymorphisme, C# appelle la BONNE méthode Reparer() 
+            // selon que 'v' est réellement une Voiture ou une Moto.
+            v.Reparer(); 
+            
+            // L'état de l'objet a été modifié, ce qui sera visible dans le ToString()
+            Debug.WriteLine(v.ToString());
+        }
+    }
+}
+```
+
+**Les deux avantages majeurs :**  
+1.  **Centralisation** : Les règles communes (comme la `Marque` ou l'état `estRepare`) sont gérées une seule fois dans la classe de base.  
+2.  **Extensibilité** : Si vous ajoutez une classe `Camion`, le `Garage` pourra le réparer sans changer une seule ligne de code dans `ReparerTout()`.  
+
+---  
+
+## 2. Le modificateur `protected` et l'encapsulation
+
+Le modificateur **`protected`** (symbole `#` en UML) est un niveau d'accès intermédiaire qui se situe entre `private` et `public`.  
+
+- **`private`** : Le membre est accessible **uniquement** à l'intérieur de la classe où il est déclaré. Même les classes dérivées ne peuvent pas le voir.  
+- **`protected`** : Le membre est accessible à la classe qui le déclare **ET** à toutes les classes qui en héritent (peu importe le niveau de profondeur). Cependant, il demeure **invisible et inaccessible** pour le reste du programme (comme la classe `Program` ou des classes non liées).  
+
+### Accès nécessaire uniquement (Le principe du besoin minimal)
+En programmation professionnelle, on évite de rendre les attributs (`_champs`) protégés pour ne pas briser l'encapsulation. On préfère utiliser une **propriété** avec un **`protected set`**.  
+
+Cette approche permet :  
+1.  **Le contrôle** : La classe de base peut valider la donnée dans son `set` avant de l'accepter.  
+2.  **La sécurité** : Une classe dérivée peut mettre à jour une valeur (comme un solde de points), mais un utilisateur externe ne pourra jamais modifier cette donnée manuellement depuis l'extérieur de la hiérarchie.  
+
+```mermaid
+classDiagram
+    class Appareil {
+        +«get»#«set» estAllume:bool
+        +«create» Appareil()
+    }
+    class Lampe {
+        +«create» Lampe()
+        +Allumer() void
+    }
+    Appareil <|-- Lampe
+```
+
+---  
+
+## 3. Polymorphisme : abstract, virtual, sealed et redefine
+
+1.  **`«abstract»`** : Une classe ou méthode incomplète. Elle n'a **aucune implémentation** et ne peut pas être instanciée (il est impossible de faire un `new` sur une classe abstraite). Elle sert exclusivement de modèle pour les classes dérivées.  
+2.  **`«virtual»`** : Une méthode qui possède une **implémentation de base** (comme la méthode `ToString()` que nous avons déjà utilisée). Elle peut être utilisée telle quelle ou être redéfinie pour changer son comportement.  
+3.  **`«sealed»`** : Un modificateur qui **empêche la redéfinition** d'une méthode ou l'héritage d'une classe. On l'utilise pour des raisons de sécurité (par exemple, un processus de validation de mot de passe) ou pour garantir qu'un comportement ne soit jamais altéré.  
+4.  **`«redefine»`** : La redéfinition explicite d'une méthode dans la classe dérivée (utilisant le mot-clé **`override`** en C#).  
+
+---  
+
+## 4. Exemple complet : Système de Fidélité
+
+Voici l'architecture UML finale avec la nomenclature demandée. Les attributs privés ont été retirés pour ne laisser que les propriétés (accesseurs).  
+
+```mermaid
+classDiagram
+    class CompteFidelite {
+        <<abstract>>
+        +«get»-«set» titulaire:string
+        +«get»#«set» soldePoints:int
+        +«create» CompteFidelite(titulaire:string)
+        +«abstract» EnregistrerAchat(montant:decimal) void
+        +«redefine» ToString() string
+    }
+
+    class ClientStandard {
+        +«create» ClientStandard(titulaire:string)
+        +«redefine» EnregistrerAchat(montant:decimal) void
+        +«redefine» ToString() string
+    }
+
+    class ClientPremium {
+        +«get»-«set» tauxMultiplicateur:decimal
+        +«create» ClientPremium(titulaire:string, taux:decimal)
+        +«redefine» EnregistrerAchat(montant:decimal) void
+        +«redefine» ToString() string
+    }
+
+    CompteFidelite <|-- ClientStandard
+    CompteFidelite <|-- ClientPremium
+```
+
+### Fichier 1 : CompteFidelite.cs (Classe de base)
+```csharp
+using System.Diagnostics;
+
+public abstract class CompteFidelite
+{
+    // 1. Attributs
+    private string _titulaire;
+    private int _soldePoints;
+
+    // 2. Constructeurs
+    public CompteFidelite(string titulaire)
+    {
+        Titulaire = titulaire;
+        _soldePoints = 0;
+        Debug.WriteLine($"[BASE] Instance créée pour : {_titulaire}");
+    }
+
+    // 3. Méthodes
+    public abstract void EnregistrerAchat(decimal montantAchat);
+
+    // 4. Méthodes override (Redéfinition)
+    public override string ToString()
+    {
+        return $"Titulaire : {_titulaire} | Solde : {_soldePoints} points";
+    }
+
+    // 5. Accesseurs
+    public string Titulaire 
+    { 
+        get => _titulaire; 
+        private set
+        {
+            ArgumentException.ThrowIfNullOrEmpty(value);
+            _titulaire = value;
+        }
+    }
+
+    public int SoldePoints 
+    { 
+        get => _soldePoints; 
+        protected set
+        {
+            ArgumentOutOfRangeException.ThrowIfNegative(value);
+            _soldePoints = value;
+        }
+    }
+}
+```
+
+### Fichier 2 : ClientStandard.cs
+```csharp
+using System.Diagnostics;
+
+public class ClientStandard : CompteFidelite
+{
+    // 2. Constructeur
+    public ClientStandard(string titulaire) : base(titulaire)
+    {
+        Debug.WriteLine("[DÉRIVÉE] Profil Standard activé.");
+    }
+
+    // 4. Méthodes override (Redéfinition)
+    public override void EnregistrerAchat(decimal montantAchat)
+    {
+        if (montantAchat < 0) throw new InvalidOperationException();
+        SoldePoints += (int)(montantAchat / 20);
+    }
+
+    public override string ToString() => base.ToString() + " (Type: Standard)";
+}
+```
+
+### Fichier 3 : ClientPremium.cs
+```csharp
+using System.Diagnostics;
+
+public class ClientPremium : CompteFidelite
+{
+    // 1. Attributs
+    private decimal _tauxMultiplicateur;
+
+    // 2. Constructeur
+    public ClientPremium(string titulaire, decimal taux) : base(titulaire)
+    {
+        TauxMultiplicateur = taux;
+        Debug.WriteLine("[DÉRIVÉE] Profil Premium activé.");
+    }
+
+    // 4. Méthodes override (Redéfinition)
+    public override void EnregistrerAchat(decimal montantAchat)
+    {
+        if (montantAchat < 0) throw new InvalidOperationException();
+        int points = (int)(montantAchat * _tauxMultiplicateur);
+        if (montantAchat > 500) points += 50;
+        SoldePoints += points;
+    }
+
+    public override string ToString() => base.ToString() + $" (Type: Premium x{_tauxMultiplicateur})";
+
+    // 5. Accesseurs
+    public decimal TauxMultiplicateur
+    {
+        get => _tauxMultiplicateur;
+        private set
+        {
+            if (value < 1.0m) throw new ArgumentOutOfRangeException();
+            _tauxMultiplicateur = value;
+        }
+    }
+}
+```

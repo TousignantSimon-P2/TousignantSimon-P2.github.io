@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://tousignantsimon-p2.github.io/notes_de_cours/Semaine_7-Interface/">
       
       
+        <link rel="prev" href="../Semaine_7-Heritage-Intermediaire/">
+      
+      
+        <link rel="next" href="../../exercices/exercice_git_semaine_3_1/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Semaine 7 Interface - Cours de Programmation 2</title>
+        <title>IEquatable et IComparable - Cours de Programmation 2</title>
       
     
     
@@ -175,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semaine 7 Interface
+              IEquatable et IComparable
             
           </span>
         </div>
@@ -502,6 +506,28 @@
   
   
   7. L'héritage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  8. Les interfaces
 
         </a>
       </li>
@@ -1466,6 +1492,233 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8. Les interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEquatable et IComparable
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEquatable et IComparable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de déclaration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaration-du-contrat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclaration du "contrat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-interfaces-standards-de-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les interfaces "standards" de C
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iequatable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IEquatable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-grand-principe-de-iequatable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les grand principe de IEquatable.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icomparable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IComparable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-utiliser-stringcomparisonordinal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pourquoi utiliser StringComparison.Ordinal ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -1480,10 +1733,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -1501,8 +1754,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1530,10 +1783,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_1" >
         
           
-          <label class="md-nav__link" for="__nav_13_1" id="__nav_13_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
             
   
   
@@ -1551,8 +1804,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1672,10 +1925,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_2" >
         
           
-          <label class="md-nav__link" for="__nav_13_2" id="__nav_13_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_2" id="__nav_14_2_label" tabindex="0">
             
   
   
@@ -1693,8 +1946,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1814,10 +2067,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
         
           
-          <label class="md-nav__link" for="__nav_13_3" id="__nav_13_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
             
   
   
@@ -1835,8 +2088,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1928,10 +2181,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
         
           
-          <label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
             
   
   
@@ -1949,8 +2202,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2014,10 +2267,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
         
           
-          <label class="md-nav__link" for="__nav_13_6" id="__nav_13_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
             
   
   
@@ -2035,8 +2288,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2100,10 +2353,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
         
           
-          <label class="md-nav__link" for="__nav_13_7" id="__nav_13_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
             
   
   
@@ -2121,8 +2374,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2223,7 +2476,7 @@
   
 
 
-  <h1>Semaine 7 Interface</h1>
+  <h1>IEquatable et IComparable</h1>
 
 <h2 id="les-interfaces">Les interfaces</h2>
 <p>Les interfaces sont essentiellement des contrats pour s'assurer qu'une classe implémente une ou plusieurs méthodes / accesseurs.  </p>

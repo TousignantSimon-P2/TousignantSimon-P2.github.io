@@ -46,7 +46,12 @@ article a[href^="https://"]::after
   mask-image: var(--md-admonition-icon--codesandbox);
 }
 
-/* Maximum space for text block */
+/* Maximum space for text block - Fully flexible */
 .md-grid {
-  max-width: 1400px;
+  max-width: none;
+}
+
+/* Ensure the content area uses the available space */
+.md-content {
+  max-width: 100%;
 }

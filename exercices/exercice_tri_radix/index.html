@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p2.github.io/exercices/exercices_tri_radix.md/">
+        <link rel="canonical" href="https://tousignantsimon-p2.github.io/exercices/exercice_tri_radix/">
       
       
         <link rel="prev" href="../exercices_heritage/">
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-3-tri-radix" class="md-skip">
+        <a href="#exercice-tri-radix-base-10" class="md-skip">
           Aller au contenu
         </a>
       
@@ -2586,10 +2586,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reorganisation-des-fichiers" class="md-nav__link">
+  <a href="#concepts-mathematiques-prealables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Réorganisation des fichiers
+        Concepts Mathématiques Préalables
       
     </span>
   </a>
@@ -2597,21 +2597,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programmation" class="md-nav__link">
+  <a href="#notes-techniques-manipulation-de-bits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Programmation
+        Notes Techniques : Manipulation de Bits
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
+    <nav class="md-nav" aria-label="Notes Techniques : Manipulation de Bits">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#1-bitshifting-decalage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bitshifting (Décalage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-masquage-avec-le-et-logique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Masquage avec le "ET logique" (&amp;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travail-a-realiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Travail à réaliser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Travail à réaliser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-1-implementation-base-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 1 : Implémentation Base 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2-optimisation-et-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 2 : Optimisation et Réflexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consignes-de-structure-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consignes de structure (Architecture)
       
     </span>
   </a>
@@ -2794,10 +2872,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reorganisation-des-fichiers" class="md-nav__link">
+  <a href="#concepts-mathematiques-prealables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Réorganisation des fichiers
+        Concepts Mathématiques Préalables
       
     </span>
   </a>
@@ -2805,21 +2883,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programmation" class="md-nav__link">
+  <a href="#notes-techniques-manipulation-de-bits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Programmation
+        Notes Techniques : Manipulation de Bits
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
+    <nav class="md-nav" aria-label="Notes Techniques : Manipulation de Bits">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#1-bitshifting-decalage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bitshifting (Décalage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-masquage-avec-le-et-logique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Masquage avec le "ET logique" (&amp;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travail-a-realiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Travail à réaliser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Travail à réaliser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-1-implementation-base-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 1 : Implémentation Base 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2-optimisation-et-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 2 : Optimisation et Réflexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consignes-de-structure-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consignes de structure (Architecture)
       
     </span>
   </a>
@@ -2846,54 +3002,62 @@
   
 
 
-<h1 id="exercice-3-tri-radix">Exercice 3 - Tri radix</h1>
-<ul>
-<li>Une fois l'exercice 2 complété :  </li>
-</ul>
-<h2 id="reorganisation-des-fichiers">Réorganisation des fichiers</h2>
-<ul>
-<li>Placez-vous dans la branche "main" et fusionnez "merge" la branche de developpement  </li>
-<li>À partir de cette branche main -&gt; faites une branche "Tri"  <ul>
-<li>Réorganisez vos fichiers de façon à ce que :  </li>
-<li>Dans une classe Tris il y ait -&gt; bubble, insertion, selection et radix  </li>
-<li>radix va lancer l'exception de non implémentation pour le moment.  </li>
-<li>La classe Tris va être dans les namespace Outils_9999999.Tris  </li>
-<li>Faites la classe OutilsTableaux et déplacez y les méthodes nécessaires.  </li>
-<li>La classe Tris va être dans les namespace Outils_9999999.Tableaux  </li>
-<li>Les méthodes qui ne sont pas utiles à l'extérieur de la classe doivent être "private"  </li>
+<h1 id="exercice-tri-radix-base-10">Exercice : Tri Radix (Base 10)</h1>
+<p>Le tri Radix est un algorithme de tri non comparatif qui traite les nombres chiffre par chiffre. Bien que cette implémentation ne soit pas la plus optimale en termes de performance pure en C#, elle est excellente pour maîtriser la manipulation des structures de données de type <strong>Queue</strong> et les tableaux de collections.</p>
+<h2 id="concepts-mathematiques-prealables">Concepts Mathématiques Préalables</h2>
+<p>Avant de débuter, assurez-vous de bien comprendre ces trois outils :</p>
+<ol>
+<li><strong>Modulo (<code>%</code>)</strong> : Retourne le reste de la division entière.<ul>
+<li><em>Exemple</em> : <code>123 % 10</code> donne <code>3</code>.</li>
 </ul>
 </li>
-</ul>
-<h2 id="programmation">Programmation</h2>
-<ul>
-<li>Avec des méthode de niveau privé de cette classe Tri:  <ul>
-<li>Craquez le problème ExtraireNombre(nombre, position) avec (nombre/10^pos)%10 :  </li>
-<li>Créer un dossier dans votre projet nommé "StructureDeDonnee"  </li>
-<li>Faites la classe File  </li>
-<li>La classe File doit contenir :  <ul>
-<li>Un tableau de int  </li>
-<li>Une variable membre index représentant le début de file  </li>
-<li>Une variable membre index représentant la fin de file  </li>
-<li>Un constructeur qui reçoit en paramètre une longueur.  </li>
-<li>Une méthode void Enfiler(int)  </li>
-<li>Une méthode int Defiler()  </li>
-<li>Une méthode int Observer()  </li>
-<li>Un accesseur Vide  </li>
-<li>Un accesseur Plein  </li>
+<li><strong>Math.DivRem</strong> : Calcule simultanément le quotient et le reste d'une division. C'est plus efficace que de faire <code>/</code> et <code>%</code> séparément.<ul>
+<li><em>Usage</em> : <code>int quotient = Math.DivRem(123, 10, out int reste);</code></li>
 </ul>
 </li>
+<li><strong>Math.Pow</strong> : Calcule une puissance. Attention, cette méthode retourne un <code>double</code>, un cast en <code>int</code> est souvent nécessaire pour le tri Radix.<ul>
+<li><em>Exemple</em> : <code>(int)Math.Pow(10, 2)</code> donne <code>100</code>.</li>
 </ul>
 </li>
-</ul>
-<h2 id="_1"></h2>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les vérifications sanitaires doivent être faites pour chaque méthode.  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les résumés doivent être présents pour chaque méthode.  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> On ne laisse pas traîner d'espace blanc pour rien.  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Si on a du code qui se duplique, on le factorise dans une méthode à part.  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Le code dupliqué doit être factorisé.  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Un "commit" par version qui compile.  </li>
-</ul>
+</ol>
+<hr />
+<h2 id="notes-techniques-manipulation-de-bits">Notes Techniques : Manipulation de Bits</h2>
+<p>Bien que nous utilisions la base 10 pour la première partie, la manipulation de bits est essentielle en informatique pour les bases de puissance 2 (Base 2, 16, etc.).</p>
+<h3 id="1-bitshifting-decalage">1. Bitshifting (Décalage)</h3>
+<p>Le décalage permet de déplacer les bits vers la gauche ou la droite.
+*   <strong>Décalage vers la gauche (<code>&lt;&lt;</code>)</strong> : Revient à multiplier par une puissance de 2.
+    *   <code>5 &lt;&lt; 1</code> (0101 -&gt; 1010) = <code>10</code>
+*   <strong>Décalage vers la droite (<code>&gt;&gt;</code>)</strong> : Revient à diviser par une puissance de 2 (division entière).
+    *   <code>20 &gt;&gt; 2</code> (10100 -&gt; 00101) = <code>5</code></p>
+<h3 id="2-masquage-avec-le-et-logique">2. Masquage avec le "ET logique" (<code>&amp;</code>)</h3>
+<p>L'opérateur <code>&amp;</code> compare chaque bit. On l'utilise avec un "masque" pour extraire une valeur spécifique.
+*   <em>Exemple</em> : Pour savoir si un nombre est pair ou impair, on regarde le dernier bit :
+    *   <code>value &amp; 1</code>
+    *   Si <code>value</code> est <code>7</code> (0111) &amp; <code>1</code> (0001) = <code>1</code> (Impair)
+    *   Si <code>value</code> est <code>8</code> (1000) &amp; <code>1</code> (0001) = <code>0</code> (Pair)</p>
+<hr />
+<h2 id="travail-a-realiser">Travail à réaliser</h2>
+<h3 id="objectif">Objectif</h3>
+<p>Implémenter le tri Radix en base 10 en utilisant :
+*   <strong>1 Queue<int> principale</strong> : Contient les données à trier.
+*   <strong>1 Tableau de 10 Queues<int></strong> : Représente les "paniers" (buckets) pour chaque chiffre de 0 à 9.</p>
+<h3 id="partie-1-implementation-base-10">Partie 1 : Implémentation Base 10</h3>
+<p>Vous devez trier une liste de nombres entiers positifs. L'algorithme doit itérer autant de fois qu'il y a de chiffres dans le plus grand nombre de la liste. À chaque itération, vous distribuez les nombres dans les 10 queues selon le chiffre de la position courante (unités, dizaines, centaines...), puis vous les rassemblez dans la queue principale.</p>
+<h3 id="partie-2-optimisation-et-reflexion">Partie 2 : Optimisation et Réflexion</h3>
+<p>Modifiez votre approche pour que l'algorithme soit capable de détecter automatiquement le nombre de passages nécessaires. Réfléchissez également à la manière dont les concepts de <strong>bitshift</strong> et de <strong>masquage</strong> vus précédemment pourraient remplacer le modulo et la division si nous travaillions en base 2 ou 16.</p>
+<hr />
+<h2 id="consignes-de-structure-architecture">Consignes de structure (Architecture)</h2>
+<p><strong>Interdiction de coder l'algorithme d'un seul bloc.</strong></p>
+<p>L'exercice doit être implémenté au sein d'une classe statique nommée <code>Tris</code>. Cette classe devra à terme regrouper vos différentes implémentations de tris :
+*   <code>Bulle</code>
+*   <code>Selection</code>
+*   <code>Insertion</code>
+*   <code>Radix</code> (L'objectif actuel)</p>
+<p>Pour le tri Radix, vous devez diviser votre code de façon à ce que la méthode principale <code>Radix</code> soit réduite à sa plus simple expression (quelques lignes seulement) en déléguant la logique de traitement à d'autres méthodes de la classe <code>Tris</code>.</p>
+<p><strong>Critères de succès :</strong>
+*   Utilisation correcte d'un tableau de <code>Queue&lt;int&gt;</code>.
+*   Aucune manipulation de chaînes de caractères (<code>ToString()</code> est interdit).
+*   Code lisible et décomposé en méthodes spécialisées.</p>
 
 
 
